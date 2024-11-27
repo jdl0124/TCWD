@@ -21,7 +21,7 @@ namespace bcsys.Forms.EntryForms
         private string ssql;
         public bool bnewb = false;
         public decimal namt = 0;
-        public DataTable dtbrates;
+        public DataTable dtbrates, dt;
         public reading()
         {
             InitializeComponent();
@@ -283,11 +283,32 @@ namespace bcsys.Forms.EntryForms
                                 dgvReading.Rows[r].Cells[7].Value = 0;
                                 dgvReading.Rows[r].Cells[8].Value = 0;
                                 dgvReading.Rows[r].Cells[11].Value = dr["mascode"].ToString();
-                            }
+                                //get arrears
+                                ssql = "select sum(billamt+ftax+wmf+penalty-srdisc-otdisc-payment) as arrears from bcdb.reading_bc where mascode=@mc and ((billamt+ftax+wmf+penalty-srdisc-otdisc)>payment or payment is null or payment=0) group by mascode";
+                                dt = new DataTable();
+                                using (MySqlCommand cmd1 = new MySqlCommand(ssql, newdbcon.database_connection))
+                                {
+									cmd1.Parameters.AddWithValue("@mc", dr["mascode"].ToString());
+                                    using (dt = new DataTable())
+                                    {
+										dt = newdbcon.get_records(ssql, cmd1);
+                                        if (dt.Rows.Count > 0)
+                                        {
+                                            foreach (DataRow rs in dt.Rows)
+                                            {
+												dgvReading.Rows[r].Cells[19].Value = rs["arrears"].ToString();
+											}
+                                        }
+                                        cmd1.Dispose ();
+									}
+								}
+                                dt.Dispose ();
 
+                            }
                         }
 
                     }
+                    dtb.Dispose();
                 }
                 newdbcon.CloseConnection();
             }

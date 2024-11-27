@@ -33,6 +33,9 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reading));
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -44,9 +47,6 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.gbAvg = new System.Windows.Forms.GroupBox();
 			this.btnHide = new System.Windows.Forms.Button();
 			this.Label3 = new System.Windows.Forms.Label();
@@ -85,6 +85,28 @@
 			this.btnUpdate = new System.Windows.Forms.Button();
 			this.lblBP = new System.Windows.Forms.Label();
 			this.dgvReading = new System.Windows.Forms.DataGridView();
+			this.dtpRDate = new System.Windows.Forms.DateTimePicker();
+			this.Label2 = new System.Windows.Forms.Label();
+			this.dgvBrgy = new System.Windows.Forms.DataGridView();
+			this.nomber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.DataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.LastBilling = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.RDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Label22 = new System.Windows.Forms.Label();
+			this.cboCType = new System.Windows.Forms.ComboBox();
+			this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+			this.dtpStart = new System.Windows.Forms.DateTimePicker();
+			this.Label16 = new System.Windows.Forms.Label();
+			this.Label1 = new System.Windows.Forms.Label();
+			this.dtpBP = new System.Windows.Forms.DateTimePicker();
+			this.tsMenu = new System.Windows.Forms.ToolStrip();
+			this.btnUpload = new System.Windows.Forms.ToolStripButton();
+			this.btnPrint = new System.Windows.Forms.ToolStripDropDownButton();
+			this.Bill = new System.Windows.Forms.ToolStripMenuItem();
+			this.List = new System.Windows.Forms.ToolStripMenuItem();
+			this.btnSave = new System.Windows.Forms.ToolStripButton();
+			this.btnSaveBilling = new System.Windows.Forms.ToolStripButton();
+			this.btnClose = new System.Windows.Forms.ToolStripButton();
 			this.Nnn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Acctno = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.DataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,28 +126,10 @@
 			this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.mascode = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.msize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dtpRDate = new System.Windows.Forms.DateTimePicker();
-			this.Label2 = new System.Windows.Forms.Label();
-			this.dgvBrgy = new System.Windows.Forms.DataGridView();
-			this.nomber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.DataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.LastBilling = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.RDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Label22 = new System.Windows.Forms.Label();
-			this.cboCType = new System.Windows.Forms.ComboBox();
-			this.dtpEnd = new System.Windows.Forms.DateTimePicker();
-			this.dtpStart = new System.Windows.Forms.DateTimePicker();
-			this.Label16 = new System.Windows.Forms.Label();
-			this.Label1 = new System.Windows.Forms.Label();
-			this.dtpBP = new System.Windows.Forms.DateTimePicker();
-			this.tsMenu = new System.Windows.Forms.ToolStrip();
-			this.btnNew = new System.Windows.Forms.ToolStripButton();
-			this.btnPrint = new System.Windows.Forms.ToolStripDropDownButton();
-			this.Bill = new System.Windows.Forms.ToolStripMenuItem();
-			this.List = new System.Windows.Forms.ToolStripMenuItem();
-			this.btnSave = new System.Windows.Forms.ToolStripButton();
-			this.btnSaveBilling = new System.Windows.Forms.ToolStripButton();
-			this.btnClose = new System.Windows.Forms.ToolStripButton();
+			this.arrears_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.zn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.bk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.btnDownload = new System.Windows.Forms.ToolStripButton();
 			this.gbAvg.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudAve)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAvg)).BeginInit();
@@ -591,7 +595,10 @@
             this.category,
             this.status,
             this.mascode,
-            this.msize});
+            this.msize,
+            this.arrears_,
+            this.zn,
+            this.bk});
 			this.dgvReading.Location = new System.Drawing.Point(233, 75);
 			this.dgvReading.Name = "dgvReading";
 			this.dgvReading.RowHeadersVisible = false;
@@ -600,6 +607,228 @@
 			this.dgvReading.TabIndex = 233;
 			this.dgvReading.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReading_CellEndEdit);
 			this.dgvReading.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvReading_KeyDown);
+			// 
+			// dtpRDate
+			// 
+			this.dtpRDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dtpRDate.Location = new System.Drawing.Point(312, 2);
+			this.dtpRDate.Name = "dtpRDate";
+			this.dtpRDate.Size = new System.Drawing.Size(99, 20);
+			this.dtpRDate.TabIndex = 227;
+			// 
+			// Label2
+			// 
+			this.Label2.AutoSize = true;
+			this.Label2.Location = new System.Drawing.Point(231, 5);
+			this.Label2.Name = "Label2";
+			this.Label2.Size = new System.Drawing.Size(76, 13);
+			this.Label2.TabIndex = 236;
+			this.Label2.Text = "Reading Date:";
+			// 
+			// dgvBrgy
+			// 
+			this.dgvBrgy.AllowUserToAddRows = false;
+			this.dgvBrgy.AllowUserToDeleteRows = false;
+			this.dgvBrgy.AllowUserToResizeRows = false;
+			dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvBrgy.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+			this.dgvBrgy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvBrgy.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nomber,
+            this.DataGridViewTextBoxColumn2,
+            this.LastBilling,
+            this.RDay});
+			this.dgvBrgy.Location = new System.Drawing.Point(1, 75);
+			this.dgvBrgy.MultiSelect = false;
+			this.dgvBrgy.Name = "dgvBrgy";
+			this.dgvBrgy.ReadOnly = true;
+			this.dgvBrgy.RowHeadersVisible = false;
+			this.dgvBrgy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvBrgy.Size = new System.Drawing.Size(223, 367);
+			this.dgvBrgy.TabIndex = 232;
+			this.dgvBrgy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBrgy_CellClick);
+			this.dgvBrgy.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBrgy_CellContentClick);
+			// 
+			// nomber
+			// 
+			this.nomber.HeaderText = "Zone";
+			this.nomber.Name = "nomber";
+			this.nomber.ReadOnly = true;
+			this.nomber.Width = 50;
+			// 
+			// DataGridViewTextBoxColumn2
+			// 
+			this.DataGridViewTextBoxColumn2.HeaderText = "Book";
+			this.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
+			this.DataGridViewTextBoxColumn2.ReadOnly = true;
+			this.DataGridViewTextBoxColumn2.Width = 50;
+			// 
+			// LastBilling
+			// 
+			dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.LastBilling.DefaultCellStyle = dataGridViewCellStyle17;
+			this.LastBilling.HeaderText = "LastBilling";
+			this.LastBilling.Name = "LastBilling";
+			this.LastBilling.ReadOnly = true;
+			this.LastBilling.Width = 60;
+			// 
+			// RDay
+			// 
+			dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.RDay.DefaultCellStyle = dataGridViewCellStyle18;
+			this.RDay.HeaderText = "RDay";
+			this.RDay.Name = "RDay";
+			this.RDay.ReadOnly = true;
+			this.RDay.Width = 40;
+			// 
+			// Label22
+			// 
+			this.Label22.AutoSize = true;
+			this.Label22.Location = new System.Drawing.Point(-1, 52);
+			this.Label22.Name = "Label22";
+			this.Label22.Size = new System.Drawing.Size(91, 13);
+			this.Label22.TabIndex = 235;
+			this.Label22.Text = "Connection Type:";
+			// 
+			// cboCType
+			// 
+			this.cboCType.FormattingEnabled = true;
+			this.cboCType.Items.AddRange(new object[] {
+            "COASTAL",
+            "UPLAND"});
+			this.cboCType.Location = new System.Drawing.Point(94, 48);
+			this.cboCType.Name = "cboCType";
+			this.cboCType.Size = new System.Drawing.Size(101, 21);
+			this.cboCType.TabIndex = 231;
+			// 
+			// dtpEnd
+			// 
+			this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dtpEnd.Location = new System.Drawing.Point(199, 25);
+			this.dtpEnd.Name = "dtpEnd";
+			this.dtpEnd.Size = new System.Drawing.Size(99, 20);
+			this.dtpEnd.TabIndex = 229;
+			// 
+			// dtpStart
+			// 
+			this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dtpStart.Location = new System.Drawing.Point(94, 25);
+			this.dtpStart.Name = "dtpStart";
+			this.dtpStart.Size = new System.Drawing.Size(99, 20);
+			this.dtpStart.TabIndex = 228;
+			// 
+			// Label16
+			// 
+			this.Label16.AutoSize = true;
+			this.Label16.Location = new System.Drawing.Point(9, 28);
+			this.Label16.Name = "Label16";
+			this.Label16.Size = new System.Drawing.Size(79, 13);
+			this.Label16.TabIndex = 234;
+			this.Label16.Text = "Service Period:";
+			// 
+			// Label1
+			// 
+			this.Label1.AutoSize = true;
+			this.Label1.Location = new System.Drawing.Point(19, 5);
+			this.Label1.Name = "Label1";
+			this.Label1.Size = new System.Drawing.Size(70, 13);
+			this.Label1.TabIndex = 226;
+			this.Label1.Text = "Billing Period:";
+			// 
+			// dtpBP
+			// 
+			this.dtpBP.Checked = false;
+			this.dtpBP.CustomFormat = "MMMMyyyy";
+			this.dtpBP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dtpBP.Location = new System.Drawing.Point(94, 2);
+			this.dtpBP.Name = "dtpBP";
+			this.dtpBP.ShowCheckBox = true;
+			this.dtpBP.Size = new System.Drawing.Size(132, 20);
+			this.dtpBP.TabIndex = 225;
+			// 
+			// tsMenu
+			// 
+			this.tsMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.tsMenu.Dock = System.Windows.Forms.DockStyle.None;
+			this.tsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnDownload,
+            this.btnUpload,
+            this.btnPrint,
+            this.btnSave,
+            this.btnSaveBilling,
+            this.btnClose});
+			this.tsMenu.Location = new System.Drawing.Point(724, 4);
+			this.tsMenu.Name = "tsMenu";
+			this.tsMenu.Size = new System.Drawing.Size(585, 25);
+			this.tsMenu.TabIndex = 237;
+			this.tsMenu.TabStop = true;
+			this.tsMenu.Text = "Receiving Menu";
+			// 
+			// btnUpload
+			// 
+			this.btnUpload.Image = ((System.Drawing.Image)(resources.GetObject("btnUpload.Image")));
+			this.btnUpload.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnUpload.Name = "btnUpload";
+			this.btnUpload.Size = new System.Drawing.Size(125, 22);
+			this.btnUpload.Text = "&Upload to Android";
+			// 
+			// btnPrint
+			// 
+			this.btnPrint.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Bill,
+            this.List});
+			this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+			this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnPrint.Name = "btnPrint";
+			this.btnPrint.Size = new System.Drawing.Size(61, 22);
+			this.btnPrint.Text = "&Print";
+			// 
+			// Bill
+			// 
+			this.Bill.Image = ((System.Drawing.Image)(resources.GetObject("Bill.Image")));
+			this.Bill.Name = "Bill";
+			this.Bill.Size = new System.Drawing.Size(92, 22);
+			this.Bill.Text = "Bill";
+			// 
+			// List
+			// 
+			this.List.Image = ((System.Drawing.Image)(resources.GetObject("List.Image")));
+			this.List.Name = "List";
+			this.List.Size = new System.Drawing.Size(92, 22);
+			this.List.Text = "List";
+			// 
+			// btnSave
+			// 
+			this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+			this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnSave.Name = "btnSave";
+			this.btnSave.Size = new System.Drawing.Size(83, 22);
+			this.btnSave.Text = "&Save Dates";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+			// 
+			// btnSaveBilling
+			// 
+			this.btnSaveBilling.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveBilling.Image")));
+			this.btnSaveBilling.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnSaveBilling.Name = "btnSaveBilling";
+			this.btnSaveBilling.Size = new System.Drawing.Size(87, 22);
+			this.btnSaveBilling.Text = "Save Billing";
+			this.btnSaveBilling.Click += new System.EventHandler(this.btnSaveBilling_Click);
+			// 
+			// btnClose
+			// 
+			this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+			this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnClose.Name = "btnClose";
+			this.btnClose.Size = new System.Drawing.Size(56, 22);
+			this.btnClose.Text = "&Close";
+			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
 			// Nnn
 			// 
@@ -755,226 +984,31 @@
 			this.msize.Name = "msize";
 			this.msize.Visible = false;
 			// 
-			// dtpRDate
+			// arrears_
 			// 
-			this.dtpRDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpRDate.Location = new System.Drawing.Point(312, 2);
-			this.dtpRDate.Name = "dtpRDate";
-			this.dtpRDate.Size = new System.Drawing.Size(99, 20);
-			this.dtpRDate.TabIndex = 227;
+			this.arrears_.HeaderText = "Arrears";
+			this.arrears_.Name = "arrears_";
+			this.arrears_.Visible = false;
 			// 
-			// Label2
+			// zn
 			// 
-			this.Label2.AutoSize = true;
-			this.Label2.Location = new System.Drawing.Point(231, 5);
-			this.Label2.Name = "Label2";
-			this.Label2.Size = new System.Drawing.Size(76, 13);
-			this.Label2.TabIndex = 236;
-			this.Label2.Text = "Reading Date:";
+			this.zn.HeaderText = "Zone";
+			this.zn.Name = "zn";
+			this.zn.Visible = false;
 			// 
-			// dgvBrgy
+			// bk
 			// 
-			this.dgvBrgy.AllowUserToAddRows = false;
-			this.dgvBrgy.AllowUserToDeleteRows = false;
-			this.dgvBrgy.AllowUserToResizeRows = false;
-			dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvBrgy.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
-			this.dgvBrgy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvBrgy.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomber,
-            this.DataGridViewTextBoxColumn2,
-            this.LastBilling,
-            this.RDay});
-			this.dgvBrgy.Location = new System.Drawing.Point(1, 75);
-			this.dgvBrgy.MultiSelect = false;
-			this.dgvBrgy.Name = "dgvBrgy";
-			this.dgvBrgy.ReadOnly = true;
-			this.dgvBrgy.RowHeadersVisible = false;
-			this.dgvBrgy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvBrgy.Size = new System.Drawing.Size(223, 367);
-			this.dgvBrgy.TabIndex = 232;
-			this.dgvBrgy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBrgy_CellClick);
-			this.dgvBrgy.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBrgy_CellContentClick);
+			this.bk.HeaderText = "Book";
+			this.bk.Name = "bk";
+			this.bk.Visible = false;
 			// 
-			// nomber
+			// btnDownload
 			// 
-			this.nomber.HeaderText = "Zone";
-			this.nomber.Name = "nomber";
-			this.nomber.ReadOnly = true;
-			this.nomber.Width = 50;
-			// 
-			// DataGridViewTextBoxColumn2
-			// 
-			this.DataGridViewTextBoxColumn2.HeaderText = "Book";
-			this.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
-			this.DataGridViewTextBoxColumn2.ReadOnly = true;
-			this.DataGridViewTextBoxColumn2.Width = 50;
-			// 
-			// LastBilling
-			// 
-			dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.LastBilling.DefaultCellStyle = dataGridViewCellStyle17;
-			this.LastBilling.HeaderText = "LastBilling";
-			this.LastBilling.Name = "LastBilling";
-			this.LastBilling.ReadOnly = true;
-			this.LastBilling.Width = 60;
-			// 
-			// RDay
-			// 
-			dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.RDay.DefaultCellStyle = dataGridViewCellStyle18;
-			this.RDay.HeaderText = "RDay";
-			this.RDay.Name = "RDay";
-			this.RDay.ReadOnly = true;
-			this.RDay.Width = 40;
-			// 
-			// Label22
-			// 
-			this.Label22.AutoSize = true;
-			this.Label22.Location = new System.Drawing.Point(-1, 52);
-			this.Label22.Name = "Label22";
-			this.Label22.Size = new System.Drawing.Size(91, 13);
-			this.Label22.TabIndex = 235;
-			this.Label22.Text = "Connection Type:";
-			// 
-			// cboCType
-			// 
-			this.cboCType.FormattingEnabled = true;
-			this.cboCType.Items.AddRange(new object[] {
-            "COASTAL",
-            "UPLAND"});
-			this.cboCType.Location = new System.Drawing.Point(94, 48);
-			this.cboCType.Name = "cboCType";
-			this.cboCType.Size = new System.Drawing.Size(101, 21);
-			this.cboCType.TabIndex = 231;
-			// 
-			// dtpEnd
-			// 
-			this.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpEnd.Location = new System.Drawing.Point(199, 25);
-			this.dtpEnd.Name = "dtpEnd";
-			this.dtpEnd.Size = new System.Drawing.Size(99, 20);
-			this.dtpEnd.TabIndex = 229;
-			// 
-			// dtpStart
-			// 
-			this.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpStart.Location = new System.Drawing.Point(94, 25);
-			this.dtpStart.Name = "dtpStart";
-			this.dtpStart.Size = new System.Drawing.Size(99, 20);
-			this.dtpStart.TabIndex = 228;
-			// 
-			// Label16
-			// 
-			this.Label16.AutoSize = true;
-			this.Label16.Location = new System.Drawing.Point(9, 28);
-			this.Label16.Name = "Label16";
-			this.Label16.Size = new System.Drawing.Size(79, 13);
-			this.Label16.TabIndex = 234;
-			this.Label16.Text = "Service Period:";
-			// 
-			// Label1
-			// 
-			this.Label1.AutoSize = true;
-			this.Label1.Location = new System.Drawing.Point(19, 5);
-			this.Label1.Name = "Label1";
-			this.Label1.Size = new System.Drawing.Size(70, 13);
-			this.Label1.TabIndex = 226;
-			this.Label1.Text = "Billing Period:";
-			// 
-			// dtpBP
-			// 
-			this.dtpBP.Checked = false;
-			this.dtpBP.CustomFormat = "MMMMyyyy";
-			this.dtpBP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dtpBP.Location = new System.Drawing.Point(94, 2);
-			this.dtpBP.Name = "dtpBP";
-			this.dtpBP.ShowCheckBox = true;
-			this.dtpBP.Size = new System.Drawing.Size(132, 20);
-			this.dtpBP.TabIndex = 225;
-			// 
-			// tsMenu
-			// 
-			this.tsMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.tsMenu.Dock = System.Windows.Forms.DockStyle.None;
-			this.tsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNew,
-            this.btnPrint,
-            this.btnSave,
-            this.btnSaveBilling,
-            this.btnClose});
-			this.tsMenu.Location = new System.Drawing.Point(959, 4);
-			this.tsMenu.Name = "tsMenu";
-			this.tsMenu.Size = new System.Drawing.Size(350, 25);
-			this.tsMenu.TabIndex = 237;
-			this.tsMenu.TabStop = true;
-			this.tsMenu.Text = "Receiving Menu";
-			// 
-			// btnNew
-			// 
-			this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
-			this.btnNew.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnNew.Name = "btnNew";
-			this.btnNew.Size = new System.Drawing.Size(51, 22);
-			this.btnNew.Text = "&New";
-			// 
-			// btnPrint
-			// 
-			this.btnPrint.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Bill,
-            this.List});
-			this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-			this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnPrint.Name = "btnPrint";
-			this.btnPrint.Size = new System.Drawing.Size(61, 22);
-			this.btnPrint.Text = "&Print";
-			// 
-			// Bill
-			// 
-			this.Bill.Image = ((System.Drawing.Image)(resources.GetObject("Bill.Image")));
-			this.Bill.Name = "Bill";
-			this.Bill.Size = new System.Drawing.Size(92, 22);
-			this.Bill.Text = "Bill";
-			// 
-			// List
-			// 
-			this.List.Image = ((System.Drawing.Image)(resources.GetObject("List.Image")));
-			this.List.Name = "List";
-			this.List.Size = new System.Drawing.Size(92, 22);
-			this.List.Text = "List";
-			// 
-			// btnSave
-			// 
-			this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-			this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(83, 22);
-			this.btnSave.Text = "&Save Dates";
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-			// 
-			// btnSaveBilling
-			// 
-			this.btnSaveBilling.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveBilling.Image")));
-			this.btnSaveBilling.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnSaveBilling.Name = "btnSaveBilling";
-			this.btnSaveBilling.Size = new System.Drawing.Size(87, 22);
-			this.btnSaveBilling.Text = "Save Billing";
-			this.btnSaveBilling.Click += new System.EventHandler(this.btnSaveBilling_Click);
-			// 
-			// btnClose
-			// 
-			this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-			this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(56, 22);
-			this.btnClose.Text = "&Close";
-			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+			this.btnDownload.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload.Image")));
+			this.btnDownload.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnDownload.Name = "btnDownload";
+			this.btnDownload.Size = new System.Drawing.Size(130, 22);
+			this.btnDownload.Text = "&Download to Server";
 			// 
 			// reading
 			// 
@@ -1083,31 +1117,35 @@
         internal System.Windows.Forms.ToolStripMenuItem List;
         internal System.Windows.Forms.ToolStripMenuItem Bill;
         internal System.Windows.Forms.ToolStripDropDownButton btnPrint;
-        internal System.Windows.Forms.ToolStripButton btnNew;
+        internal System.Windows.Forms.ToolStripButton btnUpload;
         internal System.Windows.Forms.ToolStrip tsMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomber;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastBilling;
         private System.Windows.Forms.DataGridViewTextBoxColumn RDay;
         private System.Windows.Forms.ToolStripButton btnSaveBilling;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nnn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Acctno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Purok;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Meterno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Previous;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Present;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FTax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wmf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Others;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ToT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
-        private System.Windows.Forms.DataGridViewTextBoxColumn category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mascode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn msize;
-    }
+		private System.Windows.Forms.DataGridViewTextBoxColumn Nnn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Acctno;
+		private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn3;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Purok;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Meterno;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Previous;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Present;
+		private System.Windows.Forms.DataGridViewTextBoxColumn cum;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+		private System.Windows.Forms.DataGridViewTextBoxColumn FTax;
+		private System.Windows.Forms.DataGridViewTextBoxColumn wmf;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Others;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Discount;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ToT;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Payment;
+		private System.Windows.Forms.DataGridViewTextBoxColumn category;
+		private System.Windows.Forms.DataGridViewTextBoxColumn status;
+		private System.Windows.Forms.DataGridViewTextBoxColumn mascode;
+		private System.Windows.Forms.DataGridViewTextBoxColumn msize;
+		private System.Windows.Forms.DataGridViewTextBoxColumn arrears_;
+		private System.Windows.Forms.DataGridViewTextBoxColumn zn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn bk;
+		private System.Windows.Forms.ToolStripButton btnDownload;
+	}
 }

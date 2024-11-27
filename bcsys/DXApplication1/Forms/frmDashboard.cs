@@ -346,5 +346,25 @@ namespace bcsys.Forms
 		{
 			newChildForm(new agingreport(), "Consumer's Aging of Accounts Receivable");
 		}
+
+		//private void accordionControlElement12_Click(object sender, EventArgs e)
+		//{
+		//	newChildForm(new reading(), "Billing Upload");
+		//}
+
+		//private void accordionControlElement35_Click(object sender, EventArgs e)
+		//{
+
+		//}
+
+		private void downloadreading_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void uploadtoandroid_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
