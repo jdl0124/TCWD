@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\csharp_devexpress\\eguidance\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|eguidanceV2||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|F:\\csharp_devexpress\\eguidance\\dxapplication1\\mdimain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\mdimain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|F:\\csharp_devexpress\\eguidance\\dxapplication1\\mdimain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\mdimain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\DXApplication1.csproj|F:\\csharp_devexpress\\eguidance\\dxapplication1\\mdimain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\DXApplication1.csproj|solutionrelative:dxapplication1\\mdimain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\DXApplication1.csproj|F:\\csharp_devexpress\\eguidance\\dxapplication1\\mdimain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\DXApplication1.csproj|solutionrelative:dxapplication1\\mdimain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\DXApplication1.csproj|F:\\csharp_devexpress\\eguidance\\dxapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\DXApplication1.csproj|solutionrelative:dxapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|f:\\csharp_devexpress\\eguidance\\dxapplication1\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MDIMain.Designer.cs",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\MDIMain.Designer.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\MDIMain.Designer.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\MDIMain.Designer.cs",
+              "RelativeToolTip": "DXApplication1\\MDIMain.Designer.cs",
+              "ViewState": "AQIAAG4BAAAAAAAAAAAowH0BAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T03:18:00.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MDIMain.cs",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\MDIMain.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\MDIMain.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\MDIMain.cs",
+              "RelativeToolTip": "DXApplication1\\MDIMain.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T03:17:39.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "eguidanceV2",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\eguidanceV2.csproj",
+              "RelativeDocumentMoniker": "DXApplication1\\eguidanceV2.csproj",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\eguidanceV2.csproj",
+              "RelativeToolTip": "DXApplication1\\eguidanceV2.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-05T03:17:23.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Program.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Program.cs",
+              "RelativeToolTip": "DXApplication1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T09:11:13.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MDIMain.cs",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\MDIMain.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\MDIMain.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\MDIMain.cs",
+              "RelativeToolTip": "DXApplication1\\MDIMain.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAIBJwDIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T09:09:50.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MDIMain.cs [Design]",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\MDIMain.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\MDIMain.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\MDIMain.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\MDIMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T09:08:31.526Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

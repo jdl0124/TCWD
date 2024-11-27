@@ -1,0 +1,716 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\users\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\users\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|d:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\users\\frmencrypter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\users\\frmencrypter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\users\\frmencrypter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\users\\frmencrypter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\users\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\users\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\encryptiondecryptionusingsymmetrickey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\encryptiondecryptionusingsymmetrickey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|eguidanceV2||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\loggerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\loggerdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\entryforms\\frminterviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\frminterviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\objectpositions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\objectpositions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\itemcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\itemcontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\sendmail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\sendmail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\gridentrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\gridentrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\entryforms\\frminterviews.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\frminterviews.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\reports\\masterreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\reports\\masterreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\reports\\dataset2.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\reports\\dataset2.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\reports\\subreport2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\reports\\subreport2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\reports\\subreport1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\reports\\subreport1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\reports\\masterreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\reports\\masterreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\reports\\masterreport.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\reports\\masterreport.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\frmloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\frmloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\frmloading.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\frmloading.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\frmloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\frmloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\work.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\work.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\users\\frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\users\\frmlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\users\\frmlogin.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\forms\\users\\frmlogin.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\properties\\licenses.licx||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\properties\\licenses.licx||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\playvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\playvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\stringhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\stringhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|D:\\jdl solutions\\csharp_devexpress\\eguidance\\dxapplication1\\modules\\teller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\eguidanceV2.csproj|solutionrelative:dxapplication1\\modules\\teller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\Xreport2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\frmdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\frmpif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\csharp_devexpress\\eguidance\\dxapplication1\\forms\\frmpsychological.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmpif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmpsychological.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmdetail.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 165,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmencrypter.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmencrypter.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\Users\\frmencrypter.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmencrypter.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T09:47:18.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EncryptionHelper.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\EncryptionHelper.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\EncryptionHelper.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\EncryptionHelper.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\EncryptionHelper.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T05:43:48.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBConnect.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\DBConnect.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\DBConnect.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\DBConnect.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\DBConnect.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAADgv0gAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T09:09:34.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmlogin.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmlogin.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\Users\\frmlogin.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmlogin.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\Forms\\Users\\frmlogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T07:18:42.465Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Program.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Program.cs",
+              "RelativeToolTip": "DXApplication1\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAawBYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T02:21:34.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmDashboard.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmDashboard.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T02:46:19.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EncryptionDecryptionUsingSymmetricKey.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\EncryptionDecryptionUsingSymmetricKey.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\EncryptionDecryptionUsingSymmetricKey.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\EncryptionDecryptionUsingSymmetricKey.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\EncryptionDecryptionUsingSymmetricKey.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAEwDIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T05:48:20.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "eguidanceV2",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\eguidanceV2.csproj",
+              "RelativeDocumentMoniker": "DXApplication1\\eguidanceV2.csproj",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\eguidanceV2.csproj",
+              "RelativeToolTip": "DXApplication1\\eguidanceV2.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-10T07:38:31.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmlogin.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmlogin.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\Users\\frmlogin.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmlogin.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\Users\\frmlogin.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAADgv5kAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T07:44:34.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmencrypter.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmencrypter.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\Users\\frmencrypter.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmencrypter.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\Users\\frmencrypter.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAMwIcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T10:07:02.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmDashboard.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmDashboard.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmDashboard.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\frmDashboard.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAAwGMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T02:46:13.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoggerDB.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\LoggerDB.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\LoggerDB.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\LoggerDB.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\LoggerDB.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAADwvyAAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T08:45:41.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Person.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\Person.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\Person.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\Person.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\Person.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-10T09:07:06.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ObjectPositions.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\ObjectPositions.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\ObjectPositions.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\ObjectPositions.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\ObjectPositions.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwBkAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T03:56:27.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frminterviews.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\EntryForms\\frminterviews.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\frminterviews.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\EntryForms\\frminterviews.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T03:43:53.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ItemControls.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\ItemControls.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\ItemControls.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\ItemControls.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\ItemControls.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T08:32:55.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "frmdetail.cs [Design]",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmdetail.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmdetail.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T06:37:36.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SendMail.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\SendMail.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\SendMail.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\SendMail.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\SendMail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwAwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:27:12.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frminterviews.Designer.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\EntryForms\\frminterviews.Designer.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\frminterviews.Designer.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\EntryForms\\frminterviews.Designer.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\frminterviews.Designer.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAABRwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T07:48:32.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GridEntryController.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\GridEntryController.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\GridEntryController.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\GridEntryController.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\GridEntryController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T08:32:42.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MasterReport.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\MasterReport.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Reports\\MasterReport.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\MasterReport.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T01:20:35.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MasterReport.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\MasterReport.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Reports\\MasterReport.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\MasterReport.cs",
+              "RelativeToolTip": "DXApplication1\\Reports\\MasterReport.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAewA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T02:48:52.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SubReport2.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\SubReport2.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Reports\\SubReport2.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\SubReport2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T05:54:20.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SubReport1.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\SubReport1.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Reports\\SubReport1.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\SubReport1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T01:13:56.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DataSet2.xsd",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\DataSet2.xsd",
+              "RelativeDocumentMoniker": "DXApplication1\\Reports\\DataSet2.xsd",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\DataSet2.xsd",
+              "RelativeToolTip": "DXApplication1\\Reports\\DataSet2.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-06-26T03:18:00.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MasterReport.Designer.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\MasterReport.Designer.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Reports\\MasterReport.Designer.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\MasterReport.Designer.cs",
+              "RelativeToolTip": "DXApplication1\\Reports\\MasterReport.Designer.cs",
+              "ViewState": "AQIAANIAAAAAAAAAAABRwNUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T02:49:02.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Xreport2.cs",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\Xreport2.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Reports\\Xreport2.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T02:49:13.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "frmpif.cs [Design]",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmpif.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmpif.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T03:26:28.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "frmloading.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmloading.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmloading.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmloading.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T06:43:31.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "frmloading.Designer.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmloading.Designer.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmloading.Designer.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmloading.Designer.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\frmloading.Designer.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAABRwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T07:49:37.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "frmloading.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmloading.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmloading.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmloading.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\frmloading.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T06:54:44.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "frmDashboard.Designer.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmDashboard.Designer.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.Designer.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmDashboard.Designer.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\frmDashboard.Designer.cs",
+              "ViewState": "AQIAAA4DAAAAAAAAAABRwBEDAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T02:46:13.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "frmdetail.cs",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmdetail.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmdetail.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAABoAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T06:37:32.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "frmpsychological.cs [Design]",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmpsychological.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmpsychological.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T03:49:22.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Work.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\Work.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\Work.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\Work.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\Work.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T02:40:55.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "frmpif.cs",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmpif.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmpif.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAowBQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T03:31:28.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "frmlogin.Designer.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmlogin.Designer.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\Users\\frmlogin.Designer.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmlogin.Designer.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\Users\\frmlogin.Designer.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAMBdwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T07:44:36.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "frmlogin.resx",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmlogin.resx",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\Users\\frmlogin.resx",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\Users\\frmlogin.resx",
+              "RelativeToolTip": "DXApplication1\\Forms\\Users\\frmlogin.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-06-10T07:44:37.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "frmpsychological.cs",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmpsychological.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmpsychological.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T02:25:35.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "frmdetail.Designer.cs",
+              "DocumentMoniker": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmdetail.Designer.cs",
+              "ToolTip": "F:\\csharp_devexpress\\eguidance\\DXApplication1\\Forms\\frmdetail.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T06:37:32.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\App.config",
+              "RelativeDocumentMoniker": "DXApplication1\\App.config",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\App.config",
+              "RelativeToolTip": "DXApplication1\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-06-07T06:27:39.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "licenses.licx",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Properties\\licenses.licx",
+              "RelativeDocumentMoniker": "DXApplication1\\Properties\\licenses.licx",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\Properties\\licenses.licx",
+              "RelativeToolTip": "DXApplication1\\Properties\\licenses.licx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-10T02:16:22.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Teller.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\Teller.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\Teller.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\Teller.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\Teller.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T02:40:54.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Students.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\Students.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\Students.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\Students.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\Students.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T02:40:57.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "StringHelper.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\StringHelper.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\StringHelper.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\StringHelper.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\StringHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T02:40:58.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Playvideo.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\Playvideo.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\Playvideo.cs",
+              "ToolTip": "D:\\jdl solutions\\csharp_devexpress\\eguidance\\DXApplication1\\modules\\Playvideo.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\Playvideo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T02:40:59.636Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
