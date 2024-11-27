@@ -364,7 +364,7 @@ namespace bcsys.Forms
 
 		private void uploadtoandroid_Click(object sender, EventArgs e)
 		{
-
+			newChildForm(new reading(), "Billing Upload");
 		}
 	}
 }

@@ -51,7 +51,7 @@
 			// 
 			this.tbpwd.Location = new System.Drawing.Point(191, 75);
 			this.tbpwd.Name = "tbpwd";
-			this.tbpwd.Size = new System.Drawing.Size(104, 21);
+			this.tbpwd.Size = new System.Drawing.Size(133, 21);
 			this.tbpwd.TabIndex = 1;
 			this.tbpwd.TextChanged += new System.EventHandler(this.tbpwd_TextChanged);
 			this.tbpwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbpwd_KeyPress);
@@ -62,7 +62,7 @@
 			this.btnok.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnok.ImageOptions.SvgImage")));
 			this.btnok.Location = new System.Drawing.Point(116, 112);
 			this.btnok.Name = "btnok";
-			this.btnok.Size = new System.Drawing.Size(82, 38);
+			this.btnok.Size = new System.Drawing.Size(90, 37);
 			this.btnok.TabIndex = 2;
 			this.btnok.Text = "Login";
 			this.btnok.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -71,9 +71,9 @@
 			// 
 			this.btncancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
 			this.btncancel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btncancel.ImageOptions.SvgImage")));
-			this.btncancel.Location = new System.Drawing.Point(219, 112);
+			this.btncancel.Location = new System.Drawing.Point(214, 112);
 			this.btncancel.Name = "btncancel";
-			this.btncancel.Size = new System.Drawing.Size(99, 38);
+			this.btncancel.Size = new System.Drawing.Size(109, 37);
 			this.btncancel.TabIndex = 3;
 			this.btncancel.Text = "Cancel";
 			this.btncancel.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -100,7 +100,7 @@
 			// 
 			this.tbuser.Location = new System.Drawing.Point(191, 47);
 			this.tbuser.Name = "tbuser";
-			this.tbuser.Size = new System.Drawing.Size(104, 21);
+			this.tbuser.Size = new System.Drawing.Size(133, 21);
 			this.tbuser.TabIndex = 0;
 			this.tbuser.TextChanged += new System.EventHandler(this.tbuser_TextChanged);
 			this.tbuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbuser_KeyPress);
@@ -117,7 +117,7 @@
 			this.mqbar1.Properties.MarqueeAnimationSpeed = 10;
 			this.mqbar1.Properties.ProgressAnimationMode = DevExpress.Utils.Drawing.ProgressAnimationMode.Cycle;
 			this.mqbar1.Properties.ShowTitle = true;
-			this.mqbar1.Size = new System.Drawing.Size(323, 13);
+			this.mqbar1.Size = new System.Drawing.Size(338, 13);
 			this.mqbar1.TabIndex = 8;
 			this.mqbar1.ToolTipAnchor = DevExpress.Utils.ToolTipAnchor.Cursor;
 			this.mqbar1.Visible = false;
@@ -157,9 +157,9 @@
 			this.pb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb.BackgroundImage")));
 			this.pb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.pb.InitialImage = null;
-			this.pb.Location = new System.Drawing.Point(5, 10);
+			this.pb.Location = new System.Drawing.Point(1, 0);
 			this.pb.Name = "pb";
-			this.pb.Size = new System.Drawing.Size(117, 93);
+			this.pb.Size = new System.Drawing.Size(128, 106);
 			this.pb.TabIndex = 12;
 			this.pb.TabStop = false;
 			// 
@@ -169,7 +169,7 @@
 			this.Appearance.Options.UseBackColor = true;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(326, 211);
+			this.ClientSize = new System.Drawing.Size(340, 211);
 			this.Controls.Add(this.pb);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.hyperLinkEdit2);

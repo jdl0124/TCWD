@@ -86,7 +86,7 @@ namespace bcsys.Forms.EntryForms
             string qry = "select a.znacc12,a.name,a.m_no,b.name as brgy,a.mascode,c.*,a.classcode,a.msize FROM bcdb.master a " +
                          "left join bcdb.barangay b on b.`code`=a.bgycode " +
                          "left join bcdb.reading_bc c on c.mascode=a.mascode " +
-                         "where a.zn=@zn and a.bk=@bk and a.cust_stat='1' and c.billperiod=@bp and c.ttype='0' order by a.name";
+                         "where a.zn=@zn and a.bk=@bk and a.cust_stat='0' and c.billperiod=@bp and c.ttype='0' order by a.name";
             DBConnect newdbcon = new DBConnect();
             newdbcon.OpenConnection(retries);
 
@@ -148,19 +148,19 @@ namespace bcsys.Forms.EntryForms
 							}
 							dgvReading.Rows[r].Cells[11].Value = namt;
                             namt = 0;
-                            if (dr["discount"] != DBNull.Value)
+                            if (dr["srdisc"] != DBNull.Value)
                             {
-                                namt = Convert.ToDecimal(dr["discount"]);
+                                namt = Convert.ToDecimal(dr["srdisc"]);
 								dtotbill -= namt;
 
 							}
 							dgvReading.Rows[r].Cells[12].Value = namt;
 
                             namt = 0;
-                            if (dr["totbillamt"] != DBNull.Value)
-                            {
-                                namt = Convert.ToDecimal(dr["totbillamt"]);
-                            }
+                            //if (dr["totbillamt"] != DBNull.Value)
+                            //{
+                            //    namt = Convert.ToDecimal(dr["totbillamt"]);
+                            //}
 
                             dgvReading.Rows[r].Cells[13].Value = dtotbill;
 
@@ -233,12 +233,18 @@ namespace bcsys.Forms.EntryForms
                     {
                         foreach (DataRow rw in dtb.Rows)
                         {
-                            if (Convert.ToInt32(rw["present"]) < Convert.ToInt32(rw["previous"]))
+                            if (rw["present"] != DBNull.Value)
                             {
-                                MessageBox.Show("Present reading is incomplete for Zone=" + dgvBrgy.CurrentRow.Cells[0].Value + " Book " + dgvBrgy.CurrentRow.Cells[1].Value + " for the previous Billing Period." );
-                                //present reading of the previous billperiod is incomplete
-                                bnewb=false;
-                            }
+								if (Convert.ToInt32(rw["present"]) < Convert.ToInt32(rw["previous"]))
+								{
+									MessageBox.Show("Present reading is incomplete for Zone=" + dgvBrgy.CurrentRow.Cells[0].Value + " Book " + dgvBrgy.CurrentRow.Cells[1].Value + " for the previous Billing Period.");
+									//present reading of the previous billperiod is incomplete
+									bnewb = false;
+                                    break;
+								}
+							}
+                            else { bnewb = false; break; }
+                            
                            
                         }
 
