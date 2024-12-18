@@ -574,3 +574,13 @@ D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.csproj.CoreCompileInp
 D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.csproj.Up2Date
 D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.exe
 D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.pdb
+D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.ServiceInvoiceXR.resources
+D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.test.resources
+D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xragingreport.resources
+D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrtest.resources
+D:\jdl solutions\TCWD\bcsys\DXApplication1\bin\Debug\DevExpress.XtraReports.v22.2.CodeCompletion.dll
+D:\jdl solutions\TCWD\bcsys\DXApplication1\bin\Debug\DevExpress.XtraReports.v22.2.CodeCompletion.xml
+D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.XtraForm2.resources
+D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrdlybillingreport.resources
+D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrdlybillingclass.resources
+D:\jdl solutions\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrmonthlybillingsum.resources

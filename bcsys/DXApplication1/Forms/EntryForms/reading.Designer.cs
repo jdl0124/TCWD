@@ -93,13 +93,14 @@
 			this.LastBilling = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.RDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Label22 = new System.Windows.Forms.Label();
-			this.cboCType = new System.Windows.Forms.ComboBox();
+			this.cbreader = new System.Windows.Forms.ComboBox();
 			this.dtpEnd = new System.Windows.Forms.DateTimePicker();
 			this.dtpStart = new System.Windows.Forms.DateTimePicker();
 			this.Label16 = new System.Windows.Forms.Label();
 			this.Label1 = new System.Windows.Forms.Label();
 			this.dtpBP = new System.Windows.Forms.DateTimePicker();
 			this.tsMenu = new System.Windows.Forms.ToolStrip();
+			this.btnDownload = new System.Windows.Forms.ToolStripButton();
 			this.btnUpload = new System.Windows.Forms.ToolStripButton();
 			this.btnPrint = new System.Windows.Forms.ToolStripDropDownButton();
 			this.Bill = new System.Windows.Forms.ToolStripMenuItem();
@@ -129,7 +130,14 @@
 			this.arrears_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.zn = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.bk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.btnDownload = new System.Windows.Forms.ToolStripButton();
+			this.ftaxrate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.prate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ratemin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.rate1120 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.rate2130 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.rate31up = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.senior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.gbAvg.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudAve)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvAvg)).BeginInit();
@@ -598,7 +606,15 @@
             this.msize,
             this.arrears_,
             this.zn,
-            this.bk});
+            this.bk,
+            this.ftaxrate,
+            this.prate,
+            this.ratemin,
+            this.rate1120,
+            this.rate2130,
+            this.rate31up,
+            this.senior,
+            this.address});
 			this.dgvReading.Location = new System.Drawing.Point(233, 75);
 			this.dgvReading.Name = "dgvReading";
 			this.dgvReading.RowHeadersVisible = false;
@@ -690,22 +706,22 @@
 			// Label22
 			// 
 			this.Label22.AutoSize = true;
-			this.Label22.Location = new System.Drawing.Point(-1, 52);
+			this.Label22.Location = new System.Drawing.Point(15, 52);
 			this.Label22.Name = "Label22";
-			this.Label22.Size = new System.Drawing.Size(91, 13);
+			this.Label22.Size = new System.Drawing.Size(75, 13);
 			this.Label22.TabIndex = 235;
-			this.Label22.Text = "Connection Type:";
+			this.Label22.Text = "Meter Reader:";
 			// 
-			// cboCType
+			// cbreader
 			// 
-			this.cboCType.FormattingEnabled = true;
-			this.cboCType.Items.AddRange(new object[] {
+			this.cbreader.FormattingEnabled = true;
+			this.cbreader.Items.AddRange(new object[] {
             "COASTAL",
             "UPLAND"});
-			this.cboCType.Location = new System.Drawing.Point(94, 48);
-			this.cboCType.Name = "cboCType";
-			this.cboCType.Size = new System.Drawing.Size(101, 21);
-			this.cboCType.TabIndex = 231;
+			this.cbreader.Location = new System.Drawing.Point(94, 48);
+			this.cbreader.Name = "cbreader";
+			this.cbreader.Size = new System.Drawing.Size(101, 21);
+			this.cbreader.TabIndex = 231;
 			// 
 			// dtpEnd
 			// 
@@ -763,20 +779,29 @@
             this.btnSave,
             this.btnSaveBilling,
             this.btnClose});
-			this.tsMenu.Location = new System.Drawing.Point(724, 4);
+			this.tsMenu.Location = new System.Drawing.Point(738, 4);
 			this.tsMenu.Name = "tsMenu";
-			this.tsMenu.Size = new System.Drawing.Size(585, 25);
+			this.tsMenu.Size = new System.Drawing.Size(571, 25);
 			this.tsMenu.TabIndex = 237;
 			this.tsMenu.TabStop = true;
 			this.tsMenu.Text = "Receiving Menu";
+			// 
+			// btnDownload
+			// 
+			this.btnDownload.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload.Image")));
+			this.btnDownload.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnDownload.Name = "btnDownload";
+			this.btnDownload.Size = new System.Drawing.Size(130, 22);
+			this.btnDownload.Text = "&Download to Server";
 			// 
 			// btnUpload
 			// 
 			this.btnUpload.Image = ((System.Drawing.Image)(resources.GetObject("btnUpload.Image")));
 			this.btnUpload.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnUpload.Name = "btnUpload";
-			this.btnUpload.Size = new System.Drawing.Size(125, 22);
-			this.btnUpload.Text = "&Upload to Android";
+			this.btnUpload.Size = new System.Drawing.Size(142, 22);
+			this.btnUpload.Text = "Save Date for &Android";
+			this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
 			// 
 			// btnPrint
 			// 
@@ -986,29 +1011,69 @@
 			// 
 			// arrears_
 			// 
-			this.arrears_.HeaderText = "Arrears";
+			this.arrears_.HeaderText = "arrears";
 			this.arrears_.Name = "arrears_";
 			this.arrears_.Visible = false;
 			// 
 			// zn
 			// 
-			this.zn.HeaderText = "Zone";
+			this.zn.HeaderText = "zone";
 			this.zn.Name = "zn";
 			this.zn.Visible = false;
 			// 
 			// bk
 			// 
-			this.bk.HeaderText = "Book";
+			this.bk.HeaderText = "book";
 			this.bk.Name = "bk";
 			this.bk.Visible = false;
 			// 
-			// btnDownload
+			// ftaxrate
 			// 
-			this.btnDownload.Image = ((System.Drawing.Image)(resources.GetObject("btnDownload.Image")));
-			this.btnDownload.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnDownload.Name = "btnDownload";
-			this.btnDownload.Size = new System.Drawing.Size(130, 22);
-			this.btnDownload.Text = "&Download to Server";
+			this.ftaxrate.HeaderText = "ftaxrae";
+			this.ftaxrate.Name = "ftaxrate";
+			this.ftaxrate.Visible = false;
+			// 
+			// prate
+			// 
+			this.prate.HeaderText = "prate";
+			this.prate.Name = "prate";
+			this.prate.Visible = false;
+			// 
+			// ratemin
+			// 
+			this.ratemin.HeaderText = "ratemin";
+			this.ratemin.Name = "ratemin";
+			this.ratemin.Visible = false;
+			// 
+			// rate1120
+			// 
+			this.rate1120.HeaderText = "rate1120";
+			this.rate1120.Name = "rate1120";
+			this.rate1120.Visible = false;
+			// 
+			// rate2130
+			// 
+			this.rate2130.HeaderText = "rate2130";
+			this.rate2130.Name = "rate2130";
+			this.rate2130.Visible = false;
+			// 
+			// rate31up
+			// 
+			this.rate31up.HeaderText = "rate31up";
+			this.rate31up.Name = "rate31up";
+			this.rate31up.Visible = false;
+			// 
+			// senior
+			// 
+			this.senior.HeaderText = "senior";
+			this.senior.Name = "senior";
+			this.senior.Visible = false;
+			// 
+			// address
+			// 
+			this.address.HeaderText = "address";
+			this.address.Name = "address";
+			this.address.Visible = false;
 			// 
 			// reading
 			// 
@@ -1031,7 +1096,7 @@
 			this.Controls.Add(this.Label2);
 			this.Controls.Add(this.dgvBrgy);
 			this.Controls.Add(this.Label22);
-			this.Controls.Add(this.cboCType);
+			this.Controls.Add(this.cbreader);
 			this.Controls.Add(this.dtpEnd);
 			this.Controls.Add(this.dtpStart);
 			this.Controls.Add(this.Label16);
@@ -1107,7 +1172,7 @@
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.DataGridView dgvBrgy;
         internal System.Windows.Forms.Label Label22;
-        internal System.Windows.Forms.ComboBox cboCType;
+        internal System.Windows.Forms.ComboBox cbreader;
         internal System.Windows.Forms.DateTimePicker dtpEnd;
         internal System.Windows.Forms.DateTimePicker dtpStart;
         internal System.Windows.Forms.Label Label16;
@@ -1124,6 +1189,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LastBilling;
         private System.Windows.Forms.DataGridViewTextBoxColumn RDay;
         private System.Windows.Forms.ToolStripButton btnSaveBilling;
+		private System.Windows.Forms.ToolStripButton btnDownload;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Nnn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Acctno;
 		private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn3;
@@ -1146,6 +1212,13 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn arrears_;
 		private System.Windows.Forms.DataGridViewTextBoxColumn zn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn bk;
-		private System.Windows.Forms.ToolStripButton btnDownload;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ftaxrate;
+		private System.Windows.Forms.DataGridViewTextBoxColumn prate;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ratemin;
+		private System.Windows.Forms.DataGridViewTextBoxColumn rate1120;
+		private System.Windows.Forms.DataGridViewTextBoxColumn rate2130;
+		private System.Windows.Forms.DataGridViewTextBoxColumn rate31up;
+		private System.Windows.Forms.DataGridViewTextBoxColumn senior;
+		private System.Windows.Forms.DataGridViewTextBoxColumn address;
 	}
 }

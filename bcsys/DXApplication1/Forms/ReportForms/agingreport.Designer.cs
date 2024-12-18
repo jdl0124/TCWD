@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(agingreport));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,6 +37,7 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -54,9 +54,6 @@
 			this.gcagin = new DevExpress.XtraEditors.GroupControl();
 			this.xtc1 = new DevExpress.XtraTab.XtraTabControl();
 			this.xtall = new DevExpress.XtraTab.XtraTabPage();
-			this.dgv = new System.Windows.Forms.DataGridView();
-			this.Label1 = new System.Windows.Forms.Label();
-			this.dtpDate = new System.Windows.Forms.DateTimePicker();
 			this.dgvt = new System.Windows.Forms.DataGridView();
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +63,7 @@
 			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dgv = new System.Windows.Forms.DataGridView();
 			this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.cName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +72,8 @@
 			this.Aroo = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ppy = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Label1 = new System.Windows.Forms.Label();
+			this.dtpDate = new System.Windows.Forms.DateTimePicker();
 			this.tsGo.SuspendLayout();
 			this.tsMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gcagin)).BeginInit();
@@ -81,8 +81,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.xtc1)).BeginInit();
 			this.xtc1.SuspendLayout();
 			this.xtall.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvt)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tsbPrint
@@ -90,9 +90,9 @@
 			this.tsbPrint.Image = ((System.Drawing.Image)(resources.GetObject("tsbPrint.Image")));
 			this.tsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsbPrint.Name = "tsbPrint";
-			this.tsbPrint.Size = new System.Drawing.Size(52, 22);
-			this.tsbPrint.Text = "Print";
-			this.tsbPrint.Visible = false;
+			this.tsbPrint.Size = new System.Drawing.Size(96, 22);
+			this.tsbPrint.Text = "&Print Preview";
+			this.tsbPrint.Click += new System.EventHandler(this.tsbPrint_Click);
 			// 
 			// tsGo
 			// 
@@ -127,9 +127,9 @@
             this.tsbPrint,
             this.tsbClose});
 			this.tsMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-			this.tsMenu.Location = new System.Drawing.Point(620, 1);
+			this.tsMenu.Location = new System.Drawing.Point(624, 2);
 			this.tsMenu.Name = "tsMenu";
-			this.tsMenu.Size = new System.Drawing.Size(68, 25);
+			this.tsMenu.Size = new System.Drawing.Size(195, 25);
 			this.tsMenu.TabIndex = 327;
 			this.tsMenu.Text = "ToolStrip1";
 			// 
@@ -167,53 +167,6 @@
 			this.xtall.Name = "xtall";
 			this.xtall.Size = new System.Drawing.Size(807, 515);
 			this.xtall.Text = "All";
-			// 
-			// dgv
-			// 
-			this.dgv.AllowUserToAddRows = false;
-			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 8.25F);
-			dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-			this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.User,
-            this.cName,
-            this.Total,
-            this.reading,
-            this.py,
-            this.Aroo,
-            this.ppy,
-            this.Discount});
-			this.dgv.Location = new System.Drawing.Point(0, 0);
-			this.dgv.Name = "dgv";
-			this.dgv.ReadOnly = true;
-			this.dgv.RowHeadersWidth = 15;
-			this.dgv.Size = new System.Drawing.Size(796, 486);
-			this.dgv.TabIndex = 306;
-			// 
-			// Label1
-			// 
-			this.Label1.AutoSize = true;
-			this.Label1.Location = new System.Drawing.Point(8, 6);
-			this.Label1.Name = "Label1";
-			this.Label1.Size = new System.Drawing.Size(56, 13);
-			this.Label1.TabIndex = 322;
-			this.Label1.Text = "Due Date:";
-			// 
-			// dtpDate
-			// 
-			this.dtpDate.CustomFormat = "MM/dd/yyyy";
-			this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dtpDate.Location = new System.Drawing.Point(67, 2);
-			this.dtpDate.MinDate = new System.DateTime(1945, 1, 1, 0, 0, 0, 0);
-			this.dtpDate.Name = "dtpDate";
-			this.dtpDate.Size = new System.Drawing.Size(76, 21);
-			this.dtpDate.TabIndex = 321;
 			// 
 			// dgvt
 			// 
@@ -315,6 +268,34 @@
 			this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
 			this.dataGridViewTextBoxColumn8.ReadOnly = true;
 			// 
+			// dgv
+			// 
+			this.dgv.AllowUserToAddRows = false;
+			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 8.25F);
+			dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+			this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.User,
+            this.cName,
+            this.Total,
+            this.reading,
+            this.py,
+            this.Aroo,
+            this.ppy,
+            this.Discount});
+			this.dgv.Location = new System.Drawing.Point(0, 0);
+			this.dgv.Name = "dgv";
+			this.dgv.ReadOnly = true;
+			this.dgv.RowHeadersWidth = 15;
+			this.dgv.Size = new System.Drawing.Size(796, 486);
+			this.dgv.TabIndex = 306;
+			// 
 			// User
 			// 
 			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -387,6 +368,25 @@
 			this.Discount.Name = "Discount";
 			this.Discount.ReadOnly = true;
 			// 
+			// Label1
+			// 
+			this.Label1.AutoSize = true;
+			this.Label1.Location = new System.Drawing.Point(8, 6);
+			this.Label1.Name = "Label1";
+			this.Label1.Size = new System.Drawing.Size(56, 13);
+			this.Label1.TabIndex = 322;
+			this.Label1.Text = "Due Date:";
+			// 
+			// dtpDate
+			// 
+			this.dtpDate.CustomFormat = "MM/dd/yyyy";
+			this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dtpDate.Location = new System.Drawing.Point(67, 2);
+			this.dtpDate.MinDate = new System.DateTime(1945, 1, 1, 0, 0, 0, 0);
+			this.dtpDate.Name = "dtpDate";
+			this.dtpDate.Size = new System.Drawing.Size(76, 21);
+			this.dtpDate.TabIndex = 321;
+			// 
 			// agingreport
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,8 +409,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.xtc1)).EndInit();
 			this.xtc1.ResumeLayout(false);
 			this.xtall.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvt)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

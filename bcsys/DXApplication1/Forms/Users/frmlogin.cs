@@ -41,83 +41,83 @@ namespace bcsys.Forms
         private async void simpleButton1_Click(object sender, EventArgs e)
         {
 
-            var myurl = "https://my.mu.edu.ph/my_muapi/testconvert";
-            var myusername = "admin";
-            var mypassword = "kokey12345!@#";
-            string[] myarraytest;
+            //var myurl = "https://my.mu.edu.ph/my_muapi/testconvert";
+            //var myusername = "admin";
+            //var mypassword = "kokey12345!@#";
+            //string[] myarraytest;
             
-            HttpWebRequest request;
-            request = (HttpWebRequest)WebRequest.Create(myurl);
-            request.PreAuthenticate = true;
-            request.Credentials = new NetworkCredential(myusername, mypassword);
-            request.Method = WebRequestMethods.Http.Post;
+            //HttpWebRequest request;
+            //request = (HttpWebRequest)WebRequest.Create(myurl);
+            //request.PreAuthenticate = true;
+            //request.Credentials = new NetworkCredential(myusername, mypassword);
+            //request.Method = WebRequestMethods.Http.Post;
 
-            request.ContentType = "application/x-www-form-urlencoded";
+            //request.ContentType = "application/x-www-form-urlencoded";
 
-            Dictionary<string, string> postParameters = new Dictionary<string, string>();
-            postParameters.Add("st", "testing");
-            postParameters.Add("empno", "070044");
-            postParameters.Add("Age", "37");
-            postParameters.Add("X_API_MYMU_KEY", "mymu_key202410!@#");
+            //Dictionary<string, string> postParameters = new Dictionary<string, string>();
+            //postParameters.Add("st", "testing");
+            //postParameters.Add("empno", "070044");
+            //postParameters.Add("Age", "37");
+            //postParameters.Add("X_API_MYMU_KEY", "mymu_key202410!@#");
 
-                     List<string> jsonlist = new List<string>();
-            for(int i = 1; i< 101; i++)
-            {
-                string data1 = string.Empty;
-                data1 = "DATA" + i;
-                jsonlist.Add(data1);
-            }
-            //jsonlist.Add("one");
+            //         List<string> jsonlist = new List<string>();
+            //for(int i = 1; i< 101; i++)
+            //{
+            //    string data1 = string.Empty;
+            //    data1 = "DATA" + i;
+            //    jsonlist.Add(data1);
+            //}
+            ////jsonlist.Add("one");
             
 
-            string[] jsonarray = jsonlist.ToArray();
+            //string[] jsonarray = jsonlist.ToArray();
 
-            string jsonString = JsonConvert.SerializeObject(jsonarray, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, Formatting = Formatting.Indented });
+            //string jsonString = JsonConvert.SerializeObject(jsonarray, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, Formatting = Formatting.Indented });
 
            
-            postParameters.Add("myarraytest", jsonString);
+            //postParameters.Add("myarraytest", jsonString);
 
-            string postData = "";
-            foreach (string key in postParameters.Keys)
-            {
-                postData += WebUtility.UrlEncode(key) + "="
-                      + WebUtility.UrlEncode(postParameters[key]) + "&";
-            }
-            byte[] data = Encoding.ASCII.GetBytes(postData);
-            request.ContentLength = postData.Length;
-            StreamWriter postStream = new StreamWriter(request.GetRequestStream(), Encoding.ASCII);
-            postStream.Write(postData);
-            postStream.Close();
-            var response = (HttpWebResponse)request.GetResponse();
-            if (response.StatusCode.ToString() == "OK")
-            {
+            //string postData = "";
+            //foreach (string key in postParameters.Keys)
+            //{
+            //    postData += WebUtility.UrlEncode(key) + "="
+            //          + WebUtility.UrlEncode(postParameters[key]) + "&";
+            //}
+            //byte[] data = Encoding.ASCII.GetBytes(postData);
+            //request.ContentLength = postData.Length;
+            //StreamWriter postStream = new StreamWriter(request.GetRequestStream(), Encoding.ASCII);
+            //postStream.Write(postData);
+            //postStream.Close();
+            //var response = (HttpWebResponse)request.GetResponse();
+            //if (response.StatusCode.ToString() == "OK")
+            //{
 
                
-                string strResponseValue = string.Empty;
-                request.ContentType = "application/json";
-                using (Stream responseStream = response.GetResponseStream())
-                {
-                    if (responseStream != null)
-                    {
-                        using (StreamReader reader = new StreamReader(responseStream))
-                        {
-                            strResponseValue = reader.ReadLine();
-                        }
-                    }
-                }
-                DataTable dt = new DataTable();
-                DataTable dt2 = new DataTable();
+            //    string strResponseValue = string.Empty;
+            //    request.ContentType = "application/json";
+            //    using (Stream responseStream = response.GetResponseStream())
+            //    {
+            //        if (responseStream != null)
+            //        {
+            //            using (StreamReader reader = new StreamReader(responseStream))
+            //            {
+            //                strResponseValue = reader.ReadLine();
+            //            }
+            //        }
+            //    }
+            //    DataTable dt = new DataTable();
+            //    DataTable dt2 = new DataTable();
 
-               dynamic jsonObj = JsonConvert.DeserializeObject(strResponseValue);
+            //   dynamic jsonObj = JsonConvert.DeserializeObject(strResponseValue);
 
-                foreach (var obj in jsonObj)
-                {
-                   // MessageBox.Show(obj.ToString());
-                    //MessageBox.Show(obj.myinputs.Names.ToString());
-                    //  Console.WriteLine(obj.address);
-                }
+            //    foreach (var obj in jsonObj)
+            //    {
+            //       // MessageBox.Show(obj.ToString());
+            //        //MessageBox.Show(obj.myinputs.Names.ToString());
+            //        //  Console.WriteLine(obj.address);
+            //    }
 
-            }
+            //}
            
 
             String mystring = "Teststring";

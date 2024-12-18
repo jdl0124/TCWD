@@ -366,5 +366,16 @@ namespace bcsys.Forms
 		{
 			newChildForm(new reading(), "Billing Upload");
 		}
+
+		private void accordionControlElement11_Click(object sender, EventArgs e)
+		{
+            this.Close();
+
+		}
+
+		private void ribbonControl_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

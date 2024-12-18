@@ -33,12 +33,12 @@ namespace bcsys.Forms.EntryForms
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -61,6 +61,12 @@ namespace bcsys.Forms.EntryForms
 			this.Label14 = new System.Windows.Forms.Label();
 			this.nLimit = new System.Windows.Forms.NumericUpDown();
 			this.dgvItem = new System.Windows.Forms.DataGridView();
+			this.cvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.pcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.cv1cntr = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tbSearch = new System.Windows.Forms.TextBox();
 			this.gbDR = new System.Windows.Forms.GroupBox();
 			this.Label12 = new System.Windows.Forms.Label();
@@ -80,12 +86,40 @@ namespace bcsys.Forms.EntryForms
 			this.Label4 = new System.Windows.Forms.Label();
 			this.tbName = new System.Windows.Forms.TextBox();
 			this.gbPayment = new System.Windows.Forms.GroupBox();
+			this.gbdiscount = new DevExpress.XtraEditors.GroupControl();
+			this.label22 = new System.Windows.Forms.Label();
+			this.bcancel = new System.Windows.Forms.Button();
+			this.bpost = new System.Windows.Forms.Button();
+			this.label21 = new System.Windows.Forms.Label();
+			this.nudother = new System.Windows.Forms.NumericUpDown();
+			this.label20 = new System.Windows.Forms.Label();
+			this.nudsenior = new System.Windows.Forms.NumericUpDown();
+			this.dgvPayment = new System.Windows.Forms.DataGridView();
+			this.paycntr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.selectx = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+			this.DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.CumUsed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.DataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ftax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.wmf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.surcharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.PartialP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Otherdisc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.ptype = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.bperiod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.share = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.reading = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.duedate = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tsGL = new System.Windows.Forms.ToolStrip();
 			this.tsbGLAdd = new System.Windows.Forms.ToolStripButton();
 			this.tsbSurcharge = new System.Windows.Forms.ToolStripButton();
 			this.tsbDiscount = new System.Windows.Forms.ToolStripButton();
 			this.tsbAdvance = new System.Windows.Forms.ToolStripButton();
-			this.dgvPayment = new System.Windows.Forms.DataGridView();
 			this.tsTeller = new System.Windows.Forms.ToolStrip();
 			this.tsbCollect = new System.Windows.Forms.ToolStripButton();
 			this.tsbSave = new System.Windows.Forms.ToolStripButton();
@@ -116,40 +150,7 @@ namespace bcsys.Forms.EntryForms
 			this.tbtin = new System.Windows.Forms.TextBox();
 			this.label19 = new System.Windows.Forms.Label();
 			this.nudamtdue = new System.Windows.Forms.NumericUpDown();
-			this.cvDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.pcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.cv1cntr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.gbdiscount = new DevExpress.XtraEditors.GroupControl();
-			this.label20 = new System.Windows.Forms.Label();
-			this.nudsenior = new System.Windows.Forms.NumericUpDown();
-			this.label21 = new System.Windows.Forms.Label();
-			this.nudother = new System.Windows.Forms.NumericUpDown();
-			this.bpost = new System.Windows.Forms.Button();
-			this.bcancel = new System.Windows.Forms.Button();
-			this.label22 = new System.Windows.Forms.Label();
-			this.paycntr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.selectx = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-			this.DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.CumUsed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.DataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.ftax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.wmf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.surcharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.PartialP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Otherdisc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.remarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.ptype = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.bperiod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.share = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.reading = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.duedate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.sbtnprint = new DevExpress.XtraEditors.SimpleButton();
 			this.ToolStrip1.SuspendLayout();
 			this.GroupBox2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.nudTotalCollection)).BeginInit();
@@ -158,8 +159,12 @@ namespace bcsys.Forms.EntryForms
 			this.gbDR.SuspendLayout();
 			this.gbConDtl.SuspendLayout();
 			this.gbPayment.SuspendLayout();
-			this.tsGL.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.gbdiscount)).BeginInit();
+			this.gbdiscount.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudother)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudsenior)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
+			this.tsGL.SuspendLayout();
 			this.tsTeller.SuspendLayout();
 			this.GroupBox1.SuspendLayout();
 			this.tsConsumer.SuspendLayout();
@@ -168,10 +173,6 @@ namespace bcsys.Forms.EntryForms
 			((System.ComponentModel.ISupportInitialize)(this.nudTotal)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudwtax)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudamtdue)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gbdiscount)).BeginInit();
-			this.gbdiscount.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.nudsenior)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.nudother)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// ToolStrip1
@@ -241,7 +242,7 @@ namespace bcsys.Forms.EntryForms
 			this.nudTotalCollection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
 			this.nudTotalCollection.Location = new System.Drawing.Point(367, 59);
 			this.nudTotalCollection.Maximum = new decimal(new int[] {
-            1000000,
+            10000000,
             0,
             0,
             0});
@@ -273,7 +274,7 @@ namespace bcsys.Forms.EntryForms
 			this.nLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.nLimit.Location = new System.Drawing.Point(283, 58);
 			this.nLimit.Maximum = new decimal(new int[] {
-            100000,
+            1000000,
             0,
             0,
             0});
@@ -335,6 +336,58 @@ namespace bcsys.Forms.EntryForms
 			this.dgvItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvItem.Size = new System.Drawing.Size(471, 402);
 			this.dgvItem.TabIndex = 67;
+			// 
+			// cvDate
+			// 
+			dataGridViewCellStyle2.Format = "d";
+			dataGridViewCellStyle2.NullValue = null;
+			this.cvDate.DefaultCellStyle = dataGridViewCellStyle2;
+			this.cvDate.HeaderText = "Date";
+			this.cvDate.Name = "cvDate";
+			this.cvDate.ReadOnly = true;
+			this.cvDate.Width = 70;
+			// 
+			// Column14
+			// 
+			this.Column14.HeaderText = "Orno";
+			this.Column14.Name = "Column14";
+			this.Column14.ReadOnly = true;
+			this.Column14.Width = 70;
+			// 
+			// Column15
+			// 
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Column15.DefaultCellStyle = dataGridViewCellStyle3;
+			this.Column15.HeaderText = "Consumer";
+			this.Column15.Name = "Column15";
+			this.Column15.ReadOnly = true;
+			this.Column15.Width = 240;
+			// 
+			// cvAmount
+			// 
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle4.Format = "N2";
+			dataGridViewCellStyle4.NullValue = "0.00";
+			this.cvAmount.DefaultCellStyle = dataGridViewCellStyle4;
+			this.cvAmount.HeaderText = "Amount";
+			this.cvAmount.Name = "cvAmount";
+			this.cvAmount.ReadOnly = true;
+			this.cvAmount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+			this.cvAmount.Width = 70;
+			// 
+			// pcode
+			// 
+			this.pcode.HeaderText = "mascode";
+			this.pcode.Name = "pcode";
+			this.pcode.ReadOnly = true;
+			this.pcode.Visible = false;
+			// 
+			// cv1cntr
+			// 
+			this.cv1cntr.HeaderText = "cntr";
+			this.cv1cntr.Name = "cv1cntr";
+			this.cv1cntr.ReadOnly = true;
+			this.cv1cntr.Visible = false;
 			// 
 			// tbSearch
 			// 
@@ -537,56 +590,109 @@ namespace bcsys.Forms.EntryForms
 			this.gbPayment.TabStop = false;
 			this.gbPayment.Text = "Transaction Details";
 			// 
-			// tsGL
+			// gbdiscount
 			// 
-			this.tsGL.Dock = System.Windows.Forms.DockStyle.None;
-			this.tsGL.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbGLAdd,
-            this.tsbSurcharge,
-            this.tsbDiscount,
-            this.tsbAdvance});
-			this.tsGL.Location = new System.Drawing.Point(491, 407);
-			this.tsGL.Name = "tsGL";
-			this.tsGL.Size = new System.Drawing.Size(201, 25);
-			this.tsGL.TabIndex = 3;
-			this.tsGL.TabStop = true;
-			this.tsGL.Text = "Receiving Menu";
+			this.gbdiscount.Appearance.BackColor = System.Drawing.Color.LightGray;
+			this.gbdiscount.Appearance.Options.UseBackColor = true;
+			this.gbdiscount.Controls.Add(this.label22);
+			this.gbdiscount.Controls.Add(this.bcancel);
+			this.gbdiscount.Controls.Add(this.bpost);
+			this.gbdiscount.Controls.Add(this.label21);
+			this.gbdiscount.Controls.Add(this.nudother);
+			this.gbdiscount.Controls.Add(this.label20);
+			this.gbdiscount.Controls.Add(this.nudsenior);
+			this.gbdiscount.GroupStyle = DevExpress.Utils.GroupStyle.Title;
+			this.gbdiscount.Location = new System.Drawing.Point(336, 83);
+			this.gbdiscount.Name = "gbdiscount";
+			this.gbdiscount.Size = new System.Drawing.Size(168, 107);
+			this.gbdiscount.TabIndex = 4;
+			this.gbdiscount.Text = "Discounts";
+			this.gbdiscount.Visible = false;
+			this.gbdiscount.Paint += new System.Windows.Forms.PaintEventHandler(this.gbdiscount_Paint);
 			// 
-			// tsbGLAdd
+			// label22
 			// 
-			this.tsbGLAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbGLAdd.Image")));
-			this.tsbGLAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.tsbGLAdd.Name = "tsbGLAdd";
-			this.tsbGLAdd.Size = new System.Drawing.Size(49, 22);
-			this.tsbGLAdd.Text = "&Add";
-			this.tsbGLAdd.Click += new System.EventHandler(this.tsbGLAdd_Click);
+			this.label22.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.label22.Location = new System.Drawing.Point(163, 24);
+			this.label22.Name = "label22";
+			this.label22.Size = new System.Drawing.Size(24, 49);
+			this.label22.TabIndex = 261;
 			// 
-			// tsbSurcharge
+			// bcancel
 			// 
-			this.tsbSurcharge.Image = ((System.Drawing.Image)(resources.GetObject("tsbSurcharge.Image")));
-			this.tsbSurcharge.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.tsbSurcharge.Name = "tsbSurcharge";
-			this.tsbSurcharge.Size = new System.Drawing.Size(66, 22);
-			this.tsbSurcharge.Text = "Penalty";
-			this.tsbSurcharge.Click += new System.EventHandler(this.tsbSurcharge_Click);
+			this.bcancel.Image = ((System.Drawing.Image)(resources.GetObject("bcancel.Image")));
+			this.bcancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.bcancel.Location = new System.Drawing.Point(90, 78);
+			this.bcancel.Name = "bcancel";
+			this.bcancel.Size = new System.Drawing.Size(69, 23);
+			this.bcancel.TabIndex = 260;
+			this.bcancel.Text = "Cancel";
+			this.bcancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.bcancel.UseVisualStyleBackColor = true;
+			this.bcancel.Click += new System.EventHandler(this.bcancel_Click);
 			// 
-			// tsbDiscount
+			// bpost
 			// 
-			this.tsbDiscount.Image = ((System.Drawing.Image)(resources.GetObject("tsbDiscount.Image")));
-			this.tsbDiscount.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.tsbDiscount.Name = "tsbDiscount";
-			this.tsbDiscount.Size = new System.Drawing.Size(74, 22);
-			this.tsbDiscount.Text = "Discount";
-			this.tsbDiscount.Click += new System.EventHandler(this.tsbDiscount_Click);
+			this.bpost.Image = ((System.Drawing.Image)(resources.GetObject("bpost.Image")));
+			this.bpost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.bpost.Location = new System.Drawing.Point(17, 78);
+			this.bpost.Name = "bpost";
+			this.bpost.Size = new System.Drawing.Size(59, 23);
+			this.bpost.TabIndex = 259;
+			this.bpost.Text = "Post";
+			this.bpost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.bpost.UseVisualStyleBackColor = true;
+			this.bpost.Click += new System.EventHandler(this.bpost_Click);
 			// 
-			// tsbAdvance
+			// label21
 			// 
-			this.tsbAdvance.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdvance.Image")));
-			this.tsbAdvance.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.tsbAdvance.Name = "tsbAdvance";
-			this.tsbAdvance.Size = new System.Drawing.Size(123, 22);
-			this.tsbAdvance.Text = "Advance Payment";
-			this.tsbAdvance.Visible = false;
+			this.label21.AutoSize = true;
+			this.label21.Location = new System.Drawing.Point(15, 54);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(83, 13);
+			this.label21.TabIndex = 258;
+			this.label21.Text = "Other Discount:";
+			// 
+			// nudother
+			// 
+			this.nudother.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.nudother.DecimalPlaces = 2;
+			this.nudother.Location = new System.Drawing.Point(105, 51);
+			this.nudother.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+			this.nudother.Name = "nudother";
+			this.nudother.Size = new System.Drawing.Size(73, 21);
+			this.nudother.TabIndex = 257;
+			this.nudother.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.nudother.ThousandsSeparator = true;
+			// 
+			// label20
+			// 
+			this.label20.AutoSize = true;
+			this.label20.Location = new System.Drawing.Point(13, 29);
+			this.label20.Name = "label20";
+			this.label20.Size = new System.Drawing.Size(85, 13);
+			this.label20.TabIndex = 256;
+			this.label20.Text = "Señior Discount:";
+			// 
+			// nudsenior
+			// 
+			this.nudsenior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.nudsenior.DecimalPlaces = 2;
+			this.nudsenior.Location = new System.Drawing.Point(106, 26);
+			this.nudsenior.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+			this.nudsenior.Name = "nudsenior";
+			this.nudsenior.Size = new System.Drawing.Size(72, 21);
+			this.nudsenior.TabIndex = 255;
+			this.nudsenior.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+			this.nudsenior.ThousandsSeparator = true;
 			// 
 			// dgvPayment
 			// 
@@ -647,6 +753,221 @@ namespace bcsys.Forms.EntryForms
 			this.dgvPayment.Size = new System.Drawing.Size(833, 213);
 			this.dgvPayment.TabIndex = 2;
 			this.dgvPayment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPayment_CellClick);
+			// 
+			// paycntr
+			// 
+			this.paycntr.HeaderText = "paycntr";
+			this.paycntr.Name = "paycntr";
+			this.paycntr.Visible = false;
+			// 
+			// selectx
+			// 
+			this.selectx.HeaderText = "";
+			this.selectx.Name = "selectx";
+			this.selectx.Width = 30;
+			// 
+			// DataGridViewTextBoxColumn1
+			// 
+			this.DataGridViewTextBoxColumn1.HeaderText = "BillPeriod";
+			this.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1";
+			this.DataGridViewTextBoxColumn1.ReadOnly = true;
+			this.DataGridViewTextBoxColumn1.Width = 60;
+			// 
+			// CumUsed
+			// 
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			this.CumUsed.DefaultCellStyle = dataGridViewCellStyle8;
+			this.CumUsed.HeaderText = "CUsed";
+			this.CumUsed.Name = "CumUsed";
+			this.CumUsed.Width = 60;
+			// 
+			// DataGridViewTextBoxColumn4
+			// 
+			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle9.Format = "N2";
+			this.DataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle9;
+			this.DataGridViewTextBoxColumn4.HeaderText = "BillAmount";
+			this.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4";
+			this.DataGridViewTextBoxColumn4.ReadOnly = true;
+			this.DataGridViewTextBoxColumn4.Width = 70;
+			// 
+			// ftax
+			// 
+			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle10.Format = "N2";
+			this.ftax.DefaultCellStyle = dataGridViewCellStyle10;
+			this.ftax.HeaderText = "FTax";
+			this.ftax.Name = "ftax";
+			this.ftax.ReadOnly = true;
+			this.ftax.Width = 50;
+			// 
+			// wmf
+			// 
+			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle11.Format = "N2";
+			this.wmf.DefaultCellStyle = dataGridViewCellStyle11;
+			this.wmf.HeaderText = "WMF";
+			this.wmf.Name = "wmf";
+			this.wmf.ReadOnly = true;
+			this.wmf.Width = 50;
+			// 
+			// surcharge
+			// 
+			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle12.Format = "N2";
+			this.surcharge.DefaultCellStyle = dataGridViewCellStyle12;
+			this.surcharge.HeaderText = "Penalty";
+			this.surcharge.Name = "surcharge";
+			this.surcharge.ReadOnly = true;
+			this.surcharge.Width = 50;
+			// 
+			// Total
+			// 
+			dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle13.Format = "N2";
+			this.Total.DefaultCellStyle = dataGridViewCellStyle13;
+			this.Total.HeaderText = "Total";
+			this.Total.Name = "Total";
+			this.Total.ReadOnly = true;
+			this.Total.Width = 70;
+			// 
+			// PartialP
+			// 
+			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle14.Format = "N2";
+			this.PartialP.DefaultCellStyle = dataGridViewCellStyle14;
+			this.PartialP.HeaderText = "Partial";
+			this.PartialP.Name = "PartialP";
+			this.PartialP.ReadOnly = true;
+			this.PartialP.Width = 70;
+			// 
+			// Discount
+			// 
+			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle15.Format = "N2";
+			this.Discount.DefaultCellStyle = dataGridViewCellStyle15;
+			this.Discount.HeaderText = "Sr.Disc";
+			this.Discount.Name = "Discount";
+			this.Discount.ReadOnly = true;
+			this.Discount.Width = 50;
+			// 
+			// Otherdisc
+			// 
+			dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle16.Format = "N2";
+			this.Otherdisc.DefaultCellStyle = dataGridViewCellStyle16;
+			this.Otherdisc.HeaderText = "OthDisc";
+			this.Otherdisc.Name = "Otherdisc";
+			this.Otherdisc.Width = 50;
+			// 
+			// Payment
+			// 
+			dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle17.Format = "N2";
+			this.Payment.DefaultCellStyle = dataGridViewCellStyle17;
+			this.Payment.HeaderText = "Payment";
+			this.Payment.Name = "Payment";
+			this.Payment.Width = 70;
+			// 
+			// Balance
+			// 
+			dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+			dataGridViewCellStyle18.Format = "N2";
+			this.Balance.DefaultCellStyle = dataGridViewCellStyle18;
+			this.Balance.HeaderText = "Balance";
+			this.Balance.Name = "Balance";
+			this.Balance.ReadOnly = true;
+			this.Balance.Width = 70;
+			// 
+			// remarks
+			// 
+			this.remarks.HeaderText = "Remarks";
+			this.remarks.Name = "remarks";
+			this.remarks.Width = 60;
+			// 
+			// ptype
+			// 
+			this.ptype.HeaderText = "PType";
+			this.ptype.Name = "ptype";
+			this.ptype.Visible = false;
+			// 
+			// bperiod
+			// 
+			this.bperiod.HeaderText = "bperiod";
+			this.bperiod.Name = "bperiod";
+			this.bperiod.Visible = false;
+			// 
+			// share
+			// 
+			this.share.HeaderText = "Share";
+			this.share.Name = "share";
+			this.share.Visible = false;
+			// 
+			// reading
+			// 
+			this.reading.HeaderText = "Reading";
+			this.reading.Name = "reading";
+			this.reading.Visible = false;
+			// 
+			// duedate
+			// 
+			dataGridViewCellStyle19.Format = "d";
+			dataGridViewCellStyle19.NullValue = null;
+			this.duedate.DefaultCellStyle = dataGridViewCellStyle19;
+			this.duedate.HeaderText = "duedate";
+			this.duedate.Name = "duedate";
+			this.duedate.Visible = false;
+			// 
+			// tsGL
+			// 
+			this.tsGL.Dock = System.Windows.Forms.DockStyle.None;
+			this.tsGL.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbGLAdd,
+            this.tsbSurcharge,
+            this.tsbDiscount,
+            this.tsbAdvance});
+			this.tsGL.Location = new System.Drawing.Point(491, 407);
+			this.tsGL.Name = "tsGL";
+			this.tsGL.Size = new System.Drawing.Size(201, 25);
+			this.tsGL.TabIndex = 3;
+			this.tsGL.TabStop = true;
+			this.tsGL.Text = "Receiving Menu";
+			// 
+			// tsbGLAdd
+			// 
+			this.tsbGLAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbGLAdd.Image")));
+			this.tsbGLAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.tsbGLAdd.Name = "tsbGLAdd";
+			this.tsbGLAdd.Size = new System.Drawing.Size(49, 22);
+			this.tsbGLAdd.Text = "&Add";
+			this.tsbGLAdd.Click += new System.EventHandler(this.tsbGLAdd_Click);
+			// 
+			// tsbSurcharge
+			// 
+			this.tsbSurcharge.Image = ((System.Drawing.Image)(resources.GetObject("tsbSurcharge.Image")));
+			this.tsbSurcharge.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.tsbSurcharge.Name = "tsbSurcharge";
+			this.tsbSurcharge.Size = new System.Drawing.Size(66, 22);
+			this.tsbSurcharge.Text = "Penalty";
+			this.tsbSurcharge.Click += new System.EventHandler(this.tsbSurcharge_Click);
+			// 
+			// tsbDiscount
+			// 
+			this.tsbDiscount.Image = ((System.Drawing.Image)(resources.GetObject("tsbDiscount.Image")));
+			this.tsbDiscount.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.tsbDiscount.Name = "tsbDiscount";
+			this.tsbDiscount.Size = new System.Drawing.Size(74, 22);
+			this.tsbDiscount.Text = "Discount";
+			this.tsbDiscount.Click += new System.EventHandler(this.tsbDiscount_Click);
+			// 
+			// tsbAdvance
+			// 
+			this.tsbAdvance.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdvance.Image")));
+			this.tsbAdvance.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.tsbAdvance.Name = "tsbAdvance";
+			this.tsbAdvance.Size = new System.Drawing.Size(123, 22);
+			this.tsbAdvance.Text = "Advance Payment";
+			this.tsbAdvance.Visible = false;
 			// 
 			// tsTeller
 			// 
@@ -988,331 +1309,22 @@ namespace bcsys.Forms.EntryForms
 			this.nudamtdue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
 			this.nudamtdue.ThousandsSeparator = true;
 			// 
-			// cvDate
-			// 
-			dataGridViewCellStyle2.Format = "d";
-			dataGridViewCellStyle2.NullValue = null;
-			this.cvDate.DefaultCellStyle = dataGridViewCellStyle2;
-			this.cvDate.HeaderText = "Date";
-			this.cvDate.Name = "cvDate";
-			this.cvDate.ReadOnly = true;
-			this.cvDate.Width = 70;
-			// 
-			// Column14
-			// 
-			this.Column14.HeaderText = "Orno";
-			this.Column14.Name = "Column14";
-			this.Column14.ReadOnly = true;
-			this.Column14.Width = 70;
-			// 
-			// Column15
-			// 
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Column15.DefaultCellStyle = dataGridViewCellStyle3;
-			this.Column15.HeaderText = "Consumer";
-			this.Column15.Name = "Column15";
-			this.Column15.ReadOnly = true;
-			this.Column15.Width = 240;
-			// 
-			// cvAmount
-			// 
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle4.Format = "N2";
-			dataGridViewCellStyle4.NullValue = "0.00";
-			this.cvAmount.DefaultCellStyle = dataGridViewCellStyle4;
-			this.cvAmount.HeaderText = "Amount";
-			this.cvAmount.Name = "cvAmount";
-			this.cvAmount.ReadOnly = true;
-			this.cvAmount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-			this.cvAmount.Width = 70;
-			// 
-			// pcode
-			// 
-			this.pcode.HeaderText = "mascode";
-			this.pcode.Name = "pcode";
-			this.pcode.ReadOnly = true;
-			this.pcode.Visible = false;
-			// 
-			// cv1cntr
-			// 
-			this.cv1cntr.HeaderText = "cntr";
-			this.cv1cntr.Name = "cv1cntr";
-			this.cv1cntr.ReadOnly = true;
-			this.cv1cntr.Visible = false;
-			// 
-			// gbdiscount
-			// 
-			this.gbdiscount.Appearance.BackColor = System.Drawing.Color.LightGray;
-			this.gbdiscount.Appearance.Options.UseBackColor = true;
-			this.gbdiscount.Controls.Add(this.label22);
-			this.gbdiscount.Controls.Add(this.bcancel);
-			this.gbdiscount.Controls.Add(this.bpost);
-			this.gbdiscount.Controls.Add(this.label21);
-			this.gbdiscount.Controls.Add(this.nudother);
-			this.gbdiscount.Controls.Add(this.label20);
-			this.gbdiscount.Controls.Add(this.nudsenior);
-			this.gbdiscount.GroupStyle = DevExpress.Utils.GroupStyle.Title;
-			this.gbdiscount.Location = new System.Drawing.Point(336, 83);
-			this.gbdiscount.Name = "gbdiscount";
-			this.gbdiscount.Size = new System.Drawing.Size(168, 107);
-			this.gbdiscount.TabIndex = 4;
-			this.gbdiscount.Text = "Discounts";
-			this.gbdiscount.Visible = false;
-			this.gbdiscount.Paint += new System.Windows.Forms.PaintEventHandler(this.gbdiscount_Paint);
-			// 
-			// label20
-			// 
-			this.label20.AutoSize = true;
-			this.label20.Location = new System.Drawing.Point(13, 29);
-			this.label20.Name = "label20";
-			this.label20.Size = new System.Drawing.Size(85, 13);
-			this.label20.TabIndex = 256;
-			this.label20.Text = "Señior Discount:";
-			// 
-			// nudsenior
-			// 
-			this.nudsenior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.nudsenior.DecimalPlaces = 2;
-			this.nudsenior.Location = new System.Drawing.Point(106, 26);
-			this.nudsenior.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-			this.nudsenior.Name = "nudsenior";
-			this.nudsenior.Size = new System.Drawing.Size(72, 21);
-			this.nudsenior.TabIndex = 255;
-			this.nudsenior.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.nudsenior.ThousandsSeparator = true;
-			// 
-			// label21
-			// 
-			this.label21.AutoSize = true;
-			this.label21.Location = new System.Drawing.Point(15, 54);
-			this.label21.Name = "label21";
-			this.label21.Size = new System.Drawing.Size(83, 13);
-			this.label21.TabIndex = 258;
-			this.label21.Text = "Other Discount:";
-			// 
-			// nudother
-			// 
-			this.nudother.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.nudother.DecimalPlaces = 2;
-			this.nudother.Location = new System.Drawing.Point(105, 51);
-			this.nudother.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-			this.nudother.Name = "nudother";
-			this.nudother.Size = new System.Drawing.Size(73, 21);
-			this.nudother.TabIndex = 257;
-			this.nudother.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.nudother.ThousandsSeparator = true;
-			// 
-			// bpost
-			// 
-			this.bpost.Image = ((System.Drawing.Image)(resources.GetObject("bpost.Image")));
-			this.bpost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.bpost.Location = new System.Drawing.Point(17, 78);
-			this.bpost.Name = "bpost";
-			this.bpost.Size = new System.Drawing.Size(59, 23);
-			this.bpost.TabIndex = 259;
-			this.bpost.Text = "Post";
-			this.bpost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.bpost.UseVisualStyleBackColor = true;
-			this.bpost.Click += new System.EventHandler(this.bpost_Click);
-			// 
-			// bcancel
-			// 
-			this.bcancel.Image = ((System.Drawing.Image)(resources.GetObject("bcancel.Image")));
-			this.bcancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.bcancel.Location = new System.Drawing.Point(90, 78);
-			this.bcancel.Name = "bcancel";
-			this.bcancel.Size = new System.Drawing.Size(69, 23);
-			this.bcancel.TabIndex = 260;
-			this.bcancel.Text = "Cancel";
-			this.bcancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.bcancel.UseVisualStyleBackColor = true;
-			this.bcancel.Click += new System.EventHandler(this.bcancel_Click);
-			// 
-			// label22
-			// 
-			this.label22.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.label22.Location = new System.Drawing.Point(163, 24);
-			this.label22.Name = "label22";
-			this.label22.Size = new System.Drawing.Size(24, 49);
-			this.label22.TabIndex = 261;
-			// 
-			// paycntr
-			// 
-			this.paycntr.HeaderText = "paycntr";
-			this.paycntr.Name = "paycntr";
-			this.paycntr.Visible = false;
-			// 
-			// selectx
-			// 
-			this.selectx.HeaderText = "";
-			this.selectx.Name = "selectx";
-			this.selectx.Width = 30;
-			// 
-			// DataGridViewTextBoxColumn1
-			// 
-			this.DataGridViewTextBoxColumn1.HeaderText = "BillPeriod";
-			this.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1";
-			this.DataGridViewTextBoxColumn1.ReadOnly = true;
-			this.DataGridViewTextBoxColumn1.Width = 60;
-			// 
-			// CumUsed
-			// 
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.CumUsed.DefaultCellStyle = dataGridViewCellStyle8;
-			this.CumUsed.HeaderText = "CUsed";
-			this.CumUsed.Name = "CumUsed";
-			this.CumUsed.Width = 60;
-			// 
-			// DataGridViewTextBoxColumn4
-			// 
-			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle9.Format = "N2";
-			this.DataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle9;
-			this.DataGridViewTextBoxColumn4.HeaderText = "BillAmount";
-			this.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4";
-			this.DataGridViewTextBoxColumn4.ReadOnly = true;
-			this.DataGridViewTextBoxColumn4.Width = 70;
-			// 
-			// ftax
-			// 
-			dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle10.Format = "N2";
-			this.ftax.DefaultCellStyle = dataGridViewCellStyle10;
-			this.ftax.HeaderText = "FTax";
-			this.ftax.Name = "ftax";
-			this.ftax.ReadOnly = true;
-			this.ftax.Width = 50;
-			// 
-			// wmf
-			// 
-			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle11.Format = "N2";
-			this.wmf.DefaultCellStyle = dataGridViewCellStyle11;
-			this.wmf.HeaderText = "WMF";
-			this.wmf.Name = "wmf";
-			this.wmf.ReadOnly = true;
-			this.wmf.Width = 50;
-			// 
-			// surcharge
-			// 
-			dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle12.Format = "N2";
-			this.surcharge.DefaultCellStyle = dataGridViewCellStyle12;
-			this.surcharge.HeaderText = "Penalty";
-			this.surcharge.Name = "surcharge";
-			this.surcharge.ReadOnly = true;
-			this.surcharge.Width = 50;
-			// 
-			// Total
-			// 
-			dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle13.Format = "N2";
-			this.Total.DefaultCellStyle = dataGridViewCellStyle13;
-			this.Total.HeaderText = "Total";
-			this.Total.Name = "Total";
-			this.Total.ReadOnly = true;
-			this.Total.Width = 70;
-			// 
-			// PartialP
-			// 
-			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle14.Format = "N2";
-			this.PartialP.DefaultCellStyle = dataGridViewCellStyle14;
-			this.PartialP.HeaderText = "Partial";
-			this.PartialP.Name = "PartialP";
-			this.PartialP.ReadOnly = true;
-			this.PartialP.Width = 70;
-			// 
-			// Discount
-			// 
-			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle15.Format = "N2";
-			this.Discount.DefaultCellStyle = dataGridViewCellStyle15;
-			this.Discount.HeaderText = "Sr.Disc";
-			this.Discount.Name = "Discount";
-			this.Discount.ReadOnly = true;
-			this.Discount.Width = 50;
-			// 
-			// Otherdisc
-			// 
-			dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle16.Format = "N2";
-			this.Otherdisc.DefaultCellStyle = dataGridViewCellStyle16;
-			this.Otherdisc.HeaderText = "OthDisc";
-			this.Otherdisc.Name = "Otherdisc";
-			this.Otherdisc.Width = 50;
-			// 
-			// Payment
-			// 
-			dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle17.Format = "N2";
-			this.Payment.DefaultCellStyle = dataGridViewCellStyle17;
-			this.Payment.HeaderText = "Payment";
-			this.Payment.Name = "Payment";
-			this.Payment.Width = 70;
-			// 
-			// Balance
-			// 
-			dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle18.Format = "N2";
-			this.Balance.DefaultCellStyle = dataGridViewCellStyle18;
-			this.Balance.HeaderText = "Balance";
-			this.Balance.Name = "Balance";
-			this.Balance.ReadOnly = true;
-			this.Balance.Width = 70;
-			// 
-			// remarks
-			// 
-			this.remarks.HeaderText = "Remarks";
-			this.remarks.Name = "remarks";
-			this.remarks.Width = 60;
-			// 
-			// ptype
-			// 
-			this.ptype.HeaderText = "PType";
-			this.ptype.Name = "ptype";
-			this.ptype.Visible = false;
-			// 
-			// bperiod
-			// 
-			this.bperiod.HeaderText = "bperiod";
-			this.bperiod.Name = "bperiod";
-			this.bperiod.Visible = false;
-			// 
-			// share
-			// 
-			this.share.HeaderText = "Share";
-			this.share.Name = "share";
-			this.share.Visible = false;
-			// 
-			// reading
-			// 
-			this.reading.HeaderText = "Reading";
-			this.reading.Name = "reading";
-			this.reading.Visible = false;
-			// 
-			// duedate
-			// 
-			dataGridViewCellStyle19.Format = "d";
-			dataGridViewCellStyle19.NullValue = null;
-			this.duedate.DefaultCellStyle = dataGridViewCellStyle19;
-			this.duedate.HeaderText = "duedate";
-			this.duedate.Name = "duedate";
-			this.duedate.Visible = false;
+			// sbtnprint
+			// 
+			this.sbtnprint.Location = new System.Drawing.Point(1196, 113);
+			this.sbtnprint.Name = "sbtnprint";
+			this.sbtnprint.Size = new System.Drawing.Size(75, 23);
+			this.sbtnprint.TabIndex = 264;
+			this.sbtnprint.Text = "Print OR";
+			this.sbtnprint.Visible = false;
+			this.sbtnprint.Click += new System.EventHandler(this.sbtnprint_Click);
 			// 
 			// collection
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1329, 534);
+			this.Controls.Add(this.sbtnprint);
 			this.Controls.Add(this.label19);
 			this.Controls.Add(this.tsGL);
 			this.Controls.Add(this.tbtin);
@@ -1352,9 +1364,14 @@ namespace bcsys.Forms.EntryForms
 			this.gbConDtl.ResumeLayout(false);
 			this.gbConDtl.PerformLayout();
 			this.gbPayment.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.gbdiscount)).EndInit();
+			this.gbdiscount.ResumeLayout(false);
+			this.gbdiscount.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudother)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nudsenior)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
 			this.tsGL.ResumeLayout(false);
 			this.tsGL.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
 			this.tsTeller.ResumeLayout(false);
 			this.tsTeller.PerformLayout();
 			this.GroupBox1.ResumeLayout(false);
@@ -1366,11 +1383,6 @@ namespace bcsys.Forms.EntryForms
 			((System.ComponentModel.ISupportInitialize)(this.nudTotal)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudwtax)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nudamtdue)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gbdiscount)).EndInit();
-			this.gbdiscount.ResumeLayout(false);
-			this.gbdiscount.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.nudsenior)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.nudother)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1477,5 +1489,6 @@ namespace bcsys.Forms.EntryForms
 		private System.Windows.Forms.DataGridViewTextBoxColumn share;
 		private System.Windows.Forms.DataGridViewTextBoxColumn reading;
 		private System.Windows.Forms.DataGridViewTextBoxColumn duedate;
+		private DevExpress.XtraEditors.SimpleButton sbtnprint;
 	}
 }

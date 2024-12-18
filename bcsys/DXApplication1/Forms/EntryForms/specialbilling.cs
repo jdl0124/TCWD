@@ -314,7 +314,7 @@ namespace bcsys.Forms.EntryForms
 
 		private void scomputebillamount()
 		{
-			if (ncumu >= nmin)
+			if (ncumu > nmin)
 			{
 				//1st 10
 				nminamt = nminrate;
@@ -329,10 +329,7 @@ namespace bcsys.Forms.EntryForms
 						//3rd 10
 						nminamt2130 = nmin * Convert.ToDecimal(nrate2130);
 						ncumu  = ncumu - Convert.ToInt32(nmin);
-						if (ncumu >= 1)
-						{
-							nminamt30o = ncumu * Convert.ToDecimal(nrate30over);
-						}
+						nminamt30o = ncumu * Convert.ToDecimal(nrate30over);
 					}
 					else
 					{

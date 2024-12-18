@@ -131,6 +131,7 @@
 			this.button1 = new System.Windows.Forms.Button();
 			this.label22 = new System.Windows.Forms.Label();
 			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.button2 = new System.Windows.Forms.Button();
 			this.tsConsumer.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvConsumer)).BeginInit();
@@ -926,6 +927,7 @@
 			// groupBox5
 			// 
 			this.groupBox5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+			this.groupBox5.Controls.Add(this.button2);
 			this.groupBox5.Controls.Add(this.label29);
 			this.groupBox5.Controls.Add(this.textBox7);
 			this.groupBox5.Controls.Add(this.dateTimePicker3);
@@ -1187,6 +1189,16 @@
 			this.textBox6.Size = new System.Drawing.Size(162, 20);
 			this.textBox6.TabIndex = 59;
 			// 
+			// button2
+			// 
+			this.button2.Location = new System.Drawing.Point(346, 20);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.TabIndex = 80;
+			this.button2.Text = "button2";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
+			// 
 			// consumer
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1330,5 +1342,6 @@
         internal System.Windows.Forms.Label label22;
         internal System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox tbSearch;
-    }
+		private System.Windows.Forms.Button button2;
+	}
 }

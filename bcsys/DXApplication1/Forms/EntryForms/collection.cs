@@ -43,6 +43,10 @@ using DevExpress.Persistent.Base.General;
 using DevExpress.DataAccess.Native.EntityFramework;
 using DevExpress.Utils.Extensions;
 using DevExpress.Xpo.DB.Helpers;
+using DevExpress.Web.Internal.XmlProcessor;
+//using DevExpress.DataAccess.Native.Data;
+using System.Web.UI.WebControls;
+//using DataTable = DevExpress.DataAccess.Native.Data.DataTable;
 
 namespace bcsys.Forms.EntryForms
 {
@@ -64,8 +68,9 @@ namespace bcsys.Forms.EntryForms
             tbTeller.Text = Program.usr;
             sgetlastorno();
             cboFilter.SelectedIndex = 0;
+            sdisplaycollection();
 		}
-
+        int norno;
         private void sgetlastorno()
         {
             ssql = "select * from pay_h where teller=@tel order by orno desc limit 1";
@@ -81,7 +86,9 @@ namespace bcsys.Forms.EntryForms
                     if (rs.Rows.Count > 0)
                     {
                         DataRow dr = rs.Rows[0];
-                        tbOrNo.Text = (Convert.ToInt16(dr["orno"].ToString()) + 1).ToString();
+                        norno = Convert.ToInt16(dr["orno"].ToString()) + 1;
+                        //MessageBox.Show(dr["orno"].ToString());
+						tbOrNo.Text = norno.ToString().PadLeft(6, '0');
                     }
                     else
                     {
@@ -95,7 +102,10 @@ namespace bcsys.Forms.EntryForms
 
         private void sdisplaycollection()
         {
-			ssql = "select a.cdate,a.orno,b.name,a.amtdue from bcdb.pay_h a,bcdb.master b  where a.mascode=b.mascode and a.teller=@tel and a.tdate=@dt and a.iscanceled is null order by orno desc limit " + nLimit;
+            
+			ssql = "select a.tdate,a.orno,b.name,a.amtdue,b.mascode from bcdb.pay_h a,bcdb.master b " +
+                "where a.mascode=b.mascode and a.teller=@tel and a.tdate=@dt and a.iscanceled is null " +
+                "order by orno desc limit 100";
 			DBConnect dbcon = new DBConnect();
 			dbcon.OpenConnection(retries);
 			DataTable rs = new DataTable();
@@ -109,7 +119,7 @@ namespace bcsys.Forms.EntryForms
 					if (rs.Rows.Count > 0)
 					{
                         dgvItem.Columns.Clear();
-                        dgvItem.DataSource = rs.Rows;
+                        dgvItem.DataSource = rs;
                         sformatdgv();
 					}
 				}
@@ -122,19 +132,19 @@ namespace bcsys.Forms.EntryForms
         private void sformatdgv()
         {
             dgvItem.Columns[0].HeaderText = "Date";
-			dgvItem.Columns[1].HeaderText = "ORNo.";
-			dgvItem.Columns[2].HeaderText = "Consumer Name";
-			dgvItem.Columns[3].HeaderText = "Amount Paid";
-			dgvItem.Columns[4].HeaderText = "MasCode";
-			dgvItem.Columns[0].Width = 70;
-			dgvItem.Columns[0].DefaultCellStyle.Format = "d";
-			dgvItem.Columns[1].Width = 70;
-			dgvItem.Columns[2].Width = 240;
-			dgvItem.Columns[3].Width = 70;
-			dgvItem.Columns[3].DefaultCellStyle.Format = "N2";
-			dgvItem.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvItem.Columns[1].HeaderText = "ORNo.";
+            dgvItem.Columns[2].HeaderText = "Consumer Name";
+            dgvItem.Columns[3].HeaderText = "Amount Paid";
+            dgvItem.Columns[4].HeaderText = "MasCode";
+            dgvItem.Columns[0].Width = 70;
+            dgvItem.Columns[0].DefaultCellStyle.Format = "d";
+            dgvItem.Columns[1].Width = 70;
+            dgvItem.Columns[2].Width = 240;
+            dgvItem.Columns[3].Width = 70;
+            dgvItem.Columns[3].DefaultCellStyle.Format = "N2";
+            dgvItem.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgvItem.Columns[4].Visible = false;
-		}
+        }
         private void btnConSearch_Click(object sender, EventArgs e)
         {
             Form consearch = new consearch();
@@ -254,9 +264,11 @@ namespace bcsys.Forms.EntryForms
             }
 
             ssavepayment();
-            sprintor();
-            tbOrNo.Text = (Convert.ToInt16(tbOrNo.Text) + 1).ToString();
+            //sprintor();
+            sprnorxr();
+            tbOrNo.Text = (Convert.ToInt16(tbOrNo.Text) + 1).ToString().PadLeft(6,'0');
             sinit();
+            sdisplaycollection();
 
         }
 
@@ -294,7 +306,7 @@ namespace bcsys.Forms.EntryForms
                         //save payment header
                         DBConnect ndbcon = new DBConnect(); ndbcon.OpenConnection(retries);
                         ssql = "insert into bcdb.pay_h (tdate,date,orno,mascode,acctno,acctname,totamt,wtax,amtdue,rendered,teller,remarks) " +
-                            "values (@tdt,@dta,@or,@mc,@acn,@ana,@tot,@ren,@tel,@rm)";
+                            "values (@tdt,@dta,@or,@mc,@acn,@ana,@tot,@wt,@ad,@ren,@tel,@rm)";
                         using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
                         {
                             cmd2.Parameters.AddWithValue("@tdt", dtpCollection.Value.ToString("yyyy-MM-dd"));
@@ -383,8 +395,39 @@ namespace bcsys.Forms.EntryForms
 										cmd2.Dispose();
 									}
 								}
-                                //save to ledger
-                            }
+                                //save to reading
+                                namt = 0;
+								ssql = "update bcdb.reading_bc set payment=@pa where mascode=@mc and billperiod=@bp";
+								using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
+								{
+                                    namt = Convert.ToDecimal(dgvPayment.Rows[i].Cells[9].Value) + Convert.ToDecimal(dgvPayment.Rows[i].Cells[12].Value);
+									cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
+									cmd2.Parameters.AddWithValue("@pa", namt);
+									cmd2.Parameters.AddWithValue("@bp", dgvPayment.Rows[i].Cells[16].Value);
+									cmd2.Prepare();
+									cmd2.ExecuteNonQuery();
+									cmd2.Dispose();
+								}
+                                namt = 0;
+                                //save penalty date payment
+                                namt = Convert.ToDecimal(dgvPayment.Rows[i].Cells[7].Value);
+
+								if (namt > 0)
+                                {
+									ssql = "update bcdb.penalty set payment=@pa,pdate=@dt where mascode=@mc and billperiod=@bp";
+									using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
+									{
+										cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
+										cmd2.Parameters.AddWithValue("@pa", namt);
+                                        cmd2.Parameters.AddWithValue("@dt", dtpCollection.Value.ToString("yyyy-MM-dd"));
+										cmd2.Parameters.AddWithValue("@bp", dgvPayment.Rows[i].Cells[16].Value);
+										cmd2.Prepare();
+										cmd2.ExecuteNonQuery();
+										cmd2.Dispose();
+									}
+								}
+								namt = 0;
+							}
                         }
                         ndbcon.CloseConnection();
                     }
@@ -585,7 +628,7 @@ namespace bcsys.Forms.EntryForms
             nudother.Value = 0;
             gbdiscount.Visible = false;
 		}
-
+        int rp;
 		private void sprintor()
         {
             ds = new DataSet2();
@@ -600,16 +643,18 @@ namespace bcsys.Forms.EntryForms
             r1["duedate"] = dtpCollection.Value.ToString();
             r1["acctname"] = tbName.Text;
             r1["barangay"] = tbAddress.Text;
+            rp = 1;
             for (int i = 0; i <= dgvPayment.RowCount - 1; i++)
             {
                 if (Convert.ToBoolean(dgvPayment.Rows[i].Cells[1].Value) == true)
                 {
                     //r0["meterno"] = "";
-                    r1["part" + (i + 1)] = dgvPayment.Rows[i].Cells[2].Value + " (" + dgvPayment.Rows[i].Cells[3].Value + ";" +
+                    r1["part" + rp.ToString()] = dgvPayment.Rows[i].Cells[2].Value + " (" + dgvPayment.Rows[i].Cells[3].Value + ";" +
                         dgvPayment.Rows[i].Cells[4].Value + ";" + dgvPayment.Rows[i].Cells[5].Value + ";" + dgvPayment.Rows[i].Cells[6].Value +
                         ";" + dgvPayment.Rows[i].Cells[7].Value + ")";
-                    r1["q" + (i + 1)] = 1;
-                    r1["amt" + (i + 1)] = Convert.ToDecimal(dgvPayment.Rows[i].Cells[8].Value);
+                    r1["q" + rp.ToString()] = 1;
+                    r1["amt" + rp.ToString()] = Convert.ToDecimal(dgvPayment.Rows[i].Cells[8].Value);
+                    rp++;
                 }
             }
             //r1 = dt1.NewRow();
@@ -633,6 +678,83 @@ namespace bcsys.Forms.EntryForms
 			gbdiscount.Visible = false;
 
 		}
+        int rw;
+        private void sprnorxr()
+        {
+			try
+			{
+				ObjectPositions newpos = new ObjectPositions();
+				frmDashboard fdash = new frmDashboard();
+				frminterviews mainfrm = new frminterviews();
+				frmloading frm = new frmloading();
+
+				string thirdParam = string.Empty;
+				//string myparamtest1 = "Confidential";
+
+				DataSet ds = new DataSet2();
+
+				ds.Tables["billdtl"].Rows.Clear();
+
+				XtraReport rpt = new ServiceInvoiceXR();
+				var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
+
+				Application.DoEvents();
+
+				newpos.CenterObj(fdash, frm);
+				this.Cursor = Cursors.AppStarting;
+
+				frm.BringToFront();
+				frm.Show(mainfrm);
+
+				frm.Refresh();
+				Random rnd = new Random();
+				Random rnd2 = new Random();
+				DataRow r1 = ds.Tables["billdtl"].NewRow();
+				r1["duedate"] = dtpCollection.Value.ToString();
+				r1["acctname"] = tbName.Text;
+				r1["barangay"] = tbAddress.Text;
+				r1["t1"] = tbTeller.Text;
+				rw = 1;
+				for (int i = 0; i <= dgvPayment.RowCount - 1; i++)
+				{
+					if (Convert.ToBoolean(dgvPayment.Rows[i].Cells[1].Value) == true)
+					{
+						//r0["meterno"] = "";
+						r1["part" + (rw).ToString()] = dgvPayment.Rows[i].Cells[2].Value + " (" + dgvPayment.Rows[i].Cells[3].Value + ";" +
+							dgvPayment.Rows[i].Cells[4].Value + ";" + dgvPayment.Rows[i].Cells[5].Value + ";" + dgvPayment.Rows[i].Cells[6].Value +
+							";" + dgvPayment.Rows[i].Cells[7].Value + ")";
+						r1["q" + (rw).ToString()] = 1;
+						r1["amt" + (rw).ToString()] = Convert.ToDecimal(dgvPayment.Rows[i].Cells[12].Value);
+						rw++;
+					}
+				}
+				r1["total"] = nudTotal.Value;
+				r1["wtax"] = nudwtax.Value;
+				r1["arbalance"] = nudamtdue.Value;
+				ds.Tables["billdtl"].Rows.Add(r1);
+				rpt.DataSource = ds;
+				rpt.CreateDocument();
+				fdash.pgpanel.SendToBack();
+				fdash.pgpanel.Visible = false;
+				ReportPrintTool preView = new ReportPrintTool(rpt);
+				preView.PreviewRibbonForm.SaveState = false;
+				preView.PreviewRibbonForm.WindowState = FormWindowState.Maximized;
+
+				preView.ShowRibbonPreview();
+				this.Cursor = Cursors.Default;
+				frm.SendToBack();
+				frm.Dispose();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+		private void sbtnprint_Click(object sender, EventArgs e)
+		{
+			
+		}
+	
 
 		private void dgvPayment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -700,7 +822,7 @@ namespace bcsys.Forms.EntryForms
         private void sdisplaydetails()
         {
             nudTotal.Value = 0; nudChange.Value = 0;nudTendered.Value = 0;
-            ssql = "select * from reading_bc where mascode=@mc and (payment=0 or payment is null or payment<billamt) and billperiod is not null order by billperiod";
+            ssql = "select * from reading_bc where mascode=@mc and (payment<=0 or payment is null or payment<billamt) and billperiod is not null order by billperiod";
             DBConnect dbcon = new DBConnect();
             dbcon.OpenConnection(retries);
             // newdbcon.mytable = "master.mastfile";
@@ -835,6 +957,7 @@ namespace bcsys.Forms.EntryForms
 			}
 			newdbcon.CloseConnection();
 		    Program.bp = dtpCollection.Value.ToString("yyyyMM");
+            sdisplaycollection();
 		}
     }
 }

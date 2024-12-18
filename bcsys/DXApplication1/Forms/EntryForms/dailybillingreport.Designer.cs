@@ -115,6 +115,7 @@
 			this.tsMenu = new System.Windows.Forms.ToolStrip();
 			this.tsbPrint = new System.Windows.Forms.ToolStripButton();
 			this.tsbClose = new System.Windows.Forms.ToolStripButton();
+			this.sbPreview = new DevExpress.XtraEditors.SimpleButton();
 			((System.ComponentModel.ISupportInitialize)(this.gcdly)).BeginInit();
 			this.gcdly.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.xtc1)).BeginInit();
@@ -172,7 +173,7 @@
 			this.xtall.Controls.Add(this.dgv);
 			this.xtall.Controls.Add(this.dgvt);
 			this.xtall.Name = "xtall";
-			this.xtall.Size = new System.Drawing.Size(807, 354);
+			this.xtall.Size = new System.Drawing.Size(803, 351);
 			this.xtall.Text = "All";
 			// 
 			// dgv
@@ -536,7 +537,7 @@
 			dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle26.Font = new System.Drawing.Font("Tahoma", 8.25F);
-			dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+			dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
 			dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -703,9 +704,9 @@
             this.tsbPrint,
             this.tsbClose});
 			this.tsMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-			this.tsMenu.Location = new System.Drawing.Point(667, 2);
+			this.tsMenu.Location = new System.Drawing.Point(654, 2);
 			this.tsMenu.Name = "tsMenu";
-			this.tsMenu.Size = new System.Drawing.Size(151, 25);
+			this.tsMenu.Size = new System.Drawing.Size(164, 25);
 			this.tsMenu.TabIndex = 320;
 			this.tsMenu.Text = "ToolStrip1";
 			// 
@@ -714,9 +715,9 @@
 			this.tsbPrint.Image = ((System.Drawing.Image)(resources.GetObject("tsbPrint.Image")));
 			this.tsbPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsbPrint.Name = "tsbPrint";
-			this.tsbPrint.Size = new System.Drawing.Size(52, 22);
-			this.tsbPrint.Text = "Print";
-			this.tsbPrint.Visible = false;
+			this.tsbPrint.Size = new System.Drawing.Size(96, 22);
+			this.tsbPrint.Text = "&Print Preview";
+			this.tsbPrint.Click += new System.EventHandler(this.tsbPrint_Click);
 			// 
 			// tsbClose
 			// 
@@ -727,11 +728,21 @@
 			this.tsbClose.Text = "Close";
 			this.tsbClose.Click += new System.EventHandler(this.tsbClose_Click);
 			// 
+			// sbPreview
+			// 
+			this.sbPreview.Location = new System.Drawing.Point(500, 444);
+			this.sbPreview.Name = "sbPreview";
+			this.sbPreview.Size = new System.Drawing.Size(75, 23);
+			this.sbPreview.TabIndex = 321;
+			this.sbPreview.Text = "Print Preview";
+			this.sbPreview.Click += new System.EventHandler(this.sbPreview_Click);
+			// 
 			// dailybillingreport
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(827, 605);
+			this.Controls.Add(this.sbPreview);
 			this.Controls.Add(this.tsMenu);
 			this.Controls.Add(this.dgvctotal);
 			this.Controls.Add(this.dgvc);
@@ -819,5 +830,6 @@
 		internal System.Windows.Forms.ToolStrip tsMenu;
 		internal System.Windows.Forms.ToolStripButton tsbPrint;
 		internal System.Windows.Forms.ToolStripButton tsbClose;
+		private DevExpress.XtraEditors.SimpleButton sbPreview;
 	}
 }

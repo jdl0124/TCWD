@@ -1,6 +1,8 @@
 ﻿using bcsys.modules;
+using bcsys.Reports;
 using DevExpress.CodeParser;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -52,6 +54,154 @@ namespace bcsys.Forms.ReportForms
 			if (rbbrgy.Checked == true)
 			{
 				dgv.Columns[0].HeaderText = "Barangay";
+			}
+		}
+
+		private void tsbPrint_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				ObjectPositions newpos = new ObjectPositions();
+				frmDashboard fdash = new frmDashboard();
+				agingreport mainfrm = new agingreport();
+				frmloading frm = new frmloading();
+
+				string thirdParam = string.Empty;
+				//string myparamtest1 = "Confidential";
+
+				DataSet ds = new DataSet2();
+
+				//ds.Tables.Clear();
+				ds.Tables[3].Rows.Clear();
+				ds.Tables[4].Rows.Clear();
+
+				XtraReport rpt = new xrmonthlybillingsum();
+				var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
+
+				Application.DoEvents();
+
+				newpos.CenterObj(fdash, frm);
+				this.Cursor = Cursors.AppStarting;
+
+				frm.BringToFront();
+				frm.Show(mainfrm);
+
+				frm.Refresh();
+				Random rnd = new Random();
+				Random rnd2 = new Random();
+				DataRow r1 = ds.Tables[4].NewRow();
+				r1["acctname"] = "Tangub City Water District";
+				r1["address"] = "Aging Report";
+				r1["acctno"] = "1";
+				r1["billdate"] = dtpDate.Value;
+				if (rbzone.Checked)
+				{
+					r1["contype"] = "Zone";
+				}
+                else if (rbbrgy.Checked)
+                {
+					r1["contype"] = "Barangay";
+				}
+				else if (rbdate.Checked) 
+				{
+					r1["contype"] = "Date";
+				}
+
+                ds.Tables[4].Rows.Add(r1);
+
+				for (int i = 0; i <= dgv.RowCount - 1; i++)
+				{
+					DataRow r2 = ds.Tables[3].NewRow();
+					r2["acctno"] = "1";
+					r2["nno"] = i + 1;
+					r2["zn"] = dgv.Rows[i].Cells[0].Value;
+										
+					if (dgv.Rows[i].Cells[1].Value != null)
+					{
+						r2["cumused"] = dgv.Rows[i].Cells[1].Value;
+					}
+					else
+					{
+						r2["cumused"] = 0;
+					}
+					if (dgv.Rows[i].Cells[2].Value != null)
+					{
+						r2["amount"] = dgv.Rows[i].Cells[2].Value;
+					}
+					else
+					{
+						r2["amount"] = 0;
+					}
+
+					if (dgv.Rows[i].Cells[3].Value != null)
+					{
+						r2["ftax"] = dgv.Rows[i].Cells[3].Value;
+					}
+					else
+					{
+						r2["ftax"] = 0;
+					}
+					if (dgv.Rows[i].Cells[4].Value != null)
+					{
+						r2["penalty"] = dgv.Rows[i].Cells[4].Value;
+					}
+					else
+					{
+						r2["penalty"] = 0;
+					}
+					if (dgv.Rows[i].Cells[5].Value != null)
+					{
+						r2["wmf"] = dgv.Rows[i].Cells[5].Value;
+					}
+					else
+					{
+						r2["wmf"] = 0;
+					}
+
+					if (dgv.Rows[i].Cells[8].Value != null)
+					{
+						r2["nno"] = dgv.Rows[i].Cells[8].Value;
+					}
+					else
+					{
+						r2["nno"] = 0;
+					}
+
+					if (dgv.Rows[i].Cells[9].Value != null)
+					{
+						r2["q1"] = dgv.Rows[i].Cells[9].Value;
+					}
+					else
+					{
+						r2["q1"] = 0;
+					}
+					if (dgv.Rows[i].Cells[10].Value != null)
+					{
+						r2["q2"] = dgv.Rows[i].Cells[10].Value;
+					}
+					else
+					{
+						r2["q2"] = 0;
+					}
+
+					ds.Tables[3].Rows.Add(r2);
+				}
+				rpt.DataSource = ds;
+				rpt.CreateDocument();
+				fdash.pgpanel.SendToBack();
+				fdash.pgpanel.Visible = false;
+				ReportPrintTool preView = new ReportPrintTool(rpt);
+				preView.PreviewRibbonForm.SaveState = false;
+				preView.PreviewRibbonForm.WindowState = FormWindowState.Maximized;
+
+				preView.ShowRibbonPreview();
+				this.Cursor = Cursors.Default;
+				frm.SendToBack();
+				frm.Dispose();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
 			}
 		}
 

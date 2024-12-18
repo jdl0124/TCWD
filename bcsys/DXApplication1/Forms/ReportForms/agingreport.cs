@@ -1,8 +1,12 @@
 ﻿using bcsys.modules;
+using bcsys.Reports;
 using DevExpress.CodeParser;
+using DevExpress.XtraCharts;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraTab;
 using MySql.Data.MySqlClient;
+using PriorityTextToSpeech.modules;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +48,116 @@ namespace bcsys.Forms.ReportForms
 		{
 
 		}
+
+		private void tsbPrint_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				ObjectPositions newpos = new ObjectPositions();
+				frmDashboard fdash = new frmDashboard();
+				agingreport mainfrm = new agingreport();
+				frmloading frm = new frmloading();
+
+				string thirdParam = string.Empty;
+				//string myparamtest1 = "Confidential";
+
+				DataSet ds = new DataSet2();
+				
+				//ds.Tables.Clear();
+				ds.Tables[3].Rows.Clear();
+				ds.Tables[4].Rows.Clear();
+
+				XtraReport rpt = new xragingreport ();
+				var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
+
+				Application.DoEvents();
+
+				newpos.CenterObj(fdash, frm);
+				this.Cursor = Cursors.AppStarting;
+
+				frm.BringToFront();
+				frm.Show(mainfrm);
+
+				frm.Refresh();
+				Random rnd = new Random();
+				Random rnd2 = new Random();
+				DataRow r1 = ds.Tables[4].NewRow();
+				r1["acctname"] = "Tangub City Water District";
+				r1["address"] = "Aging Report";
+				r1["acctno"] = "1";
+				r1["billdate"] = dtpDate.Value;
+
+				ds.Tables[4].Rows.Add(r1);
+
+				for (int i = 0; i <= dgv.RowCount - 1; i++)
+				{
+					DataRow r2 = ds.Tables[3].NewRow();
+					r2["acctno"] = "1";
+					r2["contype"] = dgv.Rows[i].Cells[0].Value;
+					r2["amount"] = dgv.Rows[i].Cells[1].Value ;
+					if (dgv.Rows[i].Cells[2].Value != null)
+					{
+						r2["curent"] = dgv.Rows[i].Cells[2].Value;
+					}
+					else
+					{
+						r2["curent"] = 0;
+					}
+					
+					if (dgv.Rows[i].Cells[3].Value != null)
+					{
+						r2["n1630"] = dgv.Rows[i].Cells[3].Value;
+					}
+					else
+					{
+						r2["n1630"] = 0;
+					}
+					if (dgv.Rows[i].Cells[4].Value != null)
+					{
+						r2["n3160"] = dgv.Rows[i].Cells[4].Value;
+					}
+					else
+					{
+						r2["n3160"] = 0;
+					}
+					if (dgv.Rows[i].Cells[5].Value != null)
+					{
+						r2["n6190"] = dgv.Rows[i].Cells[5].Value;
+					}
+					else
+					{
+						r2["n6190"] = 0;
+					}
+					if (dgv.Rows[i].Cells[6].Value != null)
+					{
+						r2["n91120"] = dgv.Rows[i].Cells[6].Value;
+					}
+					else
+					{
+						r2["n91120"] = 0;
+					}
+					r2["nover"] = dgv.Rows[i].Cells[7].Value ;
+					ds.Tables[3].Rows.Add(r2);
+				}
+				rpt.DataSource = ds;
+				rpt.CreateDocument();
+				fdash.pgpanel.SendToBack();
+				fdash.pgpanel.Visible = false;
+				ReportPrintTool preView = new ReportPrintTool(rpt);
+				preView.PreviewRibbonForm.SaveState = false;
+				preView.PreviewRibbonForm.WindowState = FormWindowState.Maximized;
+
+				preView.ShowRibbonPreview();
+				this.Cursor = Cursors.Default;
+				frm.SendToBack();
+				frm.Dispose();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+
 		private void sagingreport()
 		{
 			//all per zone

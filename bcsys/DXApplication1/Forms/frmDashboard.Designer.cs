@@ -169,6 +169,7 @@
 			this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
 			this.pgpanel = new DevExpress.XtraWaitForm.ProgressPanel();
+			this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox3)).BeginInit();
@@ -254,9 +255,10 @@
             this.repositoryItemRatingControl1});
 			this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
 			this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-			this.ribbonControl.Size = new System.Drawing.Size(1188, 158);
+			this.ribbonControl.Size = new System.Drawing.Size(1188, 143);
 			this.ribbonControl.StatusBar = this.ribbonStatusBar;
 			this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+			this.ribbonControl.Click += new System.EventHandler(this.ribbonControl_Click);
 			// 
 			// skinRibbonGalleryBarItem
 			// 
@@ -618,10 +620,10 @@
 			this.ribbonStatusBar.ItemLinks.Add(this.connectodbstatus);
 			this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem2);
 			this.ribbonStatusBar.ItemLinks.Add(this.barEditItem1);
-			this.ribbonStatusBar.Location = new System.Drawing.Point(0, 775);
+			this.ribbonStatusBar.Location = new System.Drawing.Point(0, 768);
 			this.ribbonStatusBar.Name = "ribbonStatusBar";
 			this.ribbonStatusBar.Ribbon = this.ribbonControl;
-			this.ribbonStatusBar.Size = new System.Drawing.Size(1188, 24);
+			this.ribbonStatusBar.Size = new System.Drawing.Size(1188, 31);
 			// 
 			// dockManager
 			// 
@@ -648,7 +650,7 @@
 			this.panelContainer1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
 			this.panelContainer1.FloatVertical = true;
 			this.panelContainer1.ID = new System.Guid("3672f75d-ee4e-497f-9e7c-7f0a64c4f62a");
-			this.panelContainer1.Location = new System.Drawing.Point(808, 158);
+			this.panelContainer1.Location = new System.Drawing.Point(808, 143);
 			this.panelContainer1.Name = "panelContainer1";
 			this.panelContainer1.Options.AllowDockBottom = false;
 			this.panelContainer1.Options.AllowDockFill = false;
@@ -661,7 +663,7 @@
 			this.panelContainer1.Options.ShowMaximizeButton = false;
 			this.panelContainer1.Options.ShowMinimizeButton = false;
 			this.panelContainer1.OriginalSize = new System.Drawing.Size(380, 200);
-			this.panelContainer1.Size = new System.Drawing.Size(380, 617);
+			this.panelContainer1.Size = new System.Drawing.Size(380, 625);
 			this.panelContainer1.Tabbed = true;
 			this.panelContainer1.Text = "panelContainer1";
 			// 
@@ -670,7 +672,7 @@
 			this.dockPanel1.Controls.Add(this.dockPanel1_Container);
 			this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
 			this.dockPanel1.ID = new System.Guid("ee3fba5b-6464-4942-a996-8a25ad6e9215");
-			this.dockPanel1.Location = new System.Drawing.Point(3, 26);
+			this.dockPanel1.Location = new System.Drawing.Point(4, 23);
 			this.dockPanel1.Name = "dockPanel1";
 			this.dockPanel1.Options.AllowDockBottom = false;
 			this.dockPanel1.Options.AllowDockLeft = false;
@@ -681,8 +683,8 @@
 			this.dockPanel1.Options.ShowCloseButton = false;
 			this.dockPanel1.Options.ShowMaximizeButton = false;
 			this.dockPanel1.Options.ShowMinimizeButton = false;
-			this.dockPanel1.OriginalSize = new System.Drawing.Size(355, 562);
-			this.dockPanel1.Size = new System.Drawing.Size(374, 562);
+			this.dockPanel1.OriginalSize = new System.Drawing.Size(374, 562);
+			this.dockPanel1.Size = new System.Drawing.Size(372, 571);
 			this.dockPanel1.Text = "Details";
 			this.dockPanel1.Click += new System.EventHandler(this.dockPanel1_Click);
 			// 
@@ -690,7 +692,7 @@
 			// 
 			this.dockPanel1_Container.Location = new System.Drawing.Point(0, 0);
 			this.dockPanel1_Container.Name = "dockPanel1_Container";
-			this.dockPanel1_Container.Size = new System.Drawing.Size(374, 562);
+			this.dockPanel1_Container.Size = new System.Drawing.Size(372, 571);
 			this.dockPanel1_Container.TabIndex = 0;
 			// 
 			// dockPanel2
@@ -699,7 +701,7 @@
 			this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill;
 			this.dockPanel2.FloatVertical = true;
 			this.dockPanel2.ID = new System.Guid("9b2eab88-6e55-4337-adb8-043f471a7a56");
-			this.dockPanel2.Location = new System.Drawing.Point(3, 26);
+			this.dockPanel2.Location = new System.Drawing.Point(4, 23);
 			this.dockPanel2.Name = "dockPanel2";
 			this.dockPanel2.Options.AllowDockAsTabbedDocument = false;
 			this.dockPanel2.Options.AllowDockBottom = false;
@@ -712,15 +714,15 @@
 			this.dockPanel2.Options.ShowCloseButton = false;
 			this.dockPanel2.Options.ShowMaximizeButton = false;
 			this.dockPanel2.Options.ShowMinimizeButton = false;
-			this.dockPanel2.OriginalSize = new System.Drawing.Size(355, 562);
-			this.dockPanel2.Size = new System.Drawing.Size(374, 562);
+			this.dockPanel2.OriginalSize = new System.Drawing.Size(374, 562);
+			this.dockPanel2.Size = new System.Drawing.Size(372, 571);
 			this.dockPanel2.Text = "Announcements";
 			// 
 			// dockPanel2_Container
 			// 
 			this.dockPanel2_Container.Location = new System.Drawing.Point(0, 0);
 			this.dockPanel2_Container.Name = "dockPanel2_Container";
-			this.dockPanel2_Container.Size = new System.Drawing.Size(374, 562);
+			this.dockPanel2_Container.Size = new System.Drawing.Size(372, 571);
 			this.dockPanel2_Container.TabIndex = 0;
 			// 
 			// dockPanel
@@ -729,7 +731,7 @@
 			this.dockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
 			this.dockPanel.FloatSize = new System.Drawing.Size(200, 135);
 			this.dockPanel.ID = new System.Guid("a045df26-1503-4d9a-99c1-a531310af22b");
-			this.dockPanel.Location = new System.Drawing.Point(0, 158);
+			this.dockPanel.Location = new System.Drawing.Point(0, 143);
 			this.dockPanel.Name = "dockPanel";
 			this.dockPanel.Options.AllowDockBottom = false;
 			this.dockPanel.Options.AllowDockFill = false;
@@ -743,15 +745,15 @@
 			this.dockPanel.Options.ShowMaximizeButton = false;
 			this.dockPanel.Options.ShowMinimizeButton = false;
 			this.dockPanel.OriginalSize = new System.Drawing.Size(200, 200);
-			this.dockPanel.Size = new System.Drawing.Size(200, 617);
+			this.dockPanel.Size = new System.Drawing.Size(200, 625);
 			this.dockPanel.Text = "Quick Access";
 			// 
 			// dockPanel_Container
 			// 
 			this.dockPanel_Container.Controls.Add(this.accordionControl);
-			this.dockPanel_Container.Location = new System.Drawing.Point(3, 26);
+			this.dockPanel_Container.Location = new System.Drawing.Point(4, 23);
 			this.dockPanel_Container.Name = "dockPanel_Container";
-			this.dockPanel_Container.Size = new System.Drawing.Size(194, 588);
+			this.dockPanel_Container.Size = new System.Drawing.Size(192, 598);
 			this.dockPanel_Container.TabIndex = 0;
 			// 
 			// accordionControl
@@ -765,7 +767,7 @@
 			this.accordionControl.Name = "accordionControl";
 			this.accordionControl.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.True;
 			this.accordionControl.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-			this.accordionControl.Size = new System.Drawing.Size(194, 588);
+			this.accordionControl.Size = new System.Drawing.Size(192, 598);
 			this.accordionControl.TabIndex = 0;
 			this.accordionControl.SelectedElementChanged += new DevExpress.XtraBars.Navigation.SelectedElementChangedEventHandler(this.accordionControl_SelectedElementChanged);
 			// 
@@ -786,7 +788,8 @@
             this.accordionControlSeparator5,
             this.accordionControlElement5,
             this.accordionControlSeparator6,
-            this.accordionControlElement6});
+            this.accordionControlElement6,
+            this.accordionControlElement11});
 			this.mainAccordionGroup.Expanded = true;
 			this.mainAccordionGroup.HeaderVisible = false;
 			this.mainAccordionGroup.Name = "mainAccordionGroup";
@@ -1007,7 +1010,6 @@
             this.accordionControlElement14,
             this.accordionControlSeparator23,
             this.billingreport});
-			this.employeesAccordionControlElement.Expanded = true;
 			this.employeesAccordionControlElement.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("employeesAccordionControlElement.ImageOptions.Image")));
 			this.employeesAccordionControlElement.Name = "employeesAccordionControlElement";
 			this.employeesAccordionControlElement.Text = "Billing";
@@ -1027,7 +1029,7 @@
 			// 
 			// uploadtoandroid
 			// 
-			this.uploadtoandroid.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement12.ImageOptions.Image")));
+			this.uploadtoandroid.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("uploadtoandroid.ImageOptions.Image")));
 			this.uploadtoandroid.Name = "uploadtoandroid";
 			this.uploadtoandroid.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.uploadtoandroid.Text = "Upload to Android";
@@ -1039,6 +1041,7 @@
 			// 
 			// downloadreading
 			// 
+			this.downloadreading.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("downloadreading.ImageOptions.Image")));
 			this.downloadreading.Name = "downloadreading";
 			this.downloadreading.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.downloadreading.Text = "Download to Server";
@@ -1078,6 +1081,7 @@
             this.accordionControlElement36,
             this.accordionControlElement37,
             this.accordionControlElement38});
+			this.billingreport.Expanded = true;
 			this.billingreport.Name = "billingreport";
 			this.billingreport.Text = "Report";
 			// 
@@ -1318,12 +1322,20 @@
 			this.pgpanel.Appearance.Options.UseBackColor = true;
 			this.pgpanel.ContentAlignment = System.Drawing.ContentAlignment.MiddleCenter;
 			this.pgpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pgpanel.Location = new System.Drawing.Point(200, 158);
+			this.pgpanel.Location = new System.Drawing.Point(200, 143);
 			this.pgpanel.Name = "pgpanel";
-			this.pgpanel.Size = new System.Drawing.Size(608, 617);
+			this.pgpanel.Size = new System.Drawing.Size(608, 625);
 			this.pgpanel.TabIndex = 6;
 			this.pgpanel.Visible = false;
 			this.pgpanel.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Line;
+			// 
+			// accordionControlElement11
+			// 
+			this.accordionControlElement11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement11.ImageOptions.Image")));
+			this.accordionControlElement11.Name = "accordionControlElement11";
+			this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.accordionControlElement11.Text = "Logout";
+			this.accordionControlElement11.Click += new System.EventHandler(this.accordionControlElement11_Click);
 			// 
 			// frmDashboard
 			// 
@@ -1332,8 +1344,8 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1188, 799);
 			this.Controls.Add(this.pgpanel);
-			this.Controls.Add(this.dockPanel);
 			this.Controls.Add(this.panelContainer1);
+			this.Controls.Add(this.dockPanel);
 			this.Controls.Add(this.ribbonStatusBar);
 			this.Controls.Add(this.ribbonControl);
 			this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmDashboard.IconOptions.Image")));
@@ -1515,5 +1527,6 @@
 		private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator30;
 		private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator31;
 		private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator6;
+		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
 	}
 }

@@ -14,6 +14,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraTab;
 using System.Drawing.Text;
+using bcsys.Forms.ReportForms;
+using bcsys.Reports;
+using DevExpress.XtraReports.UI;
 
 namespace bcsys.Forms.EntryForms
 {
@@ -127,6 +130,245 @@ namespace bcsys.Forms.EntryForms
 		private void tsbClose_Click(object sender, EventArgs e)
 		{
 			this.Close();
+		}
+
+		private void tsbPrint_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				ObjectPositions newpos = new ObjectPositions();
+				frmDashboard fdash = new frmDashboard();
+				agingreport mainfrm = new agingreport();
+				frmloading frm = new frmloading();
+
+				string thirdParam = string.Empty;
+				//string myparamtest1 = "Confidential";
+
+				DataSet ds = new DataSet2();
+
+				//ds.Tables.Clear();
+				ds.Tables[3].Rows.Clear();
+				ds.Tables[4].Rows.Clear();
+
+				XtraReport rpt = new xrdlybillingreport ();
+				var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
+
+				Application.DoEvents();
+
+				newpos.CenterObj(fdash, frm);
+				this.Cursor = Cursors.AppStarting;
+
+				frm.BringToFront();
+				frm.Show(mainfrm);
+
+				frm.Refresh();
+				Random rnd = new Random();
+				Random rnd2 = new Random();
+				DataRow r1 = ds.Tables[4].NewRow();
+				r1["acctname"] = "Tangub City Water District";
+				r1["address"] = "Aging Report";
+				r1["acctno"] = "1";
+				r1["billdate"] = dtpDate.Value;
+
+				ds.Tables[4].Rows.Add(r1);
+
+				for (int i = 0; i <= dgv.RowCount - 1; i++)
+				{
+					DataRow r2 = ds.Tables[3].NewRow();
+					r2["acctno"] = "1";
+					r2["nno"] = i + 1;
+					r2["acctno"] = dgv.Rows[i].Cells[0].Value;
+					r2["acctname"] = dgv.Rows[i].Cells[1].Value;
+					//r2["amount"] = dgv.Rows[i].Cells[2].Value;
+					if (dgv.Rows[i].Cells[5].Value != null)
+					{
+						r2["reading"] = dgv.Rows[i].Cells[5].Value;
+					}
+					else
+					{
+						r2["reading"] = null;
+					}
+
+					if (dgv.Rows[i].Cells[6].Value != null)
+					{
+						r2["cumused"] = dgv.Rows[i].Cells[6].Value;
+					}
+					else
+					{
+						r2["cumused"] = 0;
+					}
+					if (dgv.Rows[i].Cells[7].Value != null)
+					{
+						r2["aramount"] = dgv.Rows[i].Cells[7].Value;
+					}
+					else
+					{
+						r2["aramount"] = 0;
+					}
+					if (dgv.Rows[i].Cells[8].Value != null)
+					{
+						r2["ftax"] = dgv.Rows[i].Cells[8].Value;
+					}
+					else
+					{
+						r2["ftax"] = 0;
+					}
+					if (dgv.Rows[i].Cells[9].Value != null)
+					{
+						r2["penalty"] = dgv.Rows[i].Cells[9].Value;
+					}
+					else
+					{
+						r2["penalty"] = 0;
+					}
+					if (dgv.Rows[i].Cells[10].Value != null)
+					{
+						r2["wmf"] = dgv.Rows[i].Cells[10].Value;
+					}
+					else
+					{
+						r2["wmf"] = 0;
+					}
+
+					ds.Tables[3].Rows.Add(r2);
+				}
+				rpt.DataSource = ds;
+				rpt.CreateDocument();
+				fdash.pgpanel.SendToBack();
+				fdash.pgpanel.Visible = false;
+				ReportPrintTool preView = new ReportPrintTool(rpt);
+				preView.PreviewRibbonForm.SaveState = false;
+				preView.PreviewRibbonForm.WindowState = FormWindowState.Maximized;
+
+				preView.ShowRibbonPreview();
+				this.Cursor = Cursors.Default;
+				frm.SendToBack();
+				frm.Dispose();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+
+		private void sbPreview_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				ObjectPositions newpos = new ObjectPositions();
+				frmDashboard fdash = new frmDashboard();
+				agingreport mainfrm = new agingreport();
+				frmloading frm = new frmloading();
+
+				string thirdParam = string.Empty;
+				//string myparamtest1 = "Confidential";
+
+				DataSet ds = new DataSet2();
+
+				//ds.Tables.Clear();
+				ds.Tables[3].Rows.Clear();
+				ds.Tables[4].Rows.Clear();
+
+				XtraReport rpt = new xrdlybillingclass();
+				var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
+
+				Application.DoEvents();
+
+				newpos.CenterObj(fdash, frm);
+				this.Cursor = Cursors.AppStarting;
+
+				frm.BringToFront();
+				frm.Show(mainfrm);
+
+				frm.Refresh();
+				Random rnd = new Random();
+				Random rnd2 = new Random();
+				DataRow r1 = ds.Tables[4].NewRow();
+				r1["acctname"] = "Tangub City Water District";
+				r1["address"] = "Aging Report";
+				r1["acctno"] = "1";
+				r1["billdate"] = dtpDate.Value;
+
+				ds.Tables[4].Rows.Add(r1);
+
+				for (int i = 0; i <= dgvc.RowCount - 1; i++)
+				{
+					DataRow r2 = ds.Tables[3].NewRow();
+					r2["acctno"] = "1";
+					r2["nno"] = i + 1;
+					r2["zn"] = dgvc.Rows[i].Cells[0].Value;
+					r2["bk"] = dgvc.Rows[i].Cells[1].Value;
+					r2["clasi"] = dgvc.Rows[i].Cells[2].Value;
+					r2["size"] = dgvc.Rows[i].Cells[3].Value;
+					if (dgvc.Rows[i].Cells[4].Value != null)
+					{
+						r2["cumused"] = dgvc.Rows[i].Cells[4].Value;
+					}
+					else
+					{
+						r2["cumused"] = null;
+					}
+
+					if (dgvc.Rows[i].Cells[5].Value != null)
+					{
+						r2["amount"] = dgvc.Rows[i].Cells[5].Value;
+					}
+					else
+					{
+						r2["amount"] = 0;
+					}
+					if (dgvc.Rows[i].Cells[6].Value != null)
+					{
+						r2["nno"] = dgvc.Rows[i].Cells[6].Value;
+					}
+					else
+					{
+						r2["nno"] = 0;
+					}
+					//if (dgv.Rows[i].Cells[8].Value != null)
+					//{
+					//	r2["ftax"] = dgv.Rows[i].Cells[8].Value;
+					//}
+					//else
+					//{
+					//	r2["ftax"] = 0;
+					//}
+					//if (dgv.Rows[i].Cells[9].Value != null)
+					//{
+					//	r2["penalty"] = dgv.Rows[i].Cells[9].Value;
+					//}
+					//else
+					//{
+					//	r2["penalty"] = 0;
+					//}
+					//if (dgv.Rows[i].Cells[10].Value != null)
+					//{
+					//	r2["wmf"] = dgv.Rows[i].Cells[10].Value;
+					//}
+					//else
+					//{
+					//	r2["wmf"] = 0;
+					//}
+
+					ds.Tables[3].Rows.Add(r2);
+				}
+				rpt.DataSource = ds;
+				rpt.CreateDocument();
+				fdash.pgpanel.SendToBack();
+				fdash.pgpanel.Visible = false;
+				ReportPrintTool preView = new ReportPrintTool(rpt);
+				preView.PreviewRibbonForm.SaveState = false;
+				preView.PreviewRibbonForm.WindowState = FormWindowState.Maximized;
+
+				preView.ShowRibbonPreview();
+				this.Cursor = Cursors.Default;
+				frm.SendToBack();
+				frm.Dispose();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
 		}
 
 		private void sbillingreport()
