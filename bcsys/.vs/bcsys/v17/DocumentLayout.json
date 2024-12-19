@@ -3,7 +3,23 @@
   "WorkspaceRootPath": "D:\\jdl solutions\\TCWD\\bcsys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\tcwd\\bcsys\\dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,24 +27,20 @@
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\tcwd\\bcsys\\dxapplication1\\forms\\entryforms\\changemeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\changemeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\changemeter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\tcwd\\bcsys\\dxapplication1\\forms\\entryforms\\changeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\changeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\changeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\tcwd\\bcsys\\dxapplication1\\properties\\datasources\\bcsys.reports.dataset1.datasource||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\properties\\datasources\\bcsys.reports.dataset1.datasource||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\properties\\datasources\\bcsys.reports.dataset1.datasource||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\consumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,14 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\dailybillingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\dailybillingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\tcwd\\bcsys\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\reports\\xrmonthlybillingsum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -95,10 +99,6 @@
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\consumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
@@ -110,50 +110,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "changemeter.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changemeter.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\changemeter.cs",
-              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changemeter.cs",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\changemeter.cs",
-              "ViewState": "AQIAAN0AAAAAAAAAAAAAAOEAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T01:00:28.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "changeform.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changeform.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\changeform.cs",
-              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changeform.cs",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\changeform.cs",
-              "ViewState": "AQIAAGUAAAAAAAAAAAAAAHUAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T01:00:20.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "bcsys.Reports.DataSet1.datasource",
-              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
-              "RelativeDocumentMoniker": "DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
-              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
-              "RelativeToolTip": "DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-12-18T01:00:15.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "agingreport.cs",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\agingreport.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\agingreport.cs",
@@ -161,12 +122,11 @@
               "RelativeToolTip": "DXApplication1\\Forms\\ReportForms\\agingreport.cs",
               "ViewState": "AQIAAI0AAAAAAAAAAAAAAI0AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T01:52:51.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T01:52:51.33Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "frmDashboard.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.cs",
@@ -178,19 +138,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "dailybillingreport.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
               "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs [Design]",
               "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T03:03:58.622Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-17T03:03:58.622Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "collection.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collection.cs",
@@ -202,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "collection.cs",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collection.cs",
@@ -215,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "dailybillingreport.cs",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
@@ -223,12 +182,85 @@
               "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
               "ViewState": "AQIAANoAAAAAAAAAAAAAAOoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T07:48:32.633Z",
+              "WhenOpened": "2024-12-17T07:48:32.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmDashboard.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.cs",
+              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\frmDashboard.cs",
+              "ViewState": "AQIAAF4BAAAAAAAAAAAAAG4BAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T08:24:18.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "reading.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\reading.cs",
+              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\reading.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T06:08:47.457Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "reading.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\reading.cs",
+              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\reading.cs",
+              "ViewState": "AQIAABoCAAAAAAAAAAAAADECAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T06:08:56.08Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "bcsys.Reports.DataSet1.datasource",
+              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
+              "RelativeDocumentMoniker": "DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
+              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
+              "RelativeToolTip": "DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-12-18T01:00:15.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "changeform.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changeform.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\changeform.cs",
+              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changeform.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\changeform.cs",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAAAHUAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T01:00:20.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "changemeter.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changemeter.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\changemeter.cs",
+              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changemeter.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\changemeter.cs",
+              "ViewState": "AQIAAN0AAAAAAAAAAAAAAOEAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T01:00:28.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "frminterviews.cs",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\frminterviews.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\frminterviews.cs",
@@ -236,12 +268,11 @@
               "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\frminterviews.cs",
               "ViewState": "AQIAABMBAAAAAAAAAAAqwCMBAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T03:44:54.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T03:44:54.215Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "consumer.cs",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\consumer.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\consumer.cs",
@@ -249,25 +280,11 @@
               "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\consumer.cs",
               "ViewState": "AQIAACgAAAAAAAAAAAA6wDgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T06:22:20.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T06:22:20.662Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "reading.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAAAE4AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T06:08:56.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "application.cs",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\application.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\application.cs",
@@ -275,36 +292,33 @@
               "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\application.cs",
               "ViewState": "AQIAAKMAAAAAAAAAAAAAALMAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T06:23:04.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T06:23:04.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "DataSet2.xsd",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Reports\\DataSet2.xsd",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\DataSet2.xsd",
               "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Reports\\DataSet2.xsd",
               "RelativeToolTip": "DXApplication1\\Reports\\DataSet2.xsd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2024-12-16T02:52:16.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T02:52:16.165Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "monthlybillingsummary.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs",
               "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs [Design]",
               "RelativeToolTip": "DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T07:13:23.466Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-17T07:13:23.466Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "monthlybillingsummary.cs",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs",
@@ -312,61 +326,44 @@
               "RelativeToolTip": "DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs",
               "ViewState": "AQIAAJ8AAAAAAAAAAAAAALMAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T07:18:33.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-17T07:18:33.385Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "frmDashboard.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.cs",
-              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
-              "RelativeToolTip": "DXApplication1\\Forms\\frmDashboard.cs",
-              "ViewState": "AQIAAGMBAAAAAAAAAAAAAHQBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T08:24:18.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "xrmonthlybillingsum.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Reports\\xrmonthlybillingsum.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\xrmonthlybillingsum.cs",
               "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Reports\\xrmonthlybillingsum.cs [Design]",
               "RelativeToolTip": "DXApplication1\\Reports\\xrmonthlybillingsum.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T07:19:43.542Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-17T07:19:43.542Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "xrdlybillingclass.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Reports\\xrdlybillingclass.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\xrdlybillingclass.cs",
               "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Reports\\xrdlybillingclass.cs [Design]",
               "RelativeToolTip": "DXApplication1\\Reports\\xrdlybillingclass.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T06:01:08.936Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-17T06:01:08.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "xragingreport.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Reports\\xragingreport.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\xragingreport.cs",
               "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Reports\\xragingreport.cs [Design]",
               "RelativeToolTip": "DXApplication1\\Reports\\xragingreport.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T03:13:34.205Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-14T03:13:34.205Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Teller.cs",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\modules\\Teller.cs",
               "RelativeDocumentMoniker": "DXApplication1\\modules\\Teller.cs",
@@ -374,20 +371,18 @@
               "RelativeToolTip": "DXApplication1\\modules\\Teller.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T04:58:31.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T04:58:31.421Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "test.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Reports\\test.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\test.cs",
               "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Reports\\test.cs [Design]",
               "RelativeToolTip": "DXApplication1\\Reports\\test.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T03:13:42.15Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-12T03:13:42.15Z"
             },
             {
               "$type": "Document",
@@ -398,32 +393,18 @@
               "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\application.cs [Design]",
               "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\application.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T06:23:02.82Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-28T06:23:02.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "consumer.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\consumer.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\consumer.cs",
               "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\consumer.cs [Design]",
               "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\consumer.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T06:22:19.207Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "reading.cs [Design]",
-              "DocumentMoniker": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "ToolTip": "D:\\jdl solutions\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs [Design]",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\reading.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T06:08:47.457Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-28T06:22:19.207Z"
             }
           ]
         }

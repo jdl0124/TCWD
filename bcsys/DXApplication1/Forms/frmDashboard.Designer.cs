@@ -161,6 +161,7 @@
 			this.accordionControlSeparator31 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.accordionControlSeparator6 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.accordionControlElement6 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+			this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.documentManager = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
 			this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
 			this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -169,7 +170,6 @@
 			this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
 			this.pgpanel = new DevExpress.XtraWaitForm.ProgressPanel();
-			this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox3)).BeginInit();
@@ -1010,6 +1010,7 @@
             this.accordionControlElement14,
             this.accordionControlSeparator23,
             this.billingreport});
+			this.employeesAccordionControlElement.Expanded = true;
 			this.employeesAccordionControlElement.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("employeesAccordionControlElement.ImageOptions.Image")));
 			this.employeesAccordionControlElement.Name = "employeesAccordionControlElement";
 			this.employeesAccordionControlElement.Text = "Billing";
@@ -1283,6 +1284,14 @@
 			this.accordionControlElement6.Text = "About";
 			this.accordionControlElement6.Click += new System.EventHandler(this.accordionControlElement6_Click);
 			// 
+			// accordionControlElement11
+			// 
+			this.accordionControlElement11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement11.ImageOptions.Image")));
+			this.accordionControlElement11.Name = "accordionControlElement11";
+			this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.accordionControlElement11.Text = "Logout";
+			this.accordionControlElement11.Click += new System.EventHandler(this.accordionControlElement11_Click);
+			// 
 			// documentManager
 			// 
 			this.documentManager.MdiParent = this;
@@ -1328,14 +1337,6 @@
 			this.pgpanel.TabIndex = 6;
 			this.pgpanel.Visible = false;
 			this.pgpanel.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Line;
-			// 
-			// accordionControlElement11
-			// 
-			this.accordionControlElement11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement11.ImageOptions.Image")));
-			this.accordionControlElement11.Name = "accordionControlElement11";
-			this.accordionControlElement11.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.accordionControlElement11.Text = "Logout";
-			this.accordionControlElement11.Click += new System.EventHandler(this.accordionControlElement11_Click);
 			// 
 			// frmDashboard
 			// 
