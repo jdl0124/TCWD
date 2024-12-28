@@ -138,8 +138,9 @@ namespace bcsys.Forms.EntryForms
             dgvItem.Columns[4].HeaderText = "MasCode";
             dgvItem.Columns[0].Width = 70;
             dgvItem.Columns[0].DefaultCellStyle.Format = "d";
+            dgvItem.Columns[0].Visible = false; 
             dgvItem.Columns[1].Width = 70;
-            dgvItem.Columns[2].Width = 240;
+            dgvItem.Columns[2].Width = 200;
             dgvItem.Columns[3].Width = 70;
             dgvItem.Columns[3].DefaultCellStyle.Format = "N2";
             dgvItem.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
@@ -754,9 +755,13 @@ namespace bcsys.Forms.EntryForms
 		{
 			
 		}
-	
 
-		private void dgvPayment_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void GroupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvPayment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 2)
             {

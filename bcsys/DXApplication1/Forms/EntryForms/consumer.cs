@@ -207,31 +207,31 @@ namespace bcsys.Forms.EntryForms
             newdbcon.CloseConnection();
         }
         int sindex = -1;
-        private void tbSearch_KeyDown(object sender, KeyEventArgs e)
-        {
+        //private void tbSearch_KeyDown(object sender, KeyEventArgs e)
+        //{
            
-                if (e.KeyCode == Keys.Enter)
-                {
+        //        if (e.KeyCode == Keys.Enter)
+        //        {
 
-                    for (int i = 0; i <= dgvConsumer.Rows.Count - 1; i++)
-                    {
-                        string sname = dgvConsumer.Rows[i].Cells[0].Value.ToString().ToUpper();
-                        string tname = tbSearch.Text.ToUpper();
-                        if (sname.Length > 0 && sname.Length >= tname.Length)
-                        {
-                            string tsearch = sname.Substring(0, tname.Length).ToUpper();
-                            if (tsearch == tname)
-                            {
-                            dgvConsumer.CurrentCell = dgvConsumer.Rows[i].Cells[1];
-                                break;
-                            }
+        //            for (int i = 0; i <= dgvConsumer.Rows.Count - 1; i++)
+        //            {
+        //                string sname = dgvConsumer.Rows[i].Cells[0].Value.ToString().ToUpper();
+        //                string tname = tbSearch.Text.ToUpper();
+        //                if (sname.Length > 0 && sname.Length >= tname.Length)
+        //                {
+        //                    string tsearch = sname.Substring(0, tname.Length).ToUpper();
+        //                    if (tsearch == tname)
+        //                    {
+        //                    dgvConsumer.CurrentCell = dgvConsumer.Rows[i].Cells[1];
+        //                        break;
+        //                    }
 
-                        }
+        //                }
 
-                    }
-                }
+        //            }
+        //        }
             
-        }
+        //}
 
         private void dgvConsumer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -410,5 +410,58 @@ namespace bcsys.Forms.EntryForms
 		{
 
 		}
-	}
+
+        int nloc;
+        string sss;
+        //private void tbSearch_KeyDown_1(object sender, KeyEventArgs e)
+        //{
+        //    //if (e.KeyCode == Keys.Enter)
+        //    //{
+        //    //    for (int i = 0; i <= dgvConsumer.RowCount - 1; i++)
+        //    //    {
+        //    //        sss = dgvConsumer.Rows[i].Cells[0].Value.ToString().ToUpper();
+        //    //        nloc = sss.IndexOf(tbSearch.Text.ToUpper(), 0);
+        //    //        if (nloc > 0)
+        //    //        {
+        //    //            if (sss.Substring(0,tbSearch.Text.Length).ToUpper() == tbSearch.Text.ToUpper())
+        //    //            {
+        //    //                dgvConsumer.CurrentCell = dgvConsumer.Rows[i].Cells[0];
+        //    //            }
+                        
+        //    //        }
+        //    //        //if (tbSearch .Text == dgvConsumer.Rows[i].Cells[0].Value.ToString())
+        //    //        //{
+                        
+        //    //        //}
+        //    //    }
+        //    //}
+        //}
+
+               private void tbSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                for (int i = 0; i <= dgvConsumer.Rows.Count - 1; i++)
+                {
+                    string sname = dgvConsumer.Rows[i].Cells[0].Value.ToString().ToUpper();
+                    string tname = tbSearch.Text.ToUpper();
+                    if (sname.Length > 0 && sname.Length >= tname.Length)
+                    {
+                        string tsearch = sname.Substring(0, tname.Length).ToUpper();
+                        if (tsearch == tname)
+                        {
+                            dgvConsumer.CurrentCell = dgvConsumer.Rows[i].Cells[1];
+                            break;
+                        }
+
+                    }
+
+                }
+            }
+
+
+        }
+    }
 }

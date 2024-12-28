@@ -377,5 +377,35 @@ namespace bcsys.Forms
 		{
 
 		}
-	}
+
+        private void accordionControlElement25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement34_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement29_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

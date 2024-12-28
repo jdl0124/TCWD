@@ -251,7 +251,11 @@ namespace bcsys.Forms.EntryForms
             {
                 if (cbClass.SelectedIndex >=0)
                 {
-                    tbCMCode.Text = cbClass.SelectedValue.ToString() + cbMSize.SelectedValue.ToString();
+                    if (cbMSize.SelectedIndex >= 0)
+                    {
+                        tbCMCode.Text = cbClass.SelectedValue.ToString() + cbMSize.SelectedValue.ToString();
+                    }
+                    
                 }
                 
             }

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\magdis\\tcwd\\bcsys\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -118,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -157,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "reading.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\reading.cs",
@@ -169,13 +169,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "reading.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\reading.cs",
               "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
               "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "ViewState": "AgIAAOkBAAAAAAAAAAAuwPUBAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAOMBAAAAAAAAAAAuwPUBAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T06:20:55.568Z",
               "EditorCaption": ""
