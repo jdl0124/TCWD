@@ -23,6 +23,7 @@ namespace bcsys.Forms.EntryForms
 
         private void tsbClose_Click(object sender, EventArgs e)
         {
+
             this.Close();
 
         }
@@ -46,6 +47,7 @@ namespace bcsys.Forms.EntryForms
             Program.desc0 = dgv.CurrentRow.Cells[1].Value.ToString();
             Program.rate = Convert.ToDecimal(dgv.CurrentRow.Cells[2].Value.ToString());
             Program.ttype = dgv.CurrentRow.Cells[3].Value.ToString();
+            Program.nmisamount = nudRate.Value;
             this.Close();
 
         }

@@ -27,6 +27,11 @@ namespace bcsys
         public static string ttype;
         public static string reporttype;
         public static string bp;
+        public static decimal nmisamount;
+        public static string sig1;
+        public static string sig2;
+        public static string sig3;
+        public static string accno;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

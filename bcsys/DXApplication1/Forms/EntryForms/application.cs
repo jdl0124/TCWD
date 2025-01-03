@@ -44,6 +44,7 @@ namespace bcsys.Forms.EntryForms
             dgvP.Rows.Add();
             dgvP.Rows[5].Cells[0].Value = "Other Fee:";
             this.Tag = "0";
+            cbxWMF.Checked = true;
             SLoadClassMeterType();
             this.Tag = "1";
             SLoadApplications();
@@ -545,7 +546,7 @@ namespace bcsys.Forms.EntryForms
                         }
                         ndbcon.CloseConnection();
                         SLoadApplications();
-                        SInit();
+                       
                     }
                 }
             }
@@ -602,8 +603,8 @@ namespace bcsys.Forms.EntryForms
                                 }
                             }
                         }
-                        ssql = "insert into bcdb.master (znacc12,m_date,datecon,acc,ratetype,m_brand,town,cust_stat,classcode,msize,mascode,zn,bk,bgycode,user1,name,address,appno,dateapp,m_no,ftax,m_irdg) " +
-                            "values (@zna,@mdta,@dtc,@acc,@rt,@mb,@twn,@cst,@cc,@ms,@mc,@zn,@bk,@bgyc,@usr,@na,@add,@apn,@dtap,@m_no,@ftx,@ird)";
+                        ssql = "insert into bcdb.master (znacc12,m_date,datecon,acc,ratetype,m_brand,town,cust_stat,classcode,msize,mascode,zn,bk,bgycode,accno,user1,name,address,appno,dateapp,m_no,ftax,m_irdg) " +
+                            "values (@zna,@mdta,@dtc,@acc,@rt,@mb,@twn,@cst,@cc,@ms,@mc,@zn,@bk,@bgyc,@acn,@usr,@na,@add,@apn,@dtap,@m_no,@ftx,@ird)";
                         using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
                         {
                             cmd2.Parameters.AddWithValue("@zna", cbZone.Text + cbBook.Text + tbAcc.Text);
@@ -622,6 +623,8 @@ namespace bcsys.Forms.EntryForms
                             cmd2.Parameters.AddWithValue("@zn", cbZone.Text);
                             cmd2.Parameters.AddWithValue("@bk", cbBook.Text);
                             cmd2.Parameters.AddWithValue("@bgyc", tbBgyCode.Text);
+                            cmd2.Parameters.AddWithValue("@acn", cbZone.Text + cbBook.Text+"-"+
+                                cbClass.Text + cbMSize.Text+"-" + tbAcc.Text );
                             cmd2.Parameters.AddWithValue("@usr", Program.usr);
                             cmd2.Parameters.AddWithValue("@na", tbName.Text);
                             cmd2.Parameters.AddWithValue("@add", tbAddress.Text);
@@ -639,6 +642,7 @@ namespace bcsys.Forms.EntryForms
                     }
                 }
             }
+            SInit();
             newdbcon.CloseConnection();
         }
 

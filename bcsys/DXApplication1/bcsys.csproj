@@ -395,6 +395,18 @@
     <Compile Include="modules\Work.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\xrdlycollectionreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrdlycollectionreport.Designer.cs">
+      <DependentUpon>xrdlycollectionreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\xrmonthlybillingclasssummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrmonthlybillingclasssummary.Designer.cs">
+      <DependentUpon>xrmonthlybillingclasssummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\xrdlybillingclass.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -594,6 +606,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\xrdlycollectionreport.resx">
+      <DependentUpon>xrdlycollectionreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\xrmonthlybillingclasssummary.resx">
+      <DependentUpon>xrmonthlybillingclasssummary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\xrdlybillingclass.resx">
       <DependentUpon>xrdlybillingclass.cs</DependentUpon>
     </EmbeddedResource>

@@ -132,6 +132,17 @@ namespace bcsys.Forms.EntryForms
             this.nudamtdue = new System.Windows.Forms.NumericUpDown();
             this.sbtnprint = new DevExpress.XtraEditors.SimpleButton();
             this.label23 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rbCash = new System.Windows.Forms.RadioButton();
+            this.rbCheck = new System.Windows.Forms.RadioButton();
+            this.rbOnline = new System.Windows.Forms.RadioButton();
+            this.tbCheckNo = new System.Windows.Forms.TextBox();
+            this.lblchkno = new System.Windows.Forms.Label();
+            this.gbchkdtl = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.dtpchkdate = new System.Windows.Forms.DateTimePicker();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cbBank = new System.Windows.Forms.ComboBox();
             this.paycntr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.selectx = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -174,6 +185,8 @@ namespace bcsys.Forms.EntryForms
             ((System.ComponentModel.ISupportInitialize)(this.nudTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudwtax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudamtdue)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.gbchkdtl.SuspendLayout();
             this.SuspendLayout();
             // 
             // ToolStrip1
@@ -605,7 +618,7 @@ namespace bcsys.Forms.EntryForms
             this.gbdiscount.Controls.Add(this.label20);
             this.gbdiscount.Controls.Add(this.nudsenior);
             this.gbdiscount.GroupStyle = DevExpress.Utils.GroupStyle.Title;
-            this.gbdiscount.Location = new System.Drawing.Point(344, 59);
+            this.gbdiscount.Location = new System.Drawing.Point(298, 54);
             this.gbdiscount.Name = "gbdiscount";
             this.gbdiscount.Size = new System.Drawing.Size(168, 107);
             this.gbdiscount.TabIndex = 4;
@@ -652,9 +665,9 @@ namespace bcsys.Forms.EntryForms
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(15, 54);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(83, 13);
+            this.label21.Size = new System.Drawing.Size(88, 13);
             this.label21.TabIndex = 258;
-            this.label21.Text = "Other Discount:";
+            this.label21.Text = "Withholding Tax:";
             // 
             // nudother
             // 
@@ -756,6 +769,7 @@ namespace bcsys.Forms.EntryForms
             this.dgvPayment.Size = new System.Drawing.Size(782, 178);
             this.dgvPayment.TabIndex = 2;
             this.dgvPayment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPayment_CellClick);
+            this.dgvPayment.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPayment_CellEndEdit);
             // 
             // tsGL
             // 
@@ -816,7 +830,7 @@ namespace bcsys.Forms.EntryForms
             this.tsbCollect,
             this.tsbSave,
             this.tsbTClose});
-            this.tsTeller.Location = new System.Drawing.Point(721, 38);
+            this.tsTeller.Location = new System.Drawing.Point(697, 42);
             this.tsTeller.Name = "tsTeller";
             this.tsTeller.Size = new System.Drawing.Size(287, 25);
             this.tsTeller.TabIndex = 247;
@@ -918,7 +932,7 @@ namespace bcsys.Forms.EntryForms
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(368, 9);
+            this.Label2.Location = new System.Drawing.Point(373, 9);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(82, 13);
             this.Label2.TabIndex = 246;
@@ -932,7 +946,7 @@ namespace bcsys.Forms.EntryForms
             this.btnNew,
             this.btnPrintCollection,
             this.btnClose});
-            this.tsConsumer.Location = new System.Drawing.Point(855, 5);
+            this.tsConsumer.Location = new System.Drawing.Point(927, 2);
             this.tsConsumer.Name = "tsConsumer";
             this.tsConsumer.Size = new System.Drawing.Size(228, 25);
             this.tsConsumer.TabIndex = 245;
@@ -954,6 +968,7 @@ namespace bcsys.Forms.EntryForms
             this.btnPrintCollection.Name = "btnPrintCollection";
             this.btnPrintCollection.Size = new System.Drawing.Size(109, 22);
             this.btnPrintCollection.Text = "&Print Collection";
+            this.btnPrintCollection.Click += new System.EventHandler(this.btnPrintCollection_Click);
             // 
             // btnClose
             // 
@@ -993,7 +1008,7 @@ namespace bcsys.Forms.EntryForms
             // Label8
             // 
             this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(575, 478);
+            this.Label8.Location = new System.Drawing.Point(425, 504);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(47, 13);
             this.Label8.TabIndex = 256;
@@ -1003,7 +1018,7 @@ namespace bcsys.Forms.EntryForms
             // 
             this.nudChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudChange.DecimalPlaces = 2;
-            this.nudChange.Location = new System.Drawing.Point(624, 475);
+            this.nudChange.Location = new System.Drawing.Point(475, 501);
             this.nudChange.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -1050,7 +1065,7 @@ namespace bcsys.Forms.EntryForms
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(375, 409);
+            this.Label3.Location = new System.Drawing.Point(399, 409);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(73, 13);
             this.Label3.TabIndex = 253;
@@ -1114,7 +1129,7 @@ namespace bcsys.Forms.EntryForms
             // 
             this.tbtin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbtin.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tbtin.Location = new System.Drawing.Point(602, 429);
+            this.tbtin.Location = new System.Drawing.Point(597, 429);
             this.tbtin.MaxLength = 20;
             this.tbtin.Name = "tbtin";
             this.tbtin.Size = new System.Drawing.Size(82, 20);
@@ -1160,10 +1175,128 @@ namespace bcsys.Forms.EntryForms
             // 
             // label23
             // 
-            this.label23.Location = new System.Drawing.Point(726, 472);
+            this.label23.Location = new System.Drawing.Point(554, 498);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(24, 24);
             this.label23.TabIndex = 265;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.groupBox3.Controls.Add(this.rbOnline);
+            this.groupBox3.Controls.Add(this.rbCheck);
+            this.groupBox3.Controls.Add(this.rbCash);
+            this.groupBox3.Location = new System.Drawing.Point(729, 413);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(98, 82);
+            this.groupBox3.TabIndex = 266;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Payment Option";
+            // 
+            // rbCash
+            // 
+            this.rbCash.AutoSize = true;
+            this.rbCash.Location = new System.Drawing.Point(13, 19);
+            this.rbCash.Name = "rbCash";
+            this.rbCash.Size = new System.Drawing.Size(49, 17);
+            this.rbCash.TabIndex = 0;
+            this.rbCash.TabStop = true;
+            this.rbCash.Text = "Cash";
+            this.rbCash.UseVisualStyleBackColor = true;
+            this.rbCash.CheckedChanged += new System.EventHandler(this.rbCash_CheckedChanged);
+            // 
+            // rbCheck
+            // 
+            this.rbCheck.AutoSize = true;
+            this.rbCheck.Location = new System.Drawing.Point(13, 38);
+            this.rbCheck.Name = "rbCheck";
+            this.rbCheck.Size = new System.Drawing.Size(56, 17);
+            this.rbCheck.TabIndex = 1;
+            this.rbCheck.TabStop = true;
+            this.rbCheck.Text = "Check";
+            this.rbCheck.UseVisualStyleBackColor = true;
+            this.rbCheck.CheckedChanged += new System.EventHandler(this.rbCheck_CheckedChanged);
+            // 
+            // rbOnline
+            // 
+            this.rbOnline.AutoSize = true;
+            this.rbOnline.Location = new System.Drawing.Point(13, 59);
+            this.rbOnline.Name = "rbOnline";
+            this.rbOnline.Size = new System.Drawing.Size(55, 17);
+            this.rbOnline.TabIndex = 2;
+            this.rbOnline.TabStop = true;
+            this.rbOnline.Text = "Online";
+            this.rbOnline.UseVisualStyleBackColor = true;
+            this.rbOnline.CheckedChanged += new System.EventHandler(this.rbOnline_CheckedChanged);
+            // 
+            // tbCheckNo
+            // 
+            this.tbCheckNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbCheckNo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbCheckNo.Location = new System.Drawing.Point(74, 18);
+            this.tbCheckNo.MaxLength = 20;
+            this.tbCheckNo.Name = "tbCheckNo";
+            this.tbCheckNo.Size = new System.Drawing.Size(92, 20);
+            this.tbCheckNo.TabIndex = 267;
+            // 
+            // lblchkno
+            // 
+            this.lblchkno.AutoSize = true;
+            this.lblchkno.Location = new System.Drawing.Point(13, 22);
+            this.lblchkno.Name = "lblchkno";
+            this.lblchkno.Size = new System.Drawing.Size(58, 13);
+            this.lblchkno.TabIndex = 268;
+            this.lblchkno.Text = "Check No.";
+            // 
+            // gbchkdtl
+            // 
+            this.gbchkdtl.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.gbchkdtl.Controls.Add(this.cbBank);
+            this.gbchkdtl.Controls.Add(this.label25);
+            this.gbchkdtl.Controls.Add(this.dtpchkdate);
+            this.gbchkdtl.Controls.Add(this.label24);
+            this.gbchkdtl.Controls.Add(this.lblchkno);
+            this.gbchkdtl.Controls.Add(this.tbCheckNo);
+            this.gbchkdtl.Location = new System.Drawing.Point(834, 411);
+            this.gbchkdtl.Name = "gbchkdtl";
+            this.gbchkdtl.Size = new System.Drawing.Size(268, 84);
+            this.gbchkdtl.TabIndex = 269;
+            this.gbchkdtl.TabStop = false;
+            this.gbchkdtl.Text = "Check/Online Detail";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(4, 42);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(67, 13);
+            this.label24.TabIndex = 269;
+            this.label24.Text = "Check Date.";
+            // 
+            // dtpchkdate
+            // 
+            this.dtpchkdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpchkdate.Location = new System.Drawing.Point(74, 39);
+            this.dtpchkdate.Name = "dtpchkdate";
+            this.dtpchkdate.Size = new System.Drawing.Size(95, 20);
+            this.dtpchkdate.TabIndex = 270;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(5, 65);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(66, 13);
+            this.label25.TabIndex = 271;
+            this.label25.Text = "Bank Name:";
+            // 
+            // cbBank
+            // 
+            this.cbBank.FormattingEnabled = true;
+            this.cbBank.Location = new System.Drawing.Point(74, 61);
+            this.cbBank.Name = "cbBank";
+            this.cbBank.Size = new System.Drawing.Size(184, 21);
+            this.cbBank.TabIndex = 272;
             // 
             // paycntr
             // 
@@ -1190,6 +1323,7 @@ namespace bcsys.Forms.EntryForms
             this.CumUsed.DefaultCellStyle = dataGridViewCellStyle8;
             this.CumUsed.HeaderText = "CUsed";
             this.CumUsed.Name = "CumUsed";
+            this.CumUsed.ReadOnly = true;
             this.CumUsed.Width = 50;
             // 
             // DataGridViewTextBoxColumn4
@@ -1267,8 +1401,9 @@ namespace bcsys.Forms.EntryForms
             dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             dataGridViewCellStyle16.Format = "N2";
             this.Otherdisc.DefaultCellStyle = dataGridViewCellStyle16;
-            this.Otherdisc.HeaderText = "OthDisc";
+            this.Otherdisc.HeaderText = "WTax";
             this.Otherdisc.Name = "Otherdisc";
+            this.Otherdisc.ReadOnly = true;
             this.Otherdisc.Width = 50;
             // 
             // Payment
@@ -1333,7 +1468,9 @@ namespace bcsys.Forms.EntryForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 501);
+            this.ClientSize = new System.Drawing.Size(1156, 520);
+            this.Controls.Add(this.gbchkdtl);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.sbtnprint);
             this.Controls.Add(this.label19);
@@ -1394,6 +1531,10 @@ namespace bcsys.Forms.EntryForms
             ((System.ComponentModel.ISupportInitialize)(this.nudTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudwtax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudamtdue)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.gbchkdtl.ResumeLayout(false);
+            this.gbchkdtl.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1482,6 +1623,17 @@ namespace bcsys.Forms.EntryForms
         private System.Windows.Forms.DataGridViewTextBoxColumn cvAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn pcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn cv1cntr;
+        internal System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rbOnline;
+        private System.Windows.Forms.RadioButton rbCheck;
+        private System.Windows.Forms.RadioButton rbCash;
+        internal System.Windows.Forms.TextBox tbCheckNo;
+        internal System.Windows.Forms.Label lblchkno;
+        internal System.Windows.Forms.GroupBox gbchkdtl;
+        internal System.Windows.Forms.Label label24;
+        internal System.Windows.Forms.DateTimePicker dtpchkdate;
+        internal System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox cbBank;
         private System.Windows.Forms.DataGridViewTextBoxColumn paycntr;
         private System.Windows.Forms.DataGridViewCheckBoxColumn selectx;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn1;

@@ -152,9 +152,34 @@ namespace bcsys.Forms
                                 XtraMessageBox.Show("Unknow username or password");
                             }
                         }
-
+                        cmd.Dispose();
                         mqbar1.Visible = false;
                     }
+
+                    qry = "SELECT * FROM bcdb.setup";
+                    using (MySqlCommand cmd = new MySqlCommand(qry, newdbcon.database_connection))
+                    {
+                        mqbar1.Visible = true;
+                        //cmd.Parameters.AddWithValue("@myuser", tbuser.Text.Trim());
+                        //cmd.Parameters.AddWithValue("@pwd", tbuser.Text.Trim());
+                        using (result5 = new DataTable())
+                        {
+                            result5 = newdbcon.get_records(qry, cmd);
+                            if (result5.Rows.Count > 0)
+                            {
+                                foreach (DataRow row in result5.Rows)
+                                {
+                                    Program.sig1 = row["sig1"].ToString();
+                                    Program.sig2 = row["sig2"].ToString();
+                                    Program.sig3 = row["sig3"].ToString();
+                                }
+                            }
+                           
+                        }
+                        cmd.Dispose();
+                        mqbar1.Visible = false;
+                    }
+
                     newdbcon.CloseConnection();
                     qry = "";
 

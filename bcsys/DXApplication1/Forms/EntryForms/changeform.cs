@@ -317,7 +317,46 @@ namespace bcsys.Forms.EntryForms
 			}
 			ndbcon.CloseConnection();
 		}
-		private void sdisplayname()
+
+        private void btnBrgySearch_Click(object sender, EventArgs e)
+        {
+            Form brgy = new libsearch();
+            brgy.Text = "Barangay Search";
+            changeIcon.SetApplicationIcon(Application.StartupPath + @"\24x24.ico", brgy);
+            brgy.ShowDialog();
+            tbBrgy.Text = Program.brgyname;
+            tbBgyCode.Text = Program.brycode;
+			SPopCombos();
+        }
+        private void SPopCombos()
+        {
+            string qry = "SELECT * FROM bcdb.bgyzn where bgycode=@bgy order by bgycode";
+            DBConnect newdbcon = new DBConnect();
+            newdbcon.OpenConnection(retries);
+            // newdbcon.mytable = "master.mastfile";
+            DataTable result = new DataTable();
+            using (MySqlCommand cmd = new MySqlCommand(qry, newdbcon.database_connection))
+            {
+                cmd.Parameters.AddWithValue("@bgy", tbBgyCode.Text);
+                using (result = new DataTable())
+                {
+
+                    result = newdbcon.get_records(qry, cmd);
+                    if (result.Rows.Count > 0)
+                    {
+                        cbZone.Items.Clear();
+                        foreach (DataRow rw in result.Rows)
+                        {
+                            cbZone.Items.Add(rw["zn"]);
+                        }
+
+                    }
+
+                }
+            }
+            newdbcon.CloseConnection();
+        }
+        private void sdisplayname()
 		{
 			ssql = "select a.*,b.previous,b.present,b.cumused from bcdb.master a,bcdb.reading_bc b where a.mascode=b.mascode and left(znacc12,6)=@zn order by billperiod desc limit 1";
 			DBConnect dbcon = new DBConnect();

@@ -775,3 +775,5 @@ D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.csproj.CoreCom
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.csproj.Up2Date
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.exe
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.pdb
+D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrmonthlybillingclasssummary.resources
+D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrdlycollectionreport.resources

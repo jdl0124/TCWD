@@ -46,14 +46,16 @@ namespace bcsys.modules
         {
           
 
-            server = "192.168.1.133";
-            server = "localhost";
+            server = "192.168.1.130";
+            //server = "localhost";
             //database = "eguidance_db_2024";
             database = "bcdb";
-            uid = "root";
-            password = "";
-            string filepath = "";
-          //  string mypassword = "eguidance20241008!";
+            //uid = "root";
+            //password = "";
+            uid = "tcwd2";
+            password = "tcwd2024!";
+            //string filepath = "";
+            //  string mypassword = "eguidance20241008!";
             //filepath = Application.StartupPath + "/iploc.txt";
             //string[] lines = File.ReadAllLines(filepath);
 
@@ -67,8 +69,8 @@ namespace bcsys.modules
             //String encrypted1 = NewEncrypterDecrypter.Encrypt(mystring1, encrytion_key);
             //String encrypted2 = NewEncrypterDecrypter.Encrypt(mystring2, encrytion_key);
             //String encrypted3 = NewEncrypterDecrypter.Encrypt(mystring3, encrytion_key);
-           // String decrypted = NewEncrypterDecrypter.DecryptString(encrytion_key, encrypted);
-          //  MessageBox.Show(NewEncrypterDecrypter.Decrypt(encrypted3,encrytion_key));   
+            // String decrypted = NewEncrypterDecrypter.DecryptString(encrytion_key, encrypted);
+            //  MessageBox.Show(NewEncrypterDecrypter.Decrypt(encrypted3,encrytion_key));   
             //int x = 0; 
 
             //foreach (string line in lines)

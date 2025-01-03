@@ -400,7 +400,7 @@ namespace bcsys.Forms
 
         private void accordionControlElement30_Click(object sender, EventArgs e)
         {
-
+            newChildForm(new collectionreport(), "Daily Collection Report");
         }
 
         private void accordionControlElement29_Click(object sender, EventArgs e)

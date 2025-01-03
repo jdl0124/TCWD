@@ -46,6 +46,7 @@ using DevExpress.Xpo.DB.Helpers;
 using DevExpress.Web.Internal.XmlProcessor;
 //using DevExpress.DataAccess.Native.Data;
 using System.Web.UI.WebControls;
+using DevExpress.XtraEditors.DXErrorProvider;
 //using DataTable = DevExpress.DataAccess.Native.Data.DataTable;
 
 namespace bcsys.Forms.EntryForms
@@ -69,6 +70,8 @@ namespace bcsys.Forms.EntryForms
             sgetlastorno();
             cboFilter.SelectedIndex = 0;
             sdisplaycollection();
+            sloadbanks();
+            rbCash.Checked = true;
 		}
         int norno;
         private void sgetlastorno()
@@ -151,7 +154,7 @@ namespace bcsys.Forms.EntryForms
             Form consearch = new consearch();
             consearch.ShowDialog();
             tbmascode.Text = Program.smascode;
-            tbAcctno.Text = Program.zna;
+            tbAcctno.Text = Program.accno;
             tbAcctno.Focus();
             tbAcctno_KeyDown(1, new KeyEventArgs(Keys.Enter));
             //display details
@@ -174,20 +177,20 @@ namespace bcsys.Forms.EntryForms
                 Form consearch = new consearch();
                 consearch.ShowDialog();
                 tbmascode.Text = Program.smascode;
-                tbAcctno.Text = Program.zna;
+                tbAcctno.Text = Program.accno;
                 sdisplayname();
                 sdisplaydetails();
             }
         }
         private void sdisplayname()
         {
-            ssql = "select * from bcdb.master where left(znacc12,6)=@zn";
+            ssql = "select * from bcdb.master where accno=@zn";
             DBConnect dbcon = new DBConnect();
             dbcon.OpenConnection(retries);
             DataTable rs = new DataTable();
             using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
             {
-                cmd.Parameters.AddWithValue("@zn", tbAcctno.Text.Substring(0, 6));
+                cmd.Parameters.AddWithValue("@zn", tbAcctno.Text);
                 using (rs = new DataTable())
                 {
                     rs = dbcon.get_records(ssql, cmd);
@@ -196,7 +199,7 @@ namespace bcsys.Forms.EntryForms
                         foreach (DataRow dr in rs.Rows)
                         {
                             tbmascode.Text = dr["mascode"].ToString();
-                            tbAcctno.Text = dr["znacc12"].ToString();
+                            tbAcctno.Text = dr["accno"].ToString();
                             tbName.Text = dr["Name"].ToString();
                             tbAddress.Text = dr["address"].ToString();
                             tbtin.Text = dr["tin"].ToString();
@@ -289,6 +292,7 @@ namespace bcsys.Forms.EntryForms
             dgvPayment.Rows.Clear();
 
         }
+        int iptype;
         private void ssavepayment()
         {
             ssql = "select * from pay_h where teller=@tel and orno=@or";
@@ -306,8 +310,8 @@ namespace bcsys.Forms.EntryForms
                     {
                         //save payment header
                         DBConnect ndbcon = new DBConnect(); ndbcon.OpenConnection(retries);
-                        ssql = "insert into bcdb.pay_h (tdate,date,orno,mascode,acctno,acctname,totamt,wtax,amtdue,rendered,teller,remarks) " +
-                            "values (@tdt,@dta,@or,@mc,@acn,@ana,@tot,@wt,@ad,@ren,@tel,@rm)";
+                        ssql = "insert into bcdb.pay_h (tdate,date,orno,mascode,acctno,acctname,totamt,wtax,amtdue,rendered,teller,remarks,ptype) " +
+                            "values (@tdt,@dta,@or,@mc,@acn,@ana,@tot,@wt,@ad,@ren,@tel,@rm,@pt)";
                         using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
                         {
                             cmd2.Parameters.AddWithValue("@tdt", dtpCollection.Value.ToString("yyyy-MM-dd"));
@@ -322,6 +326,20 @@ namespace bcsys.Forms.EntryForms
 							cmd2.Parameters.AddWithValue("@ren", nudTendered.Value);
                             cmd2.Parameters.AddWithValue("@tel", tbTeller.Text);
                             cmd2.Parameters.AddWithValue("@rm", tbRemarks.Text);
+                            if (rbCash.Checked)
+                            {
+                                iptype = 1;
+                            }
+                            else if (rbCheck.Checked)
+                                {
+                                    iptype = 2;
+                                }
+                            else if (rbOnline.Checked)
+                            {
+                                iptype = 3;
+                            }
+
+                            cmd2.Parameters.AddWithValue("@pt", iptype);
                             cmd2.Prepare();
                             cmd2.ExecuteNonQuery();
                             cmd2.Dispose();
@@ -357,8 +375,8 @@ namespace bcsys.Forms.EntryForms
                                     rs.Dispose();
                                 }
                                 //save
-                                ssql = "insert into bcdb.pay_d (paycntr,pdate,teller,orno,mascode,acctno,billperiod,billamount,paidamount,ttype,remark,billamt,ftax,wmf,penalty,srdisc,otdisc) " +
-                                    "values(@pc,@pd,@tel,@or,@mc,@acn,@bp,@bamt,@pamt,@tt,@rem,@ba,@ft,@wm,@pen,@srd,@otd)";
+                                ssql = "insert into bcdb.pay_d (paycntr,pdate,teller,orno,mascode,acctno,billperiod,billamount,paidamount,ttype,remark,billamt,ftax,wmf,penalty,srdisc,wtax) " +
+                                    "values(@pc,@pd,@tel,@or,@mc,@acn,@bp,@bamt,@pamt,@tt,@rem,@ba,@ft,@wm,@pen,@srd,@wtax)";
                                 using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
                                 {
                                     cmd2.Parameters.AddWithValue("@pc", sguid);
@@ -377,7 +395,7 @@ namespace bcsys.Forms.EntryForms
                                     cmd2.Parameters.AddWithValue("@wm", dgvPayment.Rows[i].Cells[6].Value);
                                     cmd2.Parameters.AddWithValue("@pen", dgvPayment.Rows[i].Cells[7].Value);
                                     cmd2.Parameters.AddWithValue("@srd", dgvPayment.Rows[i].Cells[10].Value);
-									cmd2.Parameters.AddWithValue("@otd", dgvPayment.Rows[i].Cells[11].Value);
+									cmd2.Parameters.AddWithValue("@wtax", dgvPayment.Rows[i].Cells[11].Value);
 
 									cmd2.Prepare();
                                     cmd2.ExecuteNonQuery();
@@ -430,6 +448,52 @@ namespace bcsys.Forms.EntryForms
 								namt = 0;
 							}
                         }
+                        //save bank details
+                        if (iptype == 2)
+                        {
+                            ssql = "insert into bcdb.paychk_d (teller,mascode,tdate,orno,amount,bankcode,checkno,checkdate,ptype) " +
+                            "values (@tel,@mc,@tdt,@or,@amt,@bc,@ckn,@ckdt,@pt)";
+                            using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
+                            {
+                                cmd2.Parameters.AddWithValue("@tel", tbTeller.Text);
+                                cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
+                                cmd2.Parameters.AddWithValue("@tdt", dtpCollection.Value.ToString("yyyy-MM-dd"));
+                                cmd2.Parameters.AddWithValue("@or", tbOrNo.Text);
+                               
+                                cmd2.Parameters.AddWithValue("@amt", nudamtdue.Value);
+                                cmd2.Parameters.AddWithValue("@bc", cbBank.SelectedValue);
+
+                                cmd2.Parameters.AddWithValue("@ckn", tbCheckNo.Text);
+                                cmd2.Parameters.AddWithValue("@ckdt",dtpchkdate.Value.ToString("yyyy-MM-dd"));
+                                
+                                cmd2.Parameters.AddWithValue("@pt", iptype);
+                                cmd2.Prepare();
+                                cmd2.ExecuteNonQuery();
+                                cmd2.Dispose();
+                            }
+                        }
+                        else if (iptype == 3)
+                        {
+                            ssql = "insert into bcdb.paychk_d (teller,mascode,tdate,orno,amount,checkdate,bankcode,ptype) " +
+                            "values (@tel,@mc,@tdt,@or,@amt,@ckdt,@bc,@pt)";
+                            using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
+                            {
+                                cmd2.Parameters.AddWithValue("@tel", tbTeller.Text);
+                                cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
+                                cmd2.Parameters.AddWithValue("@tdt", dtpCollection.Value.ToString("yyyy-MM-dd"));
+                                cmd2.Parameters.AddWithValue("@or", tbOrNo.Text);
+
+                                cmd2.Parameters.AddWithValue("@amt", nudamtdue.Value);
+                                cmd2.Parameters.AddWithValue("@bc", cbBank.SelectedValue);
+                                cmd2.Parameters.AddWithValue("@ckdt", dtpchkdate.Value.ToString("yyyy-MM-dd"));
+
+                                cmd2.Parameters.AddWithValue("@pt", iptype);
+                                cmd2.Prepare();
+                                cmd2.ExecuteNonQuery();
+                                cmd2.Dispose();
+                            }
+                        }
+                        
                         ndbcon.CloseConnection();
                     }
                 }
@@ -444,24 +508,29 @@ namespace bcsys.Forms.EntryForms
             Form ms = new mischarges();
             ms.Text = "Miscellaneous Charges";
             ms.ShowDialog();
-            dgvPayment.Rows.Add();
-            r = dgvPayment.Rows.Count - 1;
-            dgvPayment.Rows[r].Cells[1].Value = true;
-            dgvPayment.Rows[r].Cells[2].Value = DateTime.Now.ToString("MMM-yyyy");
-            dgvPayment.Rows[r].Cells[3].Value = 0;
-            dgvPayment.Rows[r].Cells[4].Value = Program.rate;
-            dgvPayment.Rows[r].Cells[5].Value = 0;
-            dgvPayment.Rows[r].Cells[6].Value = 0;
-            dgvPayment.Rows[r].Cells[7].Value = 0;
-            dgvPayment.Rows[r].Cells[8].Value = Program.rate;
-            dgvPayment.Rows[r].Cells[9].Value = 0;
-            dgvPayment.Rows[r].Cells[10].Value = 0;
-            dgvPayment.Rows[r].Cells[12].Value = Program.rate;
-            dgvPayment.Rows[r].Cells[13].Value = 0;
-            dgvPayment.Rows[r].Cells[14].Value = Program.desc0;
-            dgvPayment.Rows[r].Cells[15].Value = Program.ttype;
-            dgvPayment.Rows[r].Cells[16].Value = DateTime.Now.ToString("yyyyMM");
-            scomputetotal();
+            if (Program.nmisamount > 0)
+            {
+                dgvPayment.Rows.Add();
+                r = dgvPayment.Rows.Count - 1;
+                dgvPayment.Rows[r].Cells[1].Value = true;
+                dgvPayment.Rows[r].Cells[2].Value = DateTime.Now.ToString("MMM-yyyy");
+                dgvPayment.Rows[r].Cells[3].Value = 0;
+                dgvPayment.Rows[r].Cells[4].Value = Program.rate;
+                dgvPayment.Rows[r].Cells[5].Value = 0;
+                dgvPayment.Rows[r].Cells[6].Value = 0;
+                dgvPayment.Rows[r].Cells[7].Value = 0;
+                dgvPayment.Rows[r].Cells[8].Value = Program.rate;
+                dgvPayment.Rows[r].Cells[9].Value = 0;
+                dgvPayment.Rows[r].Cells[10].Value = 0;
+                dgvPayment.Rows[r].Cells[12].Value = Program.rate;
+                dgvPayment.Rows[r].Cells[13].Value = 0;
+                dgvPayment.Rows[r].Cells[14].Value = Program.desc0;
+                dgvPayment.Rows[r].Cells[15].Value = Program.ttype;
+                dgvPayment.Rows[r].Cells[16].Value = DateTime.Now.ToString("yyyyMM");
+                scomputetotal();
+
+            }
+            
         }
 
         decimal namt;
@@ -624,11 +693,24 @@ namespace bcsys.Forms.EntryForms
             if (nudother.Value > 0)
             {
 				dgvPayment.CurrentRow.Cells[11].Value = nudother.Value;
+                
 			}
             nudsenior.Value = 0;
             nudother.Value = 0;
             gbdiscount.Visible = false;
+            sdgvrowtotal();
 		}
+        decimal ntotalwt;
+        private void stotalwtax()
+            {
+            for (int i = 0; i < dgvPayment.Rows.Count; i++)
+            {
+                ntotalwt += Convert.ToDecimal( dgvPayment.Rows[i].Cells[11].Value);
+
+            }
+            nudwtax.Value = ntotalwt;
+            }
+
         int rp;
 		private void sprintor()
         {
@@ -763,7 +845,7 @@ namespace bcsys.Forms.EntryForms
 
         private void dgvPayment_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            if (e.ColumnIndex >= 2 && e.ColumnIndex != 12)
             {
                 if (e.RowIndex >= 0)
                 {
@@ -774,10 +856,10 @@ namespace bcsys.Forms.EntryForms
                         dgvPayment.CurrentRow.Cells[12].Value = dgvPayment.CurrentRow.Cells[13].Value;
                         namt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[13].Value) - Convert.ToDecimal(dgvPayment.CurrentRow.Cells[12].Value);
                         dgvPayment.CurrentRow.Cells[13].Value = namt;
-                        namount = nudTotal.Value;
-                        namount += Convert.ToDecimal(dgvPayment.CurrentRow.Cells[12].Value);
-                        nudTotal.Value = namount;
-                        nudamtdue.Value = namount - nudwtax.Value;
+                        //namount = nudTotal.Value;
+                        //namount += Convert.ToDecimal(dgvPayment.CurrentRow.Cells[12].Value);
+                        //nudTotal.Value = namount;
+                        //nudamtdue.Value = namount - nudwtax.Value;
 
                     }
                     else
@@ -786,23 +868,97 @@ namespace bcsys.Forms.EntryForms
                         ntotalbill = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[8].Value);
                         npayment = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[9].Value);
                         ndiscount = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[10].Value);
-                        //namount  = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[10].Value);
+                        nwtax  = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[11].Value);
+                        ////namount  = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[10].Value);
                         dgvPayment.CurrentRow.Cells[12].Value = 0;
-                        dgvPayment.CurrentRow.Cells[13].Value = ntotalbill - npayment - ndiscount; //  - namount;
-                        namount = nudTotal.Value;
-                        namount -= Convert.ToDecimal(dgvPayment.CurrentRow.Cells[13].Value);
-                        nudTotal.Value = Math.Abs(namount);
-                        nudamtdue.Value = nudTotal.Value + nudwtax.Value;
+                        dgvPayment.CurrentRow.Cells[13].Value = ntotalbill - npayment - ndiscount - nwtax; //  - namount;
+                        //namount = nudTotal.Value;
+                        //namount -= Convert.ToDecimal(dgvPayment.CurrentRow.Cells[13].Value);
+                        //nudTotal.Value = Math.Abs(namount);
+                        //nudamtdue.Value = nudTotal.Value + nudwtax.Value;
 					}
+                    scurrentrowtotal();
                     nudChange.Value = Math.Abs(nudTendered.Value - nudamtdue.Value);
                     if (Convert.ToDecimal(dgvPayment.CurrentRow.Cells[12].Value) <= 0)
                     {
                         dgvPayment.CurrentRow.Cells[1].Value = false;
                     }
+                    scomputetotaldue();
                 }
             }
         }
 
+        private void rbCash_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbCash.Checked ) { gbchkdtl.Visible = false ; }
+        }
+
+        private void rbCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbCheck.Checked)
+                {
+                gbchkdtl.Visible = true ;
+                tbCheckNo.Enabled = true ;
+                dtpchkdate.Enabled = true ;
+            }
+        }
+
+        private void rbOnline_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbOnline.Checked)
+            {
+                gbchkdtl.Visible = true;
+                tbCheckNo.Enabled = false ;
+                dtpchkdate.Enabled = true  ;
+            }
+        }
+
+        private void btnPrintCollection_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvPayment_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 12)
+            {
+                namt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells [12].Value);
+                dgvPayment.CurrentRow.Cells[12].Value = namt;
+
+                sdgvrowtotal();
+                scomputetotaldue();
+
+
+            }
+        }
+
+        private void scomputetotaldue()
+        {
+            namt = 0;
+            for (int i = 0;i < dgvPayment.Rows.Count;i++)
+            {
+                namt = Convert.ToDecimal(dgvPayment.Rows[i].Cells[12].Value);
+
+            }
+            nudTotal.Value = namt;
+            nudamtdue.Value = namt - nudwtax.Value;
+            nudChange.Value = nudamtdue.Value - nudTendered.Value;
+
+        }
+        private void scurrentrowtotal()
+        {
+            nbillamt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[4].Value);
+            nftax = Convert.ToDecimal(dgvPayment.Rows[r].Cells[5].Value);
+            nwmf = Convert.ToDecimal(dgvPayment.Rows[r].Cells[6].Value);
+            npenalty = Convert.ToDecimal(dgvPayment.Rows[r].Cells[7].Value);
+            namount = nbillamt + nftax + nwmf + npenalty;
+            npayment = Convert.ToDecimal(dgvPayment.Rows[r].Cells[9].Value);
+            ndiscount = Convert.ToDecimal(dgvPayment.Rows[r].Cells[10].Value);
+            nwtax = Convert.ToDecimal(dgvPayment.Rows[r].Cells[11].Value);
+            namt = Convert.ToDecimal(dgvPayment.Rows[r].Cells[12].Value);
+            nbalance = namount - npayment - ndiscount - nwtax - namt;
+            dgvPayment.CurrentRow.Cells[13].Value = nbalance;
+        }
         int counttrue()
         {
             var count = 0;
@@ -824,10 +980,11 @@ namespace bcsys.Forms.EntryForms
         //Date tmpdte = new Date();
         DateTime tmpdte;
         decimal notdisc = 0;
+        decimal nwtax;
         private void sdisplaydetails()
         {
             nudTotal.Value = 0; nudChange.Value = 0;nudTendered.Value = 0;
-            ssql = "select * from reading_bc where mascode=@mc and (payment<=0 or payment is null or payment<billamt) and billperiod is not null order by billperiod";
+            ssql = "select * from reading_bc where mascode=@mc and (payment<=0 or payment is null or payment<billamt) and billperiod is not null and billperiod>='202411' order by billperiod";
             DBConnect dbcon = new DBConnect();
             dbcon.OpenConnection(retries);
             // newdbcon.mytable = "master.mastfile";
@@ -845,10 +1002,17 @@ namespace bcsys.Forms.EntryForms
 
                         foreach (DataRow dr in rs.Rows)
                         {
+                            if (rs.Rows.Count < 2)
+                            {
+                                if (dr["billperiod"].ToString() == "202411")
+                                {
+                                    return;
+                                }
+                            }
                             dgvPayment.Rows.Add();
                             r = dgvPayment.Rows.Count - 1;
                             nftax = 0;nwmf = 0;npayment = 0;ndiscount = 0;npayment=0;nbalance = 0;nbillamt = 0;namount = 0;
-
+                            nwtax = 0;
                             if (dr["billamt"] != DBNull.Value)
                             {
                                 nbillamt = Convert.ToDecimal(dr["billamt"]);
@@ -872,14 +1036,18 @@ namespace bcsys.Forms.EntryForms
                             {
                                 ndiscount = Convert.ToDecimal(dr["srdisc"]);
                             }
-							if (dr["otdisc"] != DBNull.Value)
+							if (dr["wtax"] != DBNull.Value)
 							{
-								notdisc = Convert.ToDecimal(dr["otdisc"]);
+								notdisc = Convert.ToDecimal(dr["wtax"]);
 							}
 
 							if (dr["payment"] != DBNull.Value)
                             {
                                 npayment = Convert.ToDecimal(dr["payment"]);
+                            }
+                            if (dr["wtax"] != DBNull.Value)
+                            {
+                                nwtax  = Convert.ToDecimal(dr["wtax"]);
                             }
                             var mydate = dr["billperiod"].ToString().Substring(0, 4) + "-" + dr["billperiod"].ToString().Substring(4, 2) + "-01";
                             tmpdte = Convert.ToDateTime(mydate, CultureInfo.InvariantCulture);
@@ -895,7 +1063,7 @@ namespace bcsys.Forms.EntryForms
 
                             dgvPayment.Rows[r].Cells[9].Value = npayment;
                             dgvPayment.Rows[r].Cells[10].Value = ndiscount;
-							dgvPayment.Rows[r].Cells[11].Value = notdisc ;
+							dgvPayment.Rows[r].Cells[11].Value = nwtax;
 							dgvPayment.Rows[r].Cells[12].Value = 0;
                             nbalance = namount - npayment - ndiscount;
                             dgvPayment.Rows[r].Cells[13].Value = nbalance;
@@ -907,6 +1075,21 @@ namespace bcsys.Forms.EntryForms
                 }
             }
             dbcon.CloseConnection();
+        }
+
+        private void sdgvrowtotal()
+        {
+            nbillamt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[4].Value);
+            nftax = Convert.ToDecimal( dgvPayment.CurrentRow.Cells[5].Value);
+            nwmf =  Convert.ToDecimal( dgvPayment.CurrentRow.Cells[6].Value);
+            npenalty = Convert.ToDecimal( dgvPayment.CurrentRow.Cells[7].Value);
+            namount = nbillamt + nftax + nwmf + npenalty;
+            npayment = Convert.ToDecimal( dgvPayment.CurrentRow.Cells[9].Value);
+            ndiscount = Convert.ToDecimal( dgvPayment.CurrentRow.Cells[10].Value);
+            nwtax = Convert.ToDecimal( dgvPayment.CurrentRow.Cells[11].Value);
+            namt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[12].Value);
+            nbalance = namount - npayment - ndiscount - nwtax - namt;
+            dgvPayment.CurrentRow.Cells[13].Value = nbalance;
         }
 
         private void tsbCollect_Click(object sender, EventArgs e)
@@ -964,5 +1147,33 @@ namespace bcsys.Forms.EntryForms
 		    Program.bp = dtpCollection.Value.ToString("yyyyMM");
             sdisplaycollection();
 		}
+        private void sloadbanks()
+        {
+            ssql = "SELECT * FROM bcdb.banks order by bankname";
+            DBConnect newdbcon = new DBConnect();
+            newdbcon.OpenConnection(retries);
+            
+            DataTable rs = new DataTable();
+            using (MySqlCommand cmd = new MySqlCommand(ssql , newdbcon.database_connection))
+            {
+                //cmd.Parameters.AddWithValue("@bgy", tbBgyCode.Text);
+                using (rs = new DataTable())
+                {
+
+                    rs = newdbcon.get_records(ssql , cmd);
+                    if (rs.Rows.Count > 0)
+                    {
+                        cbBank.Items.Clear();
+                        cbBank.DisplayMember = rs.Columns[1].ToString();
+                        cbBank.ValueMember = rs.Columns[0].ToString();
+                        cbBank.DataSource = rs.DefaultView;
+                        
+
+                    }
+                    cmd.Dispose();
+                }
+            }
+            newdbcon.CloseConnection();
+        }
     }
 }

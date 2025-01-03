@@ -13,5 +13,9 @@ namespace bcsys.Reports
 			InitializeComponent();
 		}
 
-	}
+        private void TopMargin_BeforePrint(object sender, CancelEventArgs e)
+        {
+
+        }
+    }
 }

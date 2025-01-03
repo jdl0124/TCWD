@@ -27,11 +27,11 @@ namespace bcsys.Forms.EntryForms
 
             if (this.Text == "Reconnection")
             {
-                qry = "SELECT a.name,a.znacc12,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where a.bgycode=b.code and a.cust_stat='1' order by name";
+                qry = "SELECT a.name,a.accno,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where a.bgycode=b.code and a.cust_stat='1' order by name";
             }
             else
             {
-				qry = "SELECT a.name,a.znacc12,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where a.bgycode=b.code and a.cust_stat='0' order by name";
+				qry = "SELECT a.name,a.accno,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where a.bgycode=b.code and a.cust_stat='0' order by name";
 			}
             
             DBConnect newdbcon = new DBConnect();
@@ -79,6 +79,7 @@ namespace bcsys.Forms.EntryForms
         {
             Program.smascode = dgvConsumer.CurrentRow.Cells[5].Value.ToString();
             Program.zna = dgvConsumer.CurrentRow.Cells[1].Value.ToString();
+            Program.accno = dgvConsumer.CurrentRow.Cells[1].Value.ToString();
             this.Close();
         }
 
@@ -95,7 +96,7 @@ namespace bcsys.Forms.EntryForms
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-            string qry = "SELECT a.name,a.znacc12,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where a.name like '%" + tbSearch.Text + "%' and a.bgycode=b.code order by name";
+            string qry = "SELECT a.name,a.acctno,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where (a.name like '%" + tbSearch.Text + "%' or a.acctno like '%" + tbSearch.Text + "%') and a.bgycode=b.code order by name";
             DBConnect newdbcon = new DBConnect();
             newdbcon.OpenConnection(retries);
             // newdbcon.mytable = "master.mastfile";

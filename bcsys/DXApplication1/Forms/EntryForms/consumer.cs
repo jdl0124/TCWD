@@ -92,6 +92,7 @@ namespace bcsys.Forms.EntryForms
             cbBrand.SelectedIndex = -1;
 
             this.Tag = "1";
+            
         }
         private void tbSearch_MouseClick(object sender, MouseEventArgs e)
         {
@@ -271,10 +272,25 @@ namespace bcsys.Forms.EntryForms
                             cbRType.SelectedIndex = Convert.ToInt32(rw["ratetype"].ToString());
                             tbMeterNo.Text = rw["m_no"].ToString();
                             tbInitReading.Text = rw["m_irdg"].ToString();
-                            dtpConnected.Value = Convert.ToDateTime(rw["datecon"].ToString());
-                            dtpDiscon.Value = Convert.ToDateTime(rw["datediscon"].ToString());
-                            dtpactive.Value = Convert.ToDateTime(rw["activedate"].ToString());
-                            dtpRecon.Value = Convert.ToDateTime(rw["daterec"].ToString());
+                            if (rw["datecon"] != DBNull.Value )
+                            {
+                                dtpConnected.Value = Convert.ToDateTime(rw["datecon"].ToString());
+                            }
+                            if (rw["datediscon"] != DBNull.Value)
+                            {
+                                dtpConnected.Value = Convert.ToDateTime(rw["datediscon"].ToString());
+                            }
+                            //dtpDiscon.Value = Convert.ToDateTime(rw["datediscon"].ToString());
+                            if (rw["activedate"] != DBNull.Value)
+                            {
+                                dtpConnected.Value = Convert.ToDateTime(rw["activedate"].ToString());
+                            }
+                            //dtpactive.Value = Convert.ToDateTime(rw["activedate"].ToString());
+                            if (rw["daterec"] != DBNull.Value)
+                            {
+                                dtpConnected.Value = Convert.ToDateTime(rw["daterec"].ToString());
+                            }
+                            //dtpRecon.Value = Convert.ToDateTime(rw["daterec"].ToString());
 
 
 
@@ -358,7 +374,7 @@ namespace bcsys.Forms.EntryForms
                     result = ndbcon.get_records(qry, cmd);
                     if (result.Rows.Count > 0)
                     {
-                        ssql = "update bcdb.master set ratetype=@rt,m_brand=@mb,town=@twn,classcode=@cc,msize=@ms,bgycode=@bgyc,user1=@usr,name=@na,address=@add,m_no=@mn where mascode=@mc";
+                        ssql = "update bcdb.master set ratetype=@rt,m_brand=@mb,town=@twn,classcode=@cc,msize=@ms,bgycode=@bgyc,accno=@acn,user1=@usr,name=@na,address=@add,m_no=@mn where mascode=@mc";
                         using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
                         {
                             cmd2.Parameters.AddWithValue("@mc", tbMasCode.Text);
@@ -367,6 +383,8 @@ namespace bcsys.Forms.EntryForms
                             cmd2.Parameters.AddWithValue("@cc", cbClass.SelectedValue);
                             cmd2.Parameters.AddWithValue("@ms", cbMSize.SelectedValue);
                             cmd2.Parameters.AddWithValue("@bgyc", tbBgyCode.Text);
+                            cmd2.Parameters.AddWithValue("@acn", cbZone.Text + cbBook.Text + "-" +
+                                cbClass.Text + cbMSize.Text + "-" + tbAcc.Text);
                             cmd2.Parameters.AddWithValue("@usr", Program.usr);
                             cmd2.Parameters.AddWithValue("@na", tbName.Text);
                             cmd2.Parameters.AddWithValue("@add", tbAddress.Text);
@@ -437,7 +455,7 @@ namespace bcsys.Forms.EntryForms
         //    //}
         //}
 
-               private void tbSearch_KeyDown(object sender, KeyEventArgs e)
+        private void tbSearch_KeyDown(object sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Enter)

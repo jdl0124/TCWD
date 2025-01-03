@@ -205,7 +205,122 @@ namespace bcsys.Forms.ReportForms
 			}
 		}
 
-		DataTable dtb = new DataTable();
+        private void sbPreview_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ObjectPositions newpos = new ObjectPositions();
+                frmDashboard fdash = new frmDashboard();
+                agingreport mainfrm = new agingreport();
+                frmloading frm = new frmloading();
+
+                string thirdParam = string.Empty;
+                //string myparamtest1 = "Confidential";
+
+                DataSet ds = new DataSet2();
+
+                //ds.Tables.Clear();
+                ds.Tables[3].Rows.Clear();
+                ds.Tables[4].Rows.Clear();
+
+                XtraReport rpt = new xrmonthlybillingclasssummary();
+                var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
+
+                Application.DoEvents();
+
+                newpos.CenterObj(fdash, frm);
+                this.Cursor = Cursors.AppStarting;
+
+                frm.BringToFront();
+                frm.Show(mainfrm);
+
+                frm.Refresh();
+                Random rnd = new Random();
+                Random rnd2 = new Random();
+                DataRow r1 = ds.Tables[4].NewRow();
+                r1["acctname"] = "Tangub City Water District";
+                r1["address"] = "Monthly Billing Clasification Summary";
+                r1["acctno"] = "1";
+                r1["billdate"] = dtpDate.Value;
+                r1["sig1"] = Program.sig1 ;
+                r1["sig2"] = Program.sig2;
+                r1["sig3"] = Program.sig3;
+
+                ds.Tables[4].Rows.Add(r1);
+
+                for (int i = 0; i <= dgvc.RowCount - 1; i++)
+                {
+                    DataRow r2 = ds.Tables[3].NewRow();
+                    r2["acctno"] = "1";
+                    r2["nno"] = i + 1;
+                    //r2["acctname"] = dgvc.Rows[i].Cells[0].Value;
+                    //r2["acctno"] = dgvc.Rows[i].Cells[1].Value;
+					r2["clasi"] = dgvc.Rows[i].Cells[0].Value;
+					r2["size"] = dgvc.Rows[i].Cells[1].Value;
+					if (dgvc.Rows[i].Cells[2].Value != null)
+                    {
+                        r2["cumused"] = dgvc.Rows[i].Cells[2].Value;
+                    }
+                    else
+                    {
+                        r2["cumused"] = null;
+                    }
+
+                    if (dgvc.Rows[i].Cells[3].Value != null)
+                    {
+                        r2["amount"] = dgvc.Rows[i].Cells[3].Value;
+                    }
+                    else
+                    {
+                        r2["amount"] = 0;
+                    }
+                    if (dgvc.Rows[i].Cells[4].Value != null)
+                    {
+                        r2["q1"] = dgvc.Rows[i].Cells[4].Value;
+                    }
+                    else
+                    {
+                        r2["q1"] = 0;
+                    }
+                    if (dgvc.Rows[i].Cells[5].Value != null)
+                    {
+                        r2["q2"] = dgvc.Rows[i].Cells[5].Value;
+                    }
+                    else
+                    {
+                        r2["q2"] = 0;
+                    }
+
+                    if (dgvc.Rows[i].Cells[6].Value != null)
+                    {
+                        r2["q3"] = dgvc.Rows[i].Cells[6].Value;
+                    }
+                    else
+                    {
+                        r2["q3"] = 0;
+                    }
+                    ds.Tables[3].Rows.Add(r2);
+                }
+                rpt.DataSource = ds;
+                rpt.CreateDocument();
+                fdash.pgpanel.SendToBack();
+                fdash.pgpanel.Visible = false;
+                ReportPrintTool preView = new ReportPrintTool(rpt);
+                preView.PreviewRibbonForm.SaveState = false;
+                preView.PreviewRibbonForm.WindowState = FormWindowState.Maximized;
+
+                preView.ShowRibbonPreview();
+                this.Cursor = Cursors.Default;
+                frm.SendToBack();
+                frm.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        DataTable dtb = new DataTable();
 		private DataGridView[] dgvzn;
 		public monthlybillingsummary()
 		{

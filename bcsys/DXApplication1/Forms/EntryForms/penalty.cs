@@ -34,7 +34,7 @@ namespace bcsys.Forms.EntryForms
 
 		private void btnGo_Click(object sender, EventArgs e)
 		{
-			ssql = "select b.znacc12,b.name,b.m_no,a.billperiod,a.duedate,a.previous,a.present,a.cumused,a.billamt,a.billamt*.1 as penalty,b.mascode from bcdb.reading_bc a,bcdb.master b where a.mascode=b.mascode and billamt>0 and a.duedate<@dd and (a.penalty=0 or a.penalty is null) order by b.name";
+			ssql = "select b.znacc12,b.name,b.m_no,a.billperiod,a.duedate,a.previous,a.present,a.cumused,a.billamt,a.billamt*.1 as penalty,b.mascode from bcdb.reading_bc a,bcdb.master b where a.mascode=b.mascode and billamt>0 and a.duedate<@dd and (a.penalty=0 or a.penalty is null) and classcode<>'20' order by b.name";
 			DBConnect dbcon = new DBConnect();
 			dbcon.OpenConnection(retries);
 			// newdbcon.mytable = "master.mastfile";
