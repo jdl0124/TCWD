@@ -3,40 +3,76 @@
   "WorkspaceRootPath": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\magdis\\tcwd\\bcsys\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\collectionreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collectionreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\collectionreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collectionreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\magdis\\tcwd\\bcsys\\dxapplication1\\forms\\reportforms\\xrledger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\reportforms\\xrledger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\magdis\\tcwd\\bcsys\\dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\reading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\magdis\\tcwd\\bcsys\\dxapplication1\\forms\\entryforms\\ledger_old.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\ledger_old.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\magdis\\tcwd\\bcsys\\dxapplication1\\forms\\entryforms\\ledger_old.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\ledger_old.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|d:\\jdl solutions\\magdis\\tcwd\\bcsys\\dxapplication1\\forms\\reportforms\\xrledger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\reportforms\\xrledger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\modules\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\modules\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\reports\\xrtblotter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\reports\\xrtblotter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\collectionreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collectionreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\reports\\xrtblotters2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\reports\\xrtblotters2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\reports\\dataset2.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\reports\\dataset2.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\dailybillingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\dailybillingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\reportforms\\dlybillingsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\reportforms\\dlybillingsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\reportforms\\billingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\reportforms\\billingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,20 +91,8 @@
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\consumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\modules\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\modules\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\reports\\xrdlycollectionreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\reports\\xrdlycollectionreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\dailybillingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\dailybillingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\reports\\xrdlybillingclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\reports\\xrdlybillingclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\consearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,20 +139,8 @@
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\reports\\xrmonthlybillingsum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\reportforms\\dlybillingsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\reportforms\\dlybillingsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\reportforms\\dlybillingsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\reportforms\\dlybillingsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\reportforms\\billingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\reportforms\\billingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\reportforms\\billingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -159,10 +171,6 @@
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collection.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\collectionreport.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\collectionreport.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -177,10 +185,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\properties\\datasources\\bcsys.reports.dataset1.datasource||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\properties\\datasources\\bcsys.reports.dataset1.datasource||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\entryforms\\frminterviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|solutionrelative:dxapplication1\\forms\\entryforms\\frminterviews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{276E66E4-9EAD-4105-B1AC-4F1FB77EEFF2}|DXApplication1\\bcsys.csproj|D:\\jdl solutions\\magdis\\TCWD\\bcsys\\dxapplication1\\forms\\reportforms\\agingreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -206,81 +210,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "reading.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\reading.cs",
-              "ViewState": "AgIAAEgCAAAAAAAAAAAIwBMCAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T06:20:55.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmDashboard.cs [Design]",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs [Design]",
-              "RelativeToolTip": "DXApplication1\\Forms\\frmDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T00:36:18.441Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "collectionreport.cs [Design]",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collectionreport.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collectionreport.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collectionreport.cs [Design]",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\collectionreport.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T06:48:18.395Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "collectionreport.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collectionreport.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collectionreport.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collectionreport.cs",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\collectionreport.cs",
-              "ViewState": "AgIAALkBAAAAAAAAAAAYwMsBAAArAAAAAAAAAA==",
+              "Title": "xrledger.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\xrledger.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\xrledger.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\xrledger.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\ReportForms\\xrledger.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAowIQAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T07:58:29.793Z",
+              "WhenOpened": "2025-01-04T02:26:22.076Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "collection.cs [Design]",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collection.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.cs [Design]",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\collection.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T04:58:42.429Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "collection.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collection.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.cs",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\collection.cs",
-              "ViewState": "AgIAAEMCAAAAAAAAAAAwwEUCAAAMAAAAAAAAAA==",
+              "Title": "frmDashboard.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\frmDashboard.cs",
+              "ViewState": "AgIAAF8BAAAAAAAAAAAmwG4BAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T05:01:02.281Z",
+              "WhenOpened": "2024-12-27T10:06:13.998Z",
               "EditorCaption": ""
             },
             {
@@ -297,32 +252,184 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Program.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Program.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Program.cs",
-              "RelativeToolTip": "DXApplication1\\Program.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAowCwAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ledger_old.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\ledger_old.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\ledger_old.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\ledger_old.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\ledger_old.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAowEwAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T03:48:31.915Z"
+              "WhenOpened": "2025-01-04T02:26:35.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DBConnect.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\modules\\DBConnect.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\modules\\DBConnect.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\modules\\DBConnect.cs",
+              "RelativeToolTip": "DXApplication1\\modules\\DBConnect.cs",
+              "ViewState": "AgIAALYCAAAAAAAAAAAgwNECAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T05:36:47.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "reading.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\reading.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\reading.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\reading.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAwwH8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T06:20:55.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmDashboard.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\Forms\\frmDashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T02:37:31.408Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "xrledger.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\xrledger.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\xrledger.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\xrledger.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\Forms\\ReportForms\\xrledger.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T02:11:24.271Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ledger_old.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\ledger_old.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\ledger_old.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\ledger_old.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\ledger_old.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T02:13:09.664Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "billingreport.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\billingreport.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\billingreport.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\billingreport.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\Forms\\ReportForms\\billingreport.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T05:41:49.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataSet2.xsd",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\DataSet2.xsd",
+              "RelativeDocumentMoniker": "DXApplication1\\Reports\\DataSet2.xsd",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\DataSet2.xsd",
+              "RelativeToolTip": "DXApplication1\\Reports\\DataSet2.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2025-01-03T03:06:06.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "xrtblotter.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xrtblotter.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Reports\\xrtblotter.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xrtblotter.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\Reports\\xrtblotter.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T02:25:15.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "xrtblotters2.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xrtblotters2.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Reports\\xrtblotters2.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xrtblotters2.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\Reports\\xrtblotters2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T02:49:09.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "collectionreport.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collectionreport.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collectionreport.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collectionreport.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\collectionreport.cs",
+              "ViewState": "AgIAAEYBAAAAAAAAAAAewEsBAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T08:45:47.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "dlybillingsummary.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\dlybillingsummary.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\dlybillingsummary.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\dlybillingsummary.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\Forms\\ReportForms\\dlybillingsummary.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T05:46:19.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "dailybillingreport.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
               "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
               "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAqwFcBAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAcwIkAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T05:53:40.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-31T05:53:40.864Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
+              "Title": "collection.cs",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collection.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.cs",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\collection.cs",
+              "ViewState": "AgIAAEMCAAAAAAAAAAA9wFQCAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T05:01:02.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "collection.cs [Design]",
+              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.cs",
+              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collection.cs",
+              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.cs [Design]",
+              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\collection.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T04:58:42.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "consumer.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\consumer.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\consumer.cs",
@@ -334,7 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "consumer.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\consumer.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\consumer.cs",
@@ -345,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "application.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\application.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\application.cs",
@@ -357,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "application.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\application.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\application.cs",
@@ -368,31 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DBConnect.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\modules\\DBConnect.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\modules\\DBConnect.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\modules\\DBConnect.cs",
-              "RelativeToolTip": "DXApplication1\\modules\\DBConnect.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAwwDEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T05:36:47.943Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "dailybillingreport.cs [Design]",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs [Design]",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\dailybillingreport.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T05:50:18.091Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "xrdlycollectionreport.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xrdlycollectionreport.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\xrdlycollectionreport.cs",
@@ -403,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "mischarges.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\mischarges.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\mischarges.cs",
@@ -415,18 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "xrdlybillingclass.cs [Design]",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xrdlybillingclass.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Reports\\xrdlybillingclass.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xrdlybillingclass.cs [Design]",
-              "RelativeToolTip": "DXApplication1\\Reports\\xrdlybillingclass.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T06:01:08.936Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "changeform.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changeform.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\changeform.cs",
@@ -438,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "consearch.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\consearch.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\consearch.cs",
@@ -449,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "consearch.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\consearch.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\consearch.cs",
@@ -461,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "xrdlybillingreport.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xrdlybillingreport.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\xrdlybillingreport.cs",
@@ -472,7 +544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "monthlybillingsummary.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs",
@@ -484,7 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "xrmonthlybillingclasssummary.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xrmonthlybillingclasssummary.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\xrmonthlybillingclasssummary.cs",
@@ -495,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "monthlybillingsummary.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\monthlybillingsummary.cs",
@@ -506,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "frmlogin.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\Users\\frmlogin.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\Users\\frmlogin.cs",
@@ -517,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "frmlogin.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\Users\\frmlogin.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\Users\\frmlogin.cs",
@@ -529,7 +601,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "xrmonthlybillingsum.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xrmonthlybillingsum.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\xrmonthlybillingsum.cs",
@@ -540,20 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "frmDashboard.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.cs",
-              "RelativeToolTip": "DXApplication1\\Forms\\frmDashboard.cs",
-              "ViewState": "AgIAAEUBAAAAAAAAAAAAwFUBAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T10:06:13.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "dlybillingsummary.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\dlybillingsummary.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\dlybillingsummary.cs",
@@ -565,18 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "billingreport.cs [Design]",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\billingreport.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\billingreport.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\billingreport.cs [Design]",
-              "RelativeToolTip": "DXApplication1\\Forms\\ReportForms\\billingreport.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T05:41:49.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "billingreport.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\billingreport.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\billingreport.cs",
@@ -588,18 +636,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "dlybillingsummary.cs [Design]",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\dlybillingsummary.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\dlybillingsummary.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\dlybillingsummary.cs [Design]",
-              "RelativeToolTip": "DXApplication1\\Forms\\ReportForms\\dlybillingsummary.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T05:46:19.408Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "penalty.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\penalty.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\penalty.cs",
@@ -611,7 +648,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "penalty.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\penalty.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\penalty.cs",
@@ -622,7 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "changeform.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changeform.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\changeform.cs",
@@ -633,7 +670,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "ServiceInvoiceXR.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\ServiceInvoiceXR.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\ServiceInvoiceXR.cs",
@@ -644,7 +681,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "collection.Designer.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collection.Designer.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collection.Designer.cs",
@@ -652,12 +689,11 @@
               "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\collection.Designer.cs",
               "ViewState": "AgIAAB4GAAAAAAAAAAAwwCkGAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-30T04:27:31.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T04:27:31.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "mischarges.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\mischarges.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\mischarges.cs",
@@ -668,20 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "collectionreport.Designer.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collectionreport.Designer.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\collectionreport.Designer.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\collectionreport.Designer.cs",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\collectionreport.Designer.cs",
-              "ViewState": "AgIAAOwDAAAAAAAAAAAuwPwDAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T08:05:47.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "agingreport.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\ReportForms\\agingreport.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\ReportForms\\agingreport.cs",
@@ -693,7 +716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "consumer.Designer.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\consumer.Designer.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\consumer.Designer.cs",
@@ -705,7 +728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "frmDashboard.Designer.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\frmDashboard.Designer.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\frmDashboard.Designer.cs",
@@ -718,19 +741,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "bcsys.Reports.DataSet1.datasource",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
               "RelativeDocumentMoniker": "DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
               "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
               "RelativeToolTip": "DXApplication1\\Properties\\DataSources\\bcsys.Reports.DataSet1.datasource",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAZAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
               "WhenOpened": "2024-12-18T01:00:15.857Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 44,
               "Title": "changemeter.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\changemeter.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\changemeter.cs",
@@ -742,19 +765,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "frminterviews.cs",
-              "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\frminterviews.cs",
-              "RelativeDocumentMoniker": "DXApplication1\\Forms\\EntryForms\\frminterviews.cs",
-              "ToolTip": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Forms\\EntryForms\\frminterviews.cs",
-              "RelativeToolTip": "DXApplication1\\Forms\\EntryForms\\frminterviews.cs",
-              "ViewState": "AQIAABMBAAAAAAAAAAAqwCMBAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T03:44:54.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "xragingreport.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\xragingreport.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\xragingreport.cs",
@@ -765,7 +776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "Teller.cs",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\modules\\Teller.cs",
               "RelativeDocumentMoniker": "DXApplication1\\modules\\Teller.cs",
@@ -777,7 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "test.cs [Design]",
               "DocumentMoniker": "D:\\jdl solutions\\magdis\\TCWD\\bcsys\\DXApplication1\\Reports\\test.cs",
               "RelativeDocumentMoniker": "DXApplication1\\Reports\\test.cs",

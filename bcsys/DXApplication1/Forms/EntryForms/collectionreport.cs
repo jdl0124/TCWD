@@ -70,7 +70,14 @@ namespace bcsys.Forms.EntryForms
 		}
 
 		private void btnGo_Click(object sender, EventArgs e)
-		{
+		{;
+
+            nudAdd.Value = 0;
+            nudLess.Value = 0;
+            nudAmount.Value = 0;
+            nudTotal.Value = 0;
+            nudDeposits.Value = 0;
+
 			if (this.Text == "Daily Collection Report")
 			{
 				stellerblotter();
@@ -85,7 +92,7 @@ namespace bcsys.Forms.EntryForms
 			}
 		}
 
-        private void tsbPrint_Click(object sender, EventArgs e)
+        private void sprn_collection()
         {
             try
             {
@@ -102,9 +109,10 @@ namespace bcsys.Forms.EntryForms
                 //ds.Tables.Clear();
                 ds.Tables[3].Rows.Clear();
                 ds.Tables[4].Rows.Clear();
-
-                XtraReport rpt = new xrdlycollectionreport ();
+                XtraReport rpt = new xrdlycollectionreport();
                 var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
+
+
 
                 Application.DoEvents();
 
@@ -127,8 +135,9 @@ namespace bcsys.Forms.EntryForms
                 r1["sig3"] = Program.sig3;
 
                 ds.Tables[4].Rows.Add(r1);
-                if (xtc1.SelectedTabPageIndex == 0)
+                if (xtc1.SelectedTabPageIndex == 1)
                 {
+
                     for (int i = 0; i <= dgv.RowCount - 1; i++)
                     {
                         DataRow r2 = ds.Tables[3].NewRow();
@@ -200,7 +209,7 @@ namespace bcsys.Forms.EntryForms
                         ds.Tables[3].Rows.Add(r2);
                     }
                 }
-                
+
 
                 rpt.DataSource = ds;
                 rpt.CreateDocument();
@@ -220,6 +229,161 @@ namespace bcsys.Forms.EntryForms
                 MessageBox.Show(ex.Message);
             }
         }
+        private void tsbPrint_Click(object sender, EventArgs e)
+        {
+            if (xtc1.SelectedTabPageIndex == 1)
+            {
+                sprn_collection();
+            }
+            else if (xtc1.SelectedTabPageIndex == 0) 
+            { 
+                sprn_tblotter();
+            }
+
+            
+        }
+
+        private void sprn_tblotter()
+        {
+            try
+            {
+                ObjectPositions newpos = new ObjectPositions();
+                frmDashboard fdash = new frmDashboard();
+                agingreport mainfrm = new agingreport();
+                frmloading frm = new frmloading();
+
+                string thirdParam = string.Empty;
+                //string myparamtest1 = "Confidential";
+
+                DataSet ds = new DataSet2();
+
+                //ds.Tables.Clear();
+                ds.Tables[3].Rows.Clear();
+                ds.Tables[4].Rows.Clear();
+                ds.Tables[5].Rows.Clear();
+
+                XtraReport rpt = new xrtblotter ();
+                var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
+
+                Application.DoEvents();
+
+                newpos.CenterObj(fdash, frm);
+                this.Cursor = Cursors.AppStarting;
+
+                frm.BringToFront();
+                frm.Show(mainfrm);
+
+                frm.Refresh();
+                Random rnd = new Random();
+                Random rnd2 = new Random();
+                DataRow r1 = ds.Tables[3].NewRow();
+                r1["acctname"] = "Tangub City Water District";
+                r1["address"] = "Aging Report";
+                r1["acctno"] = "1";
+                r1["billdate"] = dtpDate.Value;
+                r1["sig1"] = Program.sig1;
+                r1["sig2"] = Program.sig2;
+                r1["sig3"] = Program.sig3;
+
+                ds.Tables[3].Rows.Add(r1);
+                
+                    for (int i = 0; i <= dgvb.RowCount - 1; i++)
+                    {
+                        
+                    }
+                DataRow r2 = ds.Tables[5].NewRow();
+                r2["acctno"] = "1";
+                r2["nno"] = 1;
+                r2["part1"] = dgvb.Rows[0].Cells[0].Value;
+                r2["part2"] = dgvb.Rows[1].Cells[0].Value;
+                r2["part3"] = dgvb.Rows[2].Cells[0].Value;
+                r2["total"] = nudTotal.Value;
+                r2["arbalance"] = nudDeposits.Value;
+                //r2["amt1"] = dgv.Rows[i].Cells[1].Value;
+
+                if (dgvb.Rows[0].Cells[0].Value != null)
+                {
+                    r2["amt1"] = dgvb.Rows[0].Cells[1].Value;
+                }
+                else
+                {
+                    r2["amt1"] = 0;
+                }
+                if (dgvb.Rows[1].Cells[0].Value != null)
+                {
+                    r2["amt2"] = dgvb.Rows[1].Cells[1].Value;
+                }
+                else
+                {
+                    r2["amt2"] = 0;
+                }
+
+                if (dgvb.Rows[2].Cells[0].Value != null)
+                {
+                    r2["amt3"] = dgvb.Rows[2].Cells[1].Value;
+                }
+                else
+                {
+                    r2["amt3"] = 0;
+                }
+
+                ds.Tables[5].Rows.Add(r2);
+
+                for (int i = 0; i <= dgvDeposit.RowCount - 1; i++)
+                {
+                    DataRow r3 = ds.Tables[4].NewRow();
+                    r3["acctno"] = "1";
+                    
+                    r3["part"] = dgvDeposit .Rows[i].Cells[0].Value;
+                    //r2["amt1"] = dgv.Rows[i].Cells[1].Value;
+
+                    if (dgvDeposit .Rows[i].Cells[2].Value != null)
+                    {
+                        r3["ncr"] = dgvDeposit .Rows[i].Cells[2].Value;
+                    }
+                    else
+                    {
+                        r3["ncr"] = 0;
+                    }
+                    if (dgvDeposit.Rows[i].Cells[1].Value != null)
+                    {
+                        r3["ndr"] = dgvDeposit.Rows[i].Cells[1].Value;
+                    }
+                    else
+                    {
+                        r3["ndr"] = 0;
+                    }
+
+                    ds.Tables[4].Rows.Add(r3);
+                }
+                
+                XRSubreport subReport = (XRSubreport)rpt.FindControl("xrblotter1", true);
+               // ((xrtblotters1)subReport.ReportSource).DataSource = ds;
+
+                XRSubreport subReport2 = (XRSubreport)rpt.FindControl("xrblotter2", true);
+                //((xrtblotters2)subReport2.ReportSource).DataSource = ds;
+
+                rpt.DataSource = ds;
+                rpt.CreateDocument();
+                fdash.pgpanel.SendToBack();
+                fdash.pgpanel.Visible = false;
+                ReportPrintTool preView = new ReportPrintTool(rpt);
+                preView.PreviewRibbonForm.SaveState = false;
+                preView.PreviewRibbonForm.WindowState = FormWindowState.Maximized;
+
+                preView.ShowRibbonPreview();
+                this.Cursor = Cursors.Default;
+                frm.SendToBack();
+                frm.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
         string optor;
         private void tsbAdd_Click(object sender, EventArgs e)
         {
@@ -250,10 +414,21 @@ namespace bcsys.Forms.EntryForms
                 dgvDeposit.Rows[r].Cells[1].Value = nudAmount.Value.ToString("###,###,##0.00");
             }
             nudAmount.Value = 0;
+            ncr = 0;ndr = 0;
+            for (int i = 1; i < dgvDeposit.Rows.Count; i++)
+            {
+                ncr += Convert.ToDecimal ( dgvDeposit.Rows[i].Cells[2].Value);
+                ndr += Convert.ToDecimal(dgvDeposit.Rows[i].Cells[1].Value);
+
+            }
+            nudAdd.Value = ncr;
+            nudLess.Value = ndr;
+            nudDeposits.Value = nTBalance + nudTotal.Value + nudAdd.Value - nudLess.Value;
         }
 
         private void tsbLess_Click(object sender, EventArgs e)
         {
+
             tsbSave.Enabled = true;
             tsbDelete.Enabled = true;
             optor = "-";
@@ -315,7 +490,7 @@ namespace bcsys.Forms.EntryForms
                     if (rs.Rows.Count <= 0)
                     {
                         //insert to bremarks
-                        ssql = "INSERT INTO bcdb.tblotter(tellerno,bdate,brem,bamt,pkno,seqno) VALUES(@tel,@dte,@br,@ba,@pk,@sq)";
+                        ssql = "INSERT INTO bcdb.tblotter(teller,bdate,brem,bamt,pkno,seqno) VALUES(@tel,@dte,@br,@ba,@pk,@sq)";
                         using (MySqlCommand cmd3 = new MySqlCommand(ssql, newdbcon.database_connection  ))
                         {
                             if (Convert.ToDecimal(dgvDeposit.Rows[i].Cells[1].Value) > 0)
@@ -361,7 +536,7 @@ namespace bcsys.Forms.EntryForms
             {
                 tdate = dtpDate.Value.AddDays(1);
             }
-            ssql = "update bcdb.tblotter set bamt=@dep where tellerno=@tel and seqno=0 and bdate=@dte";
+            ssql = "update bcdb.tblotter set bamt=@dep where teller=@tel and seqno=0 and bdate=@dte";
             using (MySqlCommand cmd3 = new MySqlCommand(ssql, newdbcon.database_connection ))
             {
                 cmd3.Parameters.AddWithValue("@tel", Program.usr );
@@ -380,7 +555,7 @@ namespace bcsys.Forms.EntryForms
             newdbcon.OpenConnection(retries);
 
             rs = new DataTable();
-            ssql = "select * from bcdb.tblotter where tellerno=@tel and bdate=@dte order by seqno";
+            ssql = "select * from bcdb.tblotter where teller=@tel and bdate=@dte order by seqno";
             dgvDeposit.Rows.Clear();
             using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection ))
             {
@@ -451,15 +626,59 @@ namespace bcsys.Forms.EntryForms
                     dgvDeposit.Rows[r].Cells[2].Value = nTBalance.ToString("###,###,##0.00");
                 }
             }
+            nudDeposits.Value = nudTotal.Value + nudAdd.Value - nudLess.Value;
             rs.Dispose();
         }
         decimal  ndr,ncr,nTBalance,naddamt,nlessamt;
+
+        private void tbRemarks_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter )
+            {
+                nudAmount.Focus();
+                nudAmount.Select(0, nudAmount.Value.ToString().Length + 3);
+
+            }
+
+        }
+
+        private void cbteller_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //get tbalance
+            sgettbalance();
+        }
+        private void sgettbalance()
+        {
+            DBConnect newdbcon = new DBConnect();
+            newdbcon.OpenConnection(retries);
+
+            rs = new DataTable();
+            ssql = "select * from bcdb.users where username=@tel";
+            dgvDeposit.Rows.Clear();
+            using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
+            {
+                cmd2.Parameters.AddWithValue("@tel", Program.usr);
+                cmd2.Prepare();
+
+                rs = newdbcon.get_records(ssql, cmd2);
+                dgvDeposit.Rows.Clear();
+                if (rs.Rows.Count > 0)
+                {
+                    DataRow dr = rs.Rows[0];
+                    nTBalance = Convert.ToDecimal(dr["tbalance"]);
+
+                }
+                cmd2.Dispose();
+            }
+            newdbcon.CloseConnection();
+        }
+
         private void supdatedeposit()
         {
             DBConnect newdbcon = new DBConnect();
             newdbcon.OpenConnection(retries);
 
-            string qry = "UPDATE bcdb.user SET tbalance=@ntb WHERE tellerno=@telno";
+            string qry = "UPDATE bcdb.users SET tbalance=@ntb WHERE username=@telno";
             using (MySqlCommand cmd2 = new MySqlCommand(qry, newdbcon.database_connection  ))
             {
                 cmd2.Parameters.AddWithValue("@telno", Program.usr);
@@ -472,6 +691,7 @@ namespace bcsys.Forms.EntryForms
         string sptype;
 		private void stellerblotter()
 		{
+            sgettbalance();
             ssql = "select ptype,sum(amtdue) as amt from pay_h where teller=@tel and tdate=@dt group by ptype order by ptype";
             DBConnect dbcon = new DBConnect();
             dbcon.OpenConnection(retries);
@@ -482,10 +702,12 @@ namespace bcsys.Forms.EntryForms
                 cmd1.Parameters.AddWithValue("@dt", dtpDate.Value.ToString("yyyy-MM-dd"));
                 using (dt = new DataTable())
                 {
+                    dgvb.Rows.Clear();
                     dt = dbcon.get_records(ssql, cmd1);
                     if (dt.Rows.Count > 0)
                     {
-                        dgvb.Rows.Clear();
+                        
+                        namt = 0;
                         foreach (DataRow rs in dt.Rows)
                         {
                             dgvb.Rows.Add();
@@ -502,9 +724,11 @@ namespace bcsys.Forms.EntryForms
 							else { sptype = "ONLINE"; }
                             dgvb.Rows[r].Cells[0].Value = sptype;
                             dgvb.Rows[r].Cells[1].Value = rs["amt"];
-                            
+                            namt += Convert.ToDecimal(rs["amt"]);
 
                         }
+                        nudTotal.Value = namt;
+                        namt = 0;
                     }
                 }
                 cmd1.Dispose();
@@ -551,6 +775,8 @@ namespace bcsys.Forms.EntryForms
                 cmd1.Dispose();
             }
             dbcon.CloseConnection();
+            sgetdeposit();
+
 
         }
 
@@ -641,6 +867,7 @@ namespace bcsys.Forms.EntryForms
 					if (dt.Rows.Count > 0)
 					{
 						dgv.Rows.Clear();
+                        namt = 0;
 						foreach (DataRow rs in dt.Rows)
 						{
 							dgv.Rows.Add();
@@ -649,6 +876,7 @@ namespace bcsys.Forms.EntryForms
 							dgv.Rows[r].Cells[1].Value = rs["acctname"];
 							dgv.Rows[r].Cells[2].Value = rs["orno"];
 							dgv.Rows[r].Cells[3].Value = rs["paidamount"];
+                            namt += Convert.ToDecimal(rs["paidamount"]);
 							if (bp == rs["billperiod"].ToString())
 							{
 								dgv.Rows[r].Cells[4].Value = Convert.ToDecimal( rs["billamt"]) + Convert.ToDecimal(rs["ftax"]);
@@ -671,6 +899,8 @@ namespace bcsys.Forms.EntryForms
 							//dgv.Rows[r].Cells[13].Value = rs["stubno"];
 
 						}
+                        nudTotal.Value = namt;
+                        namt = 0;
 					}
 				}
 				cmd1.Dispose();

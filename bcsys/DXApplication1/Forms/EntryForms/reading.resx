@@ -322,6 +322,17 @@
         /gUxEIAyBmtU8wAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEPSURBVDhPrZI9qoNAFEZnT27BPQk2BhQLSZNCRMTGJmIn
+        ltZWpklpaWnjFu7jXDTPh0bCIxcODHPPx/yar1ZVVVLXtbRtK13XyePxUBgzRw9n0fd1u91knudTcBZ9
+        X47jvFZ9B86i/xbbApqXy0Wu16ukaSpFUSiMmaOHs/oavt/v0ve9bi8Mw1fzHTi4ZMgaVpimScmyTC/r
+        DBzLstQna/I8l3EcFVY4OvcWnNUna5IkkWEY/gVZfbrn8/nnnJ9ARp80iqLX1rjhT8AlQ9YEQSBlWeqk
+        bdt6QWfg4JIhq0/peZ6s8EQIR9Dbuhreluu6ejbEI+jhLPq+OJ/v+xLHsX6SpmkUxszRw1n0b5QxPzga
+        Otn9B6obAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="Bill.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhGAAYAIZMAL+/v+SeZ+7AjOKZZfHNke26iu/FjvPUk/Xbl+/HdPfjmu2/cefEqfXdvtOgjNeo
@@ -360,17 +371,6 @@
         W/MA0Ks/7zYLoDGCXECp4JY+APv467slssKFICAnrHDAgAQWaOABJ8SxwA2CdAEDDG4tEGGEC1Ro4QIm
         +GCCHYK0IAMDboEIgIgMlGhiiXhgIUMLgqRAQwkGxCjjjDTGWAINKQiSwQsB9Ojjj0D++EIGBmUgwJFI
         JqlkkkQq5OSTUEYZEAA7
-</value>
-  </data>
-  <data name="btnPrint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEPSURBVDhPrZI9qoNAFEZnT27BPQk2BhQLSZNCRMTGJmIn
-        ltZWpklpaWnjFu7jXDTPh0bCIxcODHPPx/yar1ZVVVLXtbRtK13XyePxUBgzRw9n0fd1u91knudTcBZ9
-        X47jvFZ9B86i/xbbApqXy0Wu16ukaSpFUSiMmaOHs/oavt/v0ve9bi8Mw1fzHTi4ZMgaVpimScmyTC/r
-        DBzLstQna/I8l3EcFVY4OvcWnNUna5IkkWEY/gVZfbrn8/nnnJ9ARp80iqLX1rjhT8AlQ9YEQSBlWeqk
-        bdt6QWfg4JIhq0/peZ6s8EQIR9Dbuhreluu6ejbEI+jhLPq+OJ/v+xLHsX6SpmkUxszRw1n0b5QxPzga
-        Otn9B6obAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

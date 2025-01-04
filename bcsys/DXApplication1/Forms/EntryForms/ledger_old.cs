@@ -74,7 +74,7 @@ namespace bcsys.Forms.EntryForms
         int r = 0;
         private void sDisplayLedger()
         {
-            string qry = "select * FROM bcdb.ledger_bc where mascode=@mc order by code";
+            string qry = "select * FROM bcdb.ledger_bc where mascode=@mc and billperiod>='202301' order by code";
             DBConnect newdbcon = new DBConnect();
             newdbcon.OpenConnection(retries);
 

@@ -91,6 +91,7 @@
             this.accordionControlSeparator7 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator8 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator9 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlElement18 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -709,6 +710,7 @@
             this.accordionControlSeparator7,
             this.accordionControlElement7,
             this.accordionControlSeparator8,
+            this.accordionControlElement12,
             this.accordionControlElement8,
             this.accordionControlSeparator9,
             this.accordionControlElement18,
@@ -752,6 +754,14 @@
             // accordionControlSeparator8
             // 
             this.accordionControlSeparator8.Name = "accordionControlSeparator8";
+            // 
+            // accordionControlElement12
+            // 
+            this.accordionControlElement12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement12.ImageOptions.Image")));
+            this.accordionControlElement12.Name = "accordionControlElement12";
+            this.accordionControlElement12.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement12.Text = "Ledger New";
+            this.accordionControlElement12.Click += new System.EventHandler(this.accordionControlElement12_Click);
             // 
             // accordionControlElement8
             // 
@@ -835,7 +845,6 @@
             this.C,
             this.accordionControlSeparator17,
             this.accordionControlElement26});
-            this.accordionControlElement22.Expanded = true;
             this.accordionControlElement22.Name = "accordionControlElement22";
             this.accordionControlElement22.Text = "Other Change";
             this.accordionControlElement22.Click += new System.EventHandler(this.accordionControlElement22_Click);
@@ -914,6 +923,7 @@
             this.accordionControlElement14,
             this.accordionControlSeparator23,
             this.billingreport});
+            this.employeesAccordionControlElement.Expanded = true;
             this.employeesAccordionControlElement.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("employeesAccordionControlElement.ImageOptions.Image")));
             this.employeesAccordionControlElement.Name = "employeesAccordionControlElement";
             this.employeesAccordionControlElement.Text = "Billing";
@@ -1426,5 +1436,6 @@
 		private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator31;
 		private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator6;
 		private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
-	}
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
+    }
 }

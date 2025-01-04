@@ -563,7 +563,7 @@
             this.lblBP.AutoSize = true;
             this.lblBP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBP.ForeColor = System.Drawing.Color.Red;
-            this.lblBP.Location = new System.Drawing.Point(722, 38);
+            this.lblBP.Location = new System.Drawing.Point(622, 38);
             this.lblBP.Name = "lblBP";
             this.lblBP.Size = new System.Drawing.Size(0, 24);
             this.lblBP.TabIndex = 247;
@@ -623,6 +623,7 @@
             this.dgvReading.Size = new System.Drawing.Size(993, 500);
             this.dgvReading.TabIndex = 233;
             this.dgvReading.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReading_CellEndEdit);
+            this.dgvReading.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvReading_CellFormatting);
             this.dgvReading.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvReading_KeyDown);
             // 
             // Nnn
@@ -836,7 +837,7 @@
             // 
             // senior
             // 
-            this.senior.HeaderText = "senior";
+            this.senior.HeaderText = "SRDisc";
             this.senior.Name = "senior";
             this.senior.Visible = false;
             // 
@@ -893,6 +894,7 @@
             this.dgvBrgy.TabIndex = 232;
             this.dgvBrgy.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBrgy_CellClick);
             this.dgvBrgy.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBrgy_CellContentClick);
+            this.dgvBrgy.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBrgy_CellFormatting);
             // 
             // nomber
             // 
@@ -1002,9 +1004,9 @@
             this.btnSave,
             this.btnSaveBilling,
             this.btnClose});
-            this.tsMenu.Location = new System.Drawing.Point(539, 4);
+            this.tsMenu.Location = new System.Drawing.Point(937, 4);
             this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(636, 25);
+            this.tsMenu.Size = new System.Drawing.Size(238, 25);
             this.tsMenu.TabIndex = 237;
             this.tsMenu.TabStop = true;
             this.tsMenu.Text = "Receiving Menu";

@@ -8,8 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using bcsys.modules;
+using DevExpress.Charts.Native;
 using DevExpress.CodeParser;
 using DevExpress.DataProcessing.InMemoryDataProcessor;
+using DevExpress.XtraRichEdit.Model;
 using DevExpress.XtraScheduler.Native;
 using MySql.Data.MySqlClient;
 using static DevExpress.Xpo.Helpers.AssociatedCollectionCriteriaHelper;
@@ -77,8 +79,8 @@ namespace bcsys.Forms.EntryForms
 					{
 						cbreader.Items.Clear();
 						
-						cbreader.DisplayMember = dtb.Columns[1].ToString();
-						cbreader.ValueMember = dtb.Columns[0].ToString();
+						cbreader.DisplayMember = dtb.Columns[2].ToString();
+						cbreader.ValueMember = dtb.Columns[5].ToString();
 						cbreader.DataSource = dtb.DefaultView;
 					}
 				}
@@ -99,6 +101,23 @@ namespace bcsys.Forms.EntryForms
             dgvBrgy.Columns[3].Width = 35;
             dgvBrgy.Columns[3].HeaderText = "RDate";
             dgvBrgy.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            for (int i = 0; i <= dgvBrgy.Rows.Count -1; i++)
+            {
+                if (dgvBrgy.Rows[i].Cells[2].Value.ToString() == dtpBP.Value.ToString("yyyyMM"))
+                {
+
+                    //dgvBrgy.Rows[i].DataGridView.DefaultCellStyle.BackColor   = Color.Green;
+                    //for (int c = 0;c<dgvBrgy.Columns.Count;c++)
+                    //{
+                    //    dgvBrgy.Rows[i].Cells[c].Style.ForeColor = Color.Green ;
+                    //}
+                   
+                }
+                else
+                {
+                    //dgvBrgy.Rows[i].DataGridView.DefaultCellStyle.BackColor  = Color.Black ;
+                }
+            }
         }
 
         decimal dtotbill = 0;
@@ -150,7 +169,7 @@ namespace bcsys.Forms.EntryForms
                         dgvReading.Rows.Clear();
                         int n = 1;int r = 0;    
                         lblBP.Text = bp.Substring(0,4) + "-" + bp.Substring(4, 2) + "-01";
-                        lblBP.Text = "Billing Period: " + Convert.ToDateTime(lblBP.Text).ToString("MMMM-yyyy");
+                        lblBP.Text = "Billing Period: " + Convert.ToDateTime(lblBP.Text).ToString("MMMM-yyyy") + " For Zone-" + dgvBrgy.CurrentRow.Cells[0].Value + " Book-" + dgvBrgy.CurrentRow.Cells[1].Value;
                         foreach(DataRow dr in dtb.Rows)
                         {
                             dtotbill = 0;
@@ -166,9 +185,13 @@ namespace bcsys.Forms.EntryForms
                             dgvReading.Rows[r].Cells[2].Value = dr["name"].ToString();
                             dgvReading.Rows[r].Cells[3].Value = dr["brgy"].ToString();
                             dgvReading.Rows[r].Cells[4].Value = dr["m_no"].ToString();
+                            dgvReading.Rows[r].Cells[5].Value = 0;
                             dgvReading.Rows[r].Cells[5].Value = dr["previous"].ToString();
+                            dgvReading.Rows[r].Cells[6].Value = 0;
                             dgvReading.Rows[r].Cells[6].Value = dr["present"].ToString();
+                            dgvReading.Rows[r].Cells[7].Value = 0;
                             dgvReading.Rows[r].Cells[7].Value = Convert.ToInt32(dr["cumused"].ToString());
+                            dgvReading.Rows[r].Cells[8].Value = 0;
                             dgvReading.Rows[r].Cells[8].Value = Convert.ToDecimal(dr["billamt"].ToString());
                             namt = 0;
                             dtotbill += Convert.ToDecimal(dr["billamt"].ToString());
@@ -178,6 +201,7 @@ namespace bcsys.Forms.EntryForms
                                 namt = Convert.ToDecimal(dr["ftax"]);
                                 dtotbill += namt;
                             }
+                            dgvReading.Rows[r].Cells[9].Value = 0;
                             dgvReading.Rows[r].Cells[9].Value = namt;
 
                             namt = 0;
@@ -186,6 +210,7 @@ namespace bcsys.Forms.EntryForms
                                 namt = Convert.ToDecimal(dr["wmf"]);
 								dtotbill += namt;
 							}
+                            dgvReading.Rows[r].Cells[10].Value = 0;
                             dgvReading.Rows[r].Cells[10].Value = namt;
 
                             namt = 0;
@@ -194,7 +219,8 @@ namespace bcsys.Forms.EntryForms
                                 namt = Convert.ToDecimal(dr["penalty"]);
 								dtotbill += namt;
 							}
-							dgvReading.Rows[r].Cells[11].Value = namt;
+                            dgvReading.Rows[r].Cells[11].Value = 0;
+                            dgvReading.Rows[r].Cells[11].Value = namt;
                             namt = 0;
                             if (dr["srdisc"] != DBNull.Value)
                             {
@@ -202,14 +228,15 @@ namespace bcsys.Forms.EntryForms
 								dtotbill -= namt;
 
 							}
-							dgvReading.Rows[r].Cells[12].Value = namt;
+                            dgvReading.Rows[r].Cells[12].Value = 0;
+                            dgvReading.Rows[r].Cells[12].Value = namt;
 
                             namt = 0;
                             //if (dr["totbillamt"] != DBNull.Value)
                             //{
                             //    namt = Convert.ToDecimal(dr["totbillamt"]);
                             //}
-
+                            dgvReading.Rows[r].Cells[13].Value = 0;
                             dgvReading.Rows[r].Cells[13].Value = dtotbill;
 
                             namt = 0;
@@ -217,7 +244,7 @@ namespace bcsys.Forms.EntryForms
                             {
                                 namt = Convert.ToDecimal(dr["payment"]);
                             }
-
+                            dgvReading.Rows[r].Cells[14].Value = 0;
                             dgvReading.Rows[r].Cells[14].Value = namt;
                             dgvReading.Rows[r].Cells[15].Value = Convert.ToDecimal(dr["classcode"].ToString());
                             dgvReading.Rows[r].Cells[18].Value = Convert.ToDecimal(dr["msize"].ToString());
@@ -226,6 +253,7 @@ namespace bcsys.Forms.EntryForms
                             {
                                 narrears = Convert.ToDecimal(dr["arrears"]);
                             }
+                            dgvReading.Rows[r].Cells[19].Value = 0;
                             dgvReading.Rows[r].Cells[19].Value = narrears; // Convert.ToDecimal(dr["arrears"].ToString());
 							dgvReading.Rows[r].Cells[22].Value = .02m;
 							dgvReading.Rows[r].Cells[24].Value = dr["minrate"].ToString();
@@ -273,6 +301,11 @@ namespace bcsys.Forms.EntryForms
                     {
                         MessageBox.Show("Initialize billing for " + dtpBP.Text + " for Zone " + dgvBrgy.CurrentRow.Cells[0].Value + "?" + " If yes, Please click the button Create Billing.");
                         btnCreate.Visible = true;
+                        var rdt = "";
+                        rdt = dtpBP.Value.ToString("yyyy") + "-" + dgvBrgy.CurrentRow.Cells[3].Value + "-" + dtpBP.Value.ToString("MM");
+                        dtpRDate.Value  = Convert.ToDateTime(rdt);
+
+                        lblBP.Text = "";
                         btnCreate.Focus();
                     }
                 }
@@ -363,22 +396,31 @@ namespace bcsys.Forms.EntryForms
                                 dgvReading.Rows[r].Cells[6].Value = 0;
                                 dgvReading.Rows[r].Cells[7].Value = 0;
                                 dgvReading.Rows[r].Cells[8].Value = 0;
+                                dgvReading.Rows[r].Cells[9].Value = 0;
+
                                 dgvReading.Rows[r].Cells[10].Value = 30m;
+                                dgvReading.Rows[r].Cells[11].Value = 0;
+                                dgvReading.Rows[r].Cells[12].Value = 0;
+
                                 dgvReading.Rows[r].Cells[17].Value = dr["mascode"].ToString();
 								dgvReading.Rows[r].Cells[15].Value = dr["classcode"].ToString();
 								dgvReading.Rows[r].Cells[18].Value = dr["msize"].ToString();
-                                dgvReading.Rows[r].Cells[22].Value = dr["ftax"].ToString();
+                                dgvReading.Rows[r].Cells[22].Value = 0.02m;
+                                //dgvReading.Rows[r].Cells[22].Value = dr["ftax"].ToString();
+
                                 dgvReading.Rows[r].Cells[23].Value = dr["penalty"].ToString();
                                 dgvReading.Rows[r].Cells[24].Value = dr["minrate"].ToString();
                                 dgvReading.Rows[r].Cells[25].Value = dr["rate1120"].ToString();
                                 dgvReading.Rows[r].Cells[26].Value = dr["rate2130"].ToString();
                                 dgvReading.Rows[r].Cells[27].Value = dr["rate30up"].ToString();
+                                dgvReading.Rows[r].Cells[28].Value = 0;
                                 dgvReading.Rows[r].Cells[28].Value = dr["withscdisc"].ToString();
                                 if (dr["withscdisc"] != DBNull.Value)
                                 {
                                     if (dr["withscdisc"].ToString() == "1")
                                     {
-                                        ssql = "select scend where mascode=@mc";
+                                        dgvReading.Rows[r].Cells[28].Value = 1;
+                                        ssql = "select scend from bcdb.master where mascode=@mc";
                                         dt = new DataTable();
                                         using (MySqlCommand cmd1 = new MySqlCommand(ssql, newdbcon.database_connection))
                                         {
@@ -401,11 +443,16 @@ namespace bcsys.Forms.EntryForms
                                         }
                                         dt.Dispose();
                                     }
+                                    else
+                                    {
+                                        dgvReading.Rows[r].Cells[28].Value = 0;
+                                    }
                                 }
-								
-                                
-                                
+
+
+                                dgvReading.Rows[r].Cells[28].Value = 0;
                                 dgvReading.Rows[r].Cells[29].Value = dr["address"].ToString();
+
 								//get arrears
 								ssql = "select sum(billamt+ftax+wmf+penalty-srdisc-otdisc-payment) as arrears from bcdb.reading_bc where mascode=@mc and ((billamt+ftax+wmf+penalty-srdisc-otdisc)>payment or payment is null or payment=0) group by mascode";
                                 dt = new DataTable();
@@ -419,8 +466,13 @@ namespace bcsys.Forms.EntryForms
                                         {
                                             foreach (DataRow rs in dt.Rows)
                                             {
-												dgvReading.Rows[r].Cells[19].Value = rs["arrears"].ToString();
+                                                dgvReading.Rows[r].Cells[19].Value = 0;
+                                                dgvReading.Rows[r].Cells[19].Value = rs["arrears"].ToString();
 											}
+                                        }
+                                        else
+                                        {
+                                            dgvReading.Rows[r].Cells[19].Value = 0;
                                         }
                                         cmd1.Dispose ();
 									}
@@ -432,6 +484,7 @@ namespace bcsys.Forms.EntryForms
                     }
                     dtb.Dispose();
                 }
+                btnCreate.Visible = false;
                 newdbcon.CloseConnection();
             }
         }
@@ -465,8 +518,8 @@ namespace bcsys.Forms.EntryForms
 							dtb = newdbcon.get_records(qry, cmd);
 							if (dtb.Rows.Count == 0)
 							{
-								ssql = "insert into bcdb.reading_bc (mascode,zn,bk,accno,meterno,billperiod,previous,present,cumused,billamt,payment,ttype,refdate,rdgdate,duedate,startdate,enddate,arrears,usr,seqno) " +
-									"values(@mc,@zn,@bk,@acn,@mn,@bp,@pv,@pr,@cu,@ba,@pay,@tt,@rdt,@rgdt,@ddt,@sdt,@edt,@arr,@usr,@sq)";
+								ssql = "insert into bcdb.reading_bc (mascode,zn,bk,accno,meterno,billperiod,previous,present,cumused,billamt,ftax,wmf,penalty,srdisc,payment,ttype,refdate,rdgdate,duedate,startdate,enddate,arrears,usr,seqno) " +
+									"values(@mc,@zn,@bk,@acn,@mn,@bp,@pv,@pr,@cu,@ba,@ft,@wmf,@pen,@srd,@pay,@tt,@rdt,@rgdt,@ddt,@sdt,@edt,@arr,@usr,@sq)";
 								using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
 								{
 									cmd2.Parameters.AddWithValue("@mc", dgvReading.Rows[i].Cells[17].Value);
@@ -479,7 +532,11 @@ namespace bcsys.Forms.EntryForms
 									cmd2.Parameters.AddWithValue("@pr", dgvReading.Rows[i].Cells[6].Value);
 									cmd2.Parameters.AddWithValue("@cu", dgvReading.Rows[i].Cells[7].Value);
 									cmd2.Parameters.AddWithValue("@ba", dgvReading.Rows[i].Cells[8].Value);
-									cmd2.Parameters.AddWithValue("@pay", Convert.ToDecimal(dgvReading.Rows[i].Cells[9].Value));
+                                    cmd2.Parameters.AddWithValue("@ft", dgvReading.Rows[i].Cells[9].Value);
+                                    cmd2.Parameters.AddWithValue("@wmf", dgvReading.Rows[i].Cells[10].Value);
+                                    cmd2.Parameters.AddWithValue("@pen", dgvReading.Rows[i].Cells[11].Value);
+                                    cmd2.Parameters.AddWithValue("@srd", dgvReading.Rows[i].Cells[12].Value);
+                                    cmd2.Parameters.AddWithValue("@pay", Convert.ToDecimal(dgvReading.Rows[i].Cells[9].Value));
 									cmd2.Parameters.AddWithValue("@tt", "0");
 									cmd2.Parameters.AddWithValue("@rdt", dtpRDate.Value.ToString("yyyy-MM-dd"));
                                     cmd2.Parameters.AddWithValue("@rgdt", dtpRDate.Value.ToString("yyyy-MM-dd"));
@@ -497,16 +554,18 @@ namespace bcsys.Forms.EntryForms
 						}
 					}
                     //save last bp to zonebk table
-                    ssql = "update bcdb.zonebk set lbp=@bp where zone=@zn and book=@bk";
+                    lbp = dtpBP.Value.ToString("yyyyMM");
+                    ssql = "update bcdb.zonebk set lbp=@lbp where zone=@zn and book=@bk";
                     using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
                     {
                         cmd2.Parameters.AddWithValue("@zn", dgvBrgy.CurrentRow.Cells[0].Value);
-                        cmd2.Parameters.AddWithValue("@bk", dgvBrgy.CurrentRow.Cells[0].Value);
-                        cmd2.Parameters.AddWithValue("@bp", dtpBP.Value.ToString("yyyyMM"));
+                        cmd2.Parameters.AddWithValue("@bk", dgvBrgy.CurrentRow.Cells[1].Value);
+                        cmd2.Parameters.AddWithValue("@lbp", lbp);
                         cmd2.Prepare();
                         cmd2.ExecuteNonQuery();
                         cmd2.Dispose();
                     }
+                    dgvBrgy.CurrentRow.Cells[2].Value = lbp;
                     newdbcon.CloseConnection();
                 }
 			}
@@ -525,75 +584,97 @@ namespace bcsys.Forms.EntryForms
         {
 			if (bnewb) //new billing
 			{
-				
-			}
-			for (int i = 0; i <= dgvReading.Rows.Count - 1; i++)
-			{
-				string qry = "select * from bcdb.reading_bc where mascode=@mc and billperiod=@bp";
-				DBConnect newdbcon = new DBConnect();
-				newdbcon.OpenConnection(retries);
-				// newdbcon.mytable = "master.mastfile";
-				DataTable dtb = new DataTable();
-				using (MySqlCommand cmd = new MySqlCommand(qry, newdbcon.database_connection))
-				{
-					cmd.Parameters.AddWithValue("@mc", dgvReading.Rows[i].Cells[1].Value);
-					cmd.Parameters.AddWithValue("@bp", dtpBP.Value.ToString("yyyyMM"));
-					using (dtb = new DataTable())
-					{
-						dtb = newdbcon.get_records(qry, cmd);
-						if (dtb.Rows.Count == 0)
-						{
-							ssql = "insert into bcdb.up_download (mascode,cname,address,billperiod,meterno,zn,bk,znbkacc,acctno," +
-								"rdate,ddate,stdate,endate,previous,present,cumused,billamt,ftax," +
-                                "wmf,arrears,ftaxrate,minrate,rate1120,rate2130,rate31up," +
-								"senior,srdisc,mreader,usr,seqno) " +
-								"values(@mc,@cn,@add,@bp,@mn,@zn,@bk,@zna,@act,@rdt," +
-                                "@ddt,@stdt,@endt,@pv," +
-									   "@pr,@cu,@ba,@ft,@mw,@arr,@ftr,@mrt,@r11,@r21," +
-									   "@r31,@sr,@srd,@mre,@usr,@sq)";
-							using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
-							{
-								cmd2.Parameters.AddWithValue("@mc", dgvReading.Rows[i].Cells[17].Value);
-								cmd2.Parameters.AddWithValue("@cn", dgvReading.Rows[i].Cells[2].Value);
-								cmd2.Parameters.AddWithValue("@add", dgvReading.Rows[i].Cells[29].Value);
-								cmd2.Parameters.AddWithValue("@bp", dtpBP.Value.ToString("yyyyMM"));
-								cmd2.Parameters.AddWithValue("@mn", dgvReading.Rows[i].Cells[4].Value);
-								cmd2.Parameters.AddWithValue("@zn", dgvBrgy.CurrentRow.Cells[0].Value);
-								cmd2.Parameters.AddWithValue("@bk", dgvBrgy.CurrentRow.Cells[1].Value);
-								cmd2.Parameters.AddWithValue("@zna", dgvReading.Rows[i].Cells[1].Value);
-                                cmd2.Parameters.AddWithValue("@act", dgvReading.Rows[i].Cells[1].Value);
-                                cmd2.Parameters.AddWithValue("@rdt", dtpRDate.Value.ToString("yyyy-MM-dd"));
-                                cmd2.Parameters.AddWithValue("@ddt", dtpRDate.Value.AddDays(9).ToString("yyyy-MM-dd"));
-                                cmd2.Parameters.AddWithValue("@stdt", dtpStart.Value.ToString("yyyy-MM-dd"));
+                for (int i = 0; i <= dgvReading.Rows.Count - 1; i++)
+                {
+                    string qry = "select * from bcdb.reading_bc where mascode=@mc and billperiod=@bp";
+                    DBConnect newdbcon = new DBConnect();
+                    newdbcon.OpenConnection(retries);
+                    // newdbcon.mytable = "master.mastfile";
+                    DataTable dtb = new DataTable();
+                    using (MySqlCommand cmd = new MySqlCommand(qry, newdbcon.database_connection))
+                    {
+                        cmd.Parameters.AddWithValue("@mc", dgvReading.Rows[i].Cells[1].Value);
+                        cmd.Parameters.AddWithValue("@bp", dtpBP.Value.ToString("yyyyMM"));
+                        using (dtb = new DataTable())
+                        {
+                            dtb = newdbcon.get_records(qry, cmd);
+                            if (dtb.Rows.Count == 0)
+                            {
+                                ssql = "insert into bcdb.up_download (mascode,cname,address,billperiod,meterno,zn,bk,znbkacc,acctno," +
+                                    "rdate,ddate,stdate,endate,previous,present,cumused,billamt,ftax," +
+                                    "wmf,arrears,ftaxrate,minrate,rate1120,rate2130,rate31up," +
+                                    "senior,srdisc,mreader,usr,seqno) " +
+                                    "values(@mc,@cn,@add,@bp,@mn,@zn,@bk,@zna,@act,@rdt," +
+                                    "@ddt,@stdt,@endt,@pv," +
+                                           "@pr,@cu,@ba,@ft,@mw,@arr,@ftr,@mrt,@r11,@r21," +
+                                           "@r31,@sr,@srd,@mre,@usr,@sq)";
+                                using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
+                                {
+                                    cmd2.Parameters.AddWithValue("@mc", dgvReading.Rows[i].Cells[17].Value);
+                                    cmd2.Parameters.AddWithValue("@cn", dgvReading.Rows[i].Cells[2].Value);
+                                    cmd2.Parameters.AddWithValue("@add", dgvReading.Rows[i].Cells[29].Value);
+                                    cmd2.Parameters.AddWithValue("@bp", dtpBP.Value.ToString("yyyyMM"));
+                                    cmd2.Parameters.AddWithValue("@mn", dgvReading.Rows[i].Cells[4].Value);
+                                    cmd2.Parameters.AddWithValue("@zn", dgvBrgy.CurrentRow.Cells[0].Value);
+                                    cmd2.Parameters.AddWithValue("@bk", dgvBrgy.CurrentRow.Cells[1].Value);
+                                    cmd2.Parameters.AddWithValue("@zna", dgvReading.Rows[i].Cells[1].Value);
+                                    cmd2.Parameters.AddWithValue("@act", dgvReading.Rows[i].Cells[1].Value);
+                                    cmd2.Parameters.AddWithValue("@rdt", dtpRDate.Value.ToString("yyyy-MM-dd"));
+                                    cmd2.Parameters.AddWithValue("@ddt", dtpRDate.Value.AddDays(9).ToString("yyyy-MM-dd"));
+                                    cmd2.Parameters.AddWithValue("@stdt", dtpStart.Value.ToString("yyyy-MM-dd"));
 
-                                cmd2.Parameters.AddWithValue("@endt", dtpEnd.Value.ToString("yyyy-MM-dd"));
-                                cmd2.Parameters.AddWithValue("@pv", dgvReading.Rows[i].Cells[5].Value);
-								cmd2.Parameters.AddWithValue("@pr", dgvReading.Rows[i].Cells[6].Value);
-								cmd2.Parameters.AddWithValue("@cu", dgvReading.Rows[i].Cells[7].Value);
-								cmd2.Parameters.AddWithValue("@ba", dgvReading.Rows[i].Cells[8].Value);
-								cmd2.Parameters.AddWithValue("@ft", dgvReading.Rows[i].Cells[9].Value);
-								cmd2.Parameters.AddWithValue("@mw", 30.0m);
-								cmd2.Parameters.AddWithValue("@arr", dgvReading.Rows[i].Cells[19].Value);
-								cmd2.Parameters.AddWithValue("@ftr", dgvReading.Rows[i].Cells[22].Value);
-								cmd2.Parameters.AddWithValue("@mrt", dgvReading.Rows[i].Cells[24].Value);
-								cmd2.Parameters.AddWithValue("@r11", dgvReading.Rows[i].Cells[25].Value);
-								cmd2.Parameters.AddWithValue("@r21", dgvReading.Rows[i].Cells[26].Value);
-								cmd2.Parameters.AddWithValue("@r31", dgvReading.Rows[i].Cells[27].Value);
-								cmd2.Parameters.AddWithValue("@sr", dgvReading.Rows[i].Cells[28].Value);
-								cmd2.Parameters.AddWithValue("@srd", dgvReading.Rows[i].Cells[12].Value);
-								cmd2.Parameters.AddWithValue("@mre", cbreader.SelectedValue);
-								cmd2.Parameters.AddWithValue("@usr", Program.usr);
-								cmd2.Parameters.AddWithValue("@sq", dgvReading.Rows[i].Cells[0].Value);
-								cmd2.Prepare();
-								cmd2.ExecuteNonQuery();
-								cmd2.Dispose();
-							}
-						}
-						dtb.Dispose();
-					}
-				}
-				newdbcon.CloseConnection();
-			}
+                                    cmd2.Parameters.AddWithValue("@endt", dtpEnd.Value.ToString("yyyy-MM-dd"));
+                                    cmd2.Parameters.AddWithValue("@pv", dgvReading.Rows[i].Cells[5].Value);
+                                    cmd2.Parameters.AddWithValue("@pr", dgvReading.Rows[i].Cells[6].Value);
+                                    cmd2.Parameters.AddWithValue("@cu", dgvReading.Rows[i].Cells[7].Value);
+                                    cmd2.Parameters.AddWithValue("@ba", dgvReading.Rows[i].Cells[8].Value);
+                                    if (dgvReading.Rows[i].Cells[9].Value == null)
+                                    {
+                                        cmd2.Parameters.AddWithValue("@ft", 0m);
+                                    }
+                                    else
+                                    {
+                                        cmd2.Parameters.AddWithValue("@ft", dgvReading.Rows[i].Cells[9].Value);
+                                    }
+                                    cmd2.Parameters.AddWithValue("@mw", 30.0m);
+                                    cmd2.Parameters.AddWithValue("@arr", dgvReading.Rows[i].Cells[19].Value);
+                                    cmd2.Parameters.AddWithValue("@ftr", dgvReading.Rows[i].Cells[22].Value);
+                                    cmd2.Parameters.AddWithValue("@mrt", dgvReading.Rows[i].Cells[24].Value);
+                                    cmd2.Parameters.AddWithValue("@r11", dgvReading.Rows[i].Cells[25].Value);
+                                    cmd2.Parameters.AddWithValue("@r21", dgvReading.Rows[i].Cells[26].Value);
+                                    cmd2.Parameters.AddWithValue("@r31", dgvReading.Rows[i].Cells[27].Value);
+                                    if (dgvReading.Rows[i].Cells[28].Value == null)
+                                    {
+                                        cmd2.Parameters.AddWithValue("@sr", 0m);
+                                    }
+                                    else
+                                    {
+                                        cmd2.Parameters.AddWithValue("@sr", dgvReading.Rows[i].Cells[28].Value);
+                                    }
+                                    if (dgvReading.Rows[i].Cells[12].Value == null)
+                                    {
+                                        cmd2.Parameters.AddWithValue("@srd", 0m);
+                                    }
+                                    else
+                                    {
+                                        cmd2.Parameters.AddWithValue("@srd", dgvReading.Rows[i].Cells[12].Value);
+                                    }
+
+                                    cmd2.Parameters.AddWithValue("@mre", cbreader.SelectedValue);
+                                    cmd2.Parameters.AddWithValue("@usr", Program.usr);
+                                    cmd2.Parameters.AddWithValue("@sq", dgvReading.Rows[i].Cells[0].Value);
+                                    cmd2.Prepare();
+                                    cmd2.ExecuteNonQuery();
+                                    cmd2.Dispose();
+                                }
+                            }
+                            dtb.Dispose();
+                        }
+                    }
+                    newdbcon.CloseConnection();
+                }
+            }
+			
 		}
 
 		private void btnDownload_Click(object sender, EventArgs e)
@@ -673,8 +754,44 @@ namespace bcsys.Forms.EntryForms
         {
             ndays = DateTime.DaysInMonth(dtpRDate.Value.AddMonths(-1).Year, dtpRDate.Value.AddMonths(-1).Month);
             dtpStart.Value = dtpRDate.Value.AddDays(-ndays);
-            dtpEnd.Value = dtpStart.Value.AddDays(ndays );
+            dtpEnd.Value = dtpStart.Value.AddDays(ndays);
             
+        }
+
+        private void dgvBrgy_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvBrgy.Rows)
+            {
+                if (row.Cells[2].Value.ToString() == dtpBP.Value.ToString("yyyyMM"))
+                {
+                    row.DefaultCellStyle.BackColor  = Color.LightPink;
+                    row.DefaultCellStyle.ForeColor = Color.DarkBlue;
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.White ;
+                    row.DefaultCellStyle.ForeColor = Color.DarkRed;
+                }
+            }
+            
+
+        }
+
+        private void dgvReading_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach(DataGridViewRow row in dgvReading.Rows)
+            {
+                if(Convert.ToDecimal(row.Cells[7].Value) > 0)
+                {
+                    //row.DefaultCellStyle.BackColor= Color.White  ;
+                    row.DefaultCellStyle.ForeColor= Color.Black;
+                }
+                else
+                {
+                    //row.DefaultCellStyle.BackColor = Color.White;
+                    row.DefaultCellStyle.ForeColor = Color.DarkViolet;
+                }
+            }
         }
 
         private void slastbillperiod()
@@ -753,7 +870,7 @@ namespace bcsys.Forms.EntryForms
                     }
                     else
                     {
-                        nminamt = cused * Convert.ToDecimal(dr[0]["minrate"]);
+                        nminamt = Convert.ToDecimal(dr[0]["minrate"]);
                     }
 
                     nbillamt = nminamt + n1120amt + n2130amt + n30overamt;
@@ -770,7 +887,7 @@ namespace bcsys.Forms.EntryForms
                     DBConnect newdbcon = new DBConnect();
                     newdbcon.OpenConnection(retries);
                     // newdbcon.mytable = "master.mastfile";
-                    ssql = "update bcdb.reading_bc set present=@pr,cumused=@cu,billamt=@ba,ftax=@fx,wmf=@w,totbillamt=@tb where mascode=@mc and billperiod=@bp";
+                    ssql = "update bcdb.reading_bc set present=@pr,cumused=@cu,billamt=@ba,ftax=@fx,wmf=@w,totalbillamt=@tb where mascode=@mc and billperiod=@bp";
                     using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
                     {
                         cmd2.Parameters.AddWithValue("@mc", dgvReading.CurrentRow.Cells[17].Value);

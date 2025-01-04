@@ -46,7 +46,7 @@ namespace bcsys.modules
         {
           
 
-            server = "192.168.1.130";
+            server = "192.168.1.149";
             //server = "localhost";
             //database = "eguidance_db_2024";
             database = "bcdb";

@@ -593,6 +593,7 @@ namespace bcsys.Forms.EntryForms
                     cmd.ExecuteNonQuery();
                     cmd.Dispose ();
 				}
+                dtpchkdate.Value.AddDays(1);
 				dbcon.CloseConnection();
                 dtpCollection.Value.AddDays(1);
 			}
