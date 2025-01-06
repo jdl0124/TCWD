@@ -225,7 +225,7 @@ namespace bcsys.Forms
 
         private void accordionControlElement10_Click(object sender, EventArgs e)
         {
-            newChildForm(new reading(), "Reading/Billing");
+            newChildForm(new reading (), "Reading/Billing");
         }
 
         private void accordionControlElement7_Click(object sender, EventArgs e)
@@ -364,7 +364,7 @@ namespace bcsys.Forms
 
 		private void uploadtoandroid_Click(object sender, EventArgs e)
 		{
-			newChildForm(new reading(), "Billing Upload");
+			newChildForm(new readingupdown(), "Billing To Server");
 		}
 
 		private void accordionControlElement11_Click(object sender, EventArgs e)

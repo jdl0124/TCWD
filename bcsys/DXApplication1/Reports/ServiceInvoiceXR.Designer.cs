@@ -102,7 +102,7 @@
             this.xrLabel12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[part6]")});
             this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 338F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 344F);
             this.xrLabel12.Multiline = true;
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -171,7 +171,7 @@
             this.xrLabel22.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[q6]")});
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 338F);
+            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 344F);
             this.xrLabel22.Multiline = true;
             this.xrLabel22.Name = "xrLabel22";
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -185,7 +185,7 @@
             this.xrLabel26.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[amt6]")});
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(306F, 338F);
+            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(306F, 344F);
             this.xrLabel26.Multiline = true;
             this.xrLabel26.Name = "xrLabel26";
             this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -199,7 +199,7 @@
             this.xrLabel25.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[amt5]")});
             this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(306F, 315F);
+            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(306F, 321F);
             this.xrLabel25.Multiline = true;
             this.xrLabel25.Name = "xrLabel25";
             this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -213,7 +213,7 @@
             this.xrLabel24.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[amt4]")});
             this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(306F, 293F);
+            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(306F, 299F);
             this.xrLabel24.Multiline = true;
             this.xrLabel24.Name = "xrLabel24";
             this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -227,7 +227,7 @@
             this.xrLabel17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[q5]")});
             this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 315F);
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 321F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -241,7 +241,7 @@
             this.xrLabel13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[q4]")});
             this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 293F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 299F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -255,7 +255,7 @@
             this.xrLabel11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[part5]")});
             this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 315F);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 321F);
             this.xrLabel11.Multiline = true;
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -268,7 +268,7 @@
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[part4]")});
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 293F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 299F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -290,13 +290,13 @@
             // xrLabel19
             // 
             this.xrLabel19.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[totamount]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[total]")});
             this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(23.5417F, 387.6252F);
+            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(23.5417F, 385.6252F);
             this.xrLabel19.Multiline = true;
             this.xrLabel19.Name = "xrLabel19";
             this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel19.SizeF = new System.Drawing.SizeF(84.1666F, 14.99994F);
+            this.xrLabel19.SizeF = new System.Drawing.SizeF(89.37494F, 14.99994F);
             this.xrLabel19.StylePriority.UseFont = false;
             this.xrLabel19.Text = "xrLabel19";
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -306,7 +306,7 @@
             this.xrLabel16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[amt3]")});
             this.xrLabel16.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(306F, 271F);
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(306F, 277F);
             this.xrLabel16.Multiline = true;
             this.xrLabel16.Name = "xrLabel16";
             this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -320,7 +320,7 @@
             this.xrLabel15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[amt2]")});
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(306F, 249F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(306F, 255F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -334,7 +334,7 @@
             this.xrLabel14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[amt1]")});
             this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(306F, 226F);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(306F, 232F);
             this.xrLabel14.Multiline = true;
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -348,7 +348,7 @@
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[barangay]")});
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(117.2917F, 168.896F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(117.2917F, 177.896F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -361,7 +361,7 @@
             this.xrLabel10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[q3]")});
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 271F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 277F);
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -375,7 +375,7 @@
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[q2]")});
             this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 249F);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 255F);
             this.xrLabel9.Multiline = true;
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -389,7 +389,7 @@
             this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[q1]")});
             this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 226F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(261.5625F, 232F);
             this.xrLabel8.Multiline = true;
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -403,7 +403,7 @@
             this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[part3]")});
             this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 271F);
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 277F);
             this.xrLabel7.Multiline = true;
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -416,7 +416,7 @@
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[part2]")});
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(9.999998F, 249F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(9.999998F, 255F);
             this.xrLabel6.Multiline = true;
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -429,7 +429,7 @@
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[part1]")});
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 226F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(10.00003F, 232F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -442,7 +442,7 @@
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[duedate]")});
             this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(281.3542F, 106.7501F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(281.3542F, 114.7501F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -458,7 +458,7 @@
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[acctname]")});
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Calibri", 9F);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(117.2918F, 151.021F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(117.2918F, 160.021F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -495,7 +495,7 @@
             this.GroupHeader1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.dataSet21});
-            this.DataMember = "StudentInfo";
+            this.DataMember = "billdtl";
             this.DataSource = this.dataSet21;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(24F, 34F, 478.5834F, 3.0001F);

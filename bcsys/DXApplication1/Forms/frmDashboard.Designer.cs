@@ -121,7 +121,6 @@
             this.accordionControlSeparator19 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.uploadtoandroid = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator20 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
-            this.downloadreading = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator21 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator22 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
@@ -916,14 +915,12 @@
             this.accordionControlSeparator19,
             this.uploadtoandroid,
             this.accordionControlSeparator20,
-            this.downloadreading,
             this.accordionControlSeparator21,
             this.accordionControlElement13,
             this.accordionControlSeparator22,
             this.accordionControlElement14,
             this.accordionControlSeparator23,
             this.billingreport});
-            this.employeesAccordionControlElement.Expanded = true;
             this.employeesAccordionControlElement.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("employeesAccordionControlElement.ImageOptions.Image")));
             this.employeesAccordionControlElement.Name = "employeesAccordionControlElement";
             this.employeesAccordionControlElement.Text = "Billing";
@@ -946,20 +943,12 @@
             this.uploadtoandroid.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("uploadtoandroid.ImageOptions.Image")));
             this.uploadtoandroid.Name = "uploadtoandroid";
             this.uploadtoandroid.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.uploadtoandroid.Text = "Upload to Android";
+            this.uploadtoandroid.Text = "Upload to Billing";
             this.uploadtoandroid.Click += new System.EventHandler(this.uploadtoandroid_Click);
             // 
             // accordionControlSeparator20
             // 
             this.accordionControlSeparator20.Name = "accordionControlSeparator20";
-            // 
-            // downloadreading
-            // 
-            this.downloadreading.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("downloadreading.ImageOptions.Image")));
-            this.downloadreading.Name = "downloadreading";
-            this.downloadreading.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.downloadreading.Text = "Download to Server";
-            this.downloadreading.Click += new System.EventHandler(this.downloadreading_Click);
             // 
             // accordionControlSeparator21
             // 
@@ -1365,7 +1354,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement8;
         private DevExpress.XtraBars.Navigation.AccordionContentContainer accordionContentContainer1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement10;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement downloadreading;
         private DevExpress.XtraBars.Navigation.AccordionControlElement uploadtoandroid;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
         private DevExpress.XtraBars.BarSubItem barSubItem1;

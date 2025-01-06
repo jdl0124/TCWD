@@ -4,6 +4,7 @@ using bcsys.Reports;
 using DevExpress.DataProcessing.InMemoryDataProcessor.GraphGenerator;
 using DevExpress.Diagram.Core.Native;
 using DevExpress.Drawing.Internal.Fonts.Interop;
+using DevExpress.Office.Utils;
 using DevExpress.XtraCharts;
 using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
@@ -107,8 +108,8 @@ namespace bcsys.Forms.EntryForms
                 DataSet ds = new DataSet2();
 
                 //ds.Tables.Clear();
-                ds.Tables[3].Rows.Clear();
-                ds.Tables[4].Rows.Clear();
+                ds.Tables["billhead"].Rows.Clear();
+                ds.Tables["billdtl"].Rows.Clear();
                 XtraReport rpt = new xrdlycollectionreport();
                 var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
 
@@ -125,7 +126,7 @@ namespace bcsys.Forms.EntryForms
                 frm.Refresh();
                 Random rnd = new Random();
                 Random rnd2 = new Random();
-                DataRow r1 = ds.Tables[4].NewRow();
+                DataRow r1 = ds.Tables["billhead"].NewRow();
                 r1["acctname"] = "Tangub City Water District";
                 r1["address"] = "Aging Report";
                 r1["acctno"] = "1";
@@ -134,13 +135,13 @@ namespace bcsys.Forms.EntryForms
                 r1["sig2"] = Program.sig2;
                 r1["sig3"] = Program.sig3;
 
-                ds.Tables[4].Rows.Add(r1);
+                ds.Tables["billhead"].Rows.Add(r1);
                 if (xtc1.SelectedTabPageIndex == 1)
                 {
 
                     for (int i = 0; i <= dgv.RowCount - 1; i++)
                     {
-                        DataRow r2 = ds.Tables[3].NewRow();
+                        DataRow r2 = ds.Tables["billdtl"].NewRow();
                         r2["acctno"] = "1";
                         r2["nno"] = i + 1;
                         r2["refno"] = dgv.Rows[i].Cells[0].Value;
@@ -206,7 +207,7 @@ namespace bcsys.Forms.EntryForms
                             r2["amt6"] = 0;
                         }
 
-                        ds.Tables[3].Rows.Add(r2);
+                        ds.Tables["billdtl"].Rows.Add(r2);
                     }
                 }
 
@@ -258,9 +259,9 @@ namespace bcsys.Forms.EntryForms
                 DataSet ds = new DataSet2();
 
                 //ds.Tables.Clear();
-                ds.Tables[3].Rows.Clear();
-                ds.Tables[4].Rows.Clear();
-                ds.Tables[5].Rows.Clear();
+                ds.Tables["billhead"].Rows.Clear();
+                ds.Tables["billdtl"].Rows.Clear();
+                ds.Tables["deposit"].Rows.Clear();
 
                 XtraReport rpt = new xrtblotter ();
                 var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
@@ -276,7 +277,7 @@ namespace bcsys.Forms.EntryForms
                 frm.Refresh();
                 Random rnd = new Random();
                 Random rnd2 = new Random();
-                DataRow r1 = ds.Tables[3].NewRow();
+                DataRow r1 = ds.Tables["billhead"].NewRow();
                 r1["acctname"] = "Tangub City Water District";
                 r1["address"] = "Aging Report";
                 r1["acctno"] = "1";
@@ -285,18 +286,25 @@ namespace bcsys.Forms.EntryForms
                 r1["sig2"] = Program.sig2;
                 r1["sig3"] = Program.sig3;
 
-                ds.Tables[3].Rows.Add(r1);
+                ds.Tables["billhead"].Rows.Add(r1);
                 
                     for (int i = 0; i <= dgvb.RowCount - 1; i++)
                     {
                         
                     }
-                DataRow r2 = ds.Tables[5].NewRow();
+                DataRow r2 = ds.Tables["billdtl"].NewRow();
                 r2["acctno"] = "1";
                 r2["nno"] = 1;
                 r2["part1"] = dgvb.Rows[0].Cells[0].Value;
-                r2["part2"] = dgvb.Rows[1].Cells[0].Value;
-                r2["part3"] = dgvb.Rows[2].Cells[0].Value;
+                if (dgvb.Rows.Count >=2)
+                {
+                    r2["part2"] = dgvb.Rows[1].Cells[0].Value;
+                }
+                if (dgvb.Rows.Count >=3)
+                {
+                    r2["part3"] = dgvb.Rows[2].Cells[0].Value;
+                }
+                
                 r2["total"] = nudTotal.Value;
                 r2["arbalance"] = nudDeposits.Value;
                 //r2["amt1"] = dgv.Rows[i].Cells[1].Value;
@@ -309,29 +317,34 @@ namespace bcsys.Forms.EntryForms
                 {
                     r2["amt1"] = 0;
                 }
-                if (dgvb.Rows[1].Cells[0].Value != null)
+                if (dgvb.Rows.Count >= 2)
                 {
-                    r2["amt2"] = dgvb.Rows[1].Cells[1].Value;
-                }
-                else
-                {
-                    r2["amt2"] = 0;
+                    if (dgvb.Rows[1].Cells[0].Value != null)
+                    {
+                        r2["amt2"] = dgvb.Rows[1].Cells[1].Value;
+                    }
+                    else
+                    {
+                        r2["amt2"] = 0;
+                    }
+
+                    if (dgvb.Rows[2].Cells[0].Value != null)
+                    {
+                        r2["amt3"] = dgvb.Rows[2].Cells[1].Value;
+                    }
+                    else
+                    {
+                        r2["amt3"] = 0;
+                    }
                 }
 
-                if (dgvb.Rows[2].Cells[0].Value != null)
-                {
-                    r2["amt3"] = dgvb.Rows[2].Cells[1].Value;
-                }
-                else
-                {
-                    r2["amt3"] = 0;
-                }
+                
 
-                ds.Tables[5].Rows.Add(r2);
+                ds.Tables["billdtl"].Rows.Add(r2);
 
                 for (int i = 0; i <= dgvDeposit.RowCount - 1; i++)
                 {
-                    DataRow r3 = ds.Tables[4].NewRow();
+                    DataRow r3 = ds.Tables["deposit"].NewRow();
                     r3["acctno"] = "1";
                     
                     r3["part"] = dgvDeposit .Rows[i].Cells[0].Value;
@@ -354,7 +367,7 @@ namespace bcsys.Forms.EntryForms
                         r3["ndr"] = 0;
                     }
 
-                    ds.Tables[4].Rows.Add(r3);
+                    ds.Tables["deposit"].Rows.Add(r3);
                 }
                 
                 XRSubreport subReport = (XRSubreport)rpt.FindControl("xrblotter1", true);
@@ -750,6 +763,10 @@ namespace bcsys.Forms.EntryForms
                         //dgvb.Rows.Clear();
                         foreach (DataRow rs in dt.Rows)
                         {
+                            //if (dgvb.Rows.Count == 1)
+                            //{
+                            //    break;
+                            //}
                            
                             if (rs["ptype"].ToString() == "1")
                             {
@@ -762,12 +779,56 @@ namespace bcsys.Forms.EntryForms
                                 r = 1;
                             }
                             else { r = 2; }
-							dgvb.Rows[r].Cells[2].Value = rs["ba"];
-							dgvb.Rows[r].Cells[3].Value = rs["ft"];
-							dgvb.Rows[r].Cells[4].Value = rs["wm"];
-							dgvb.Rows[r].Cells[5].Value = rs["su"];
-							dgvb.Rows[r].Cells[6].Value = rs["sr"];
-							dgvb.Rows[r].Cells[7].Value = rs["wt"];
+                            if(rs["ba"] != DBNull.Value)
+                            {
+                                //MessageBox.Show(rs["ba"].ToString());
+                                dgvb.Rows[r].Cells[2].Value = rs["ba"];
+                            }
+                            else
+                            {
+                                dgvb.Rows[r].Cells[2].Value = 0;
+                            }
+                            if (rs["ft"] != DBNull.Value)
+                            {
+                                dgvb.Rows[r].Cells[3].Value = rs["ft"];
+                            }
+                            else
+                            {
+                                dgvb.Rows[r].Cells[3].Value = 0;
+                            }
+                            if (rs["wm"] != DBNull.Value)
+                            {
+                                dgvb.Rows[r].Cells[4].Value = rs["wm"];
+                            }
+                            else
+                            {
+                                dgvb.Rows[r].Cells[4].Value = 0;
+                            }
+                            if (rs["su"] != DBNull.Value)
+                            {
+                                dgvb.Rows[r].Cells[5].Value = rs["su"];
+                            }
+                            else
+                            {
+                                dgvb.Rows[r].Cells[5].Value = 0;
+                            }
+
+                            if (rs["sr"] != DBNull.Value)
+                            {
+                                dgvb.Rows[r].Cells[6].Value = rs["sr"];
+                            }
+                            else
+                            {
+                                dgvb.Rows[r].Cells[6].Value = 0;
+                            }
+                            if (rs["wt"] != DBNull.Value)
+                            {
+                                dgvb.Rows[r].Cells[7].Value = rs["wt"];
+                            }
+                            else
+                            {
+                                dgvb.Rows[r].Cells[7].Value = 0;
+                            }
 
 						}
                     }

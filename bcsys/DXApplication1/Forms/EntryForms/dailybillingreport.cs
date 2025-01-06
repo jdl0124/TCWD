@@ -148,8 +148,8 @@ namespace bcsys.Forms.EntryForms
 				DataSet ds = new DataSet2();
 
 				//ds.Tables.Clear();
-				ds.Tables[3].Rows.Clear();
-				ds.Tables[4].Rows.Clear();
+				ds.Tables["billhead"].Rows.Clear();
+				ds.Tables["billdtl"].Rows.Clear();
 
 				XtraReport rpt = new xrdlybillingreport ();
 				var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
@@ -165,7 +165,7 @@ namespace bcsys.Forms.EntryForms
 				frm.Refresh();
 				Random rnd = new Random();
 				Random rnd2 = new Random();
-				DataRow r1 = ds.Tables[4].NewRow();
+				DataRow r1 = ds.Tables["billhead"].NewRow();
 				r1["acctname"] = "Tangub City Water District";
 				r1["address"] = "Aging Report";
 				r1["acctno"] = "1";
@@ -174,12 +174,13 @@ namespace bcsys.Forms.EntryForms
                 r1["sig2"] = Program.sig2;
                 r1["sig3"] = Program.sig3;
 
-                ds.Tables[4].Rows.Add(r1);
+				ds.Tables["billhead"].Rows.Add(r1);
+
 				if (xtc1.SelectedTabPageIndex == 0)
 				{
                     for (int i = 0; i <= dgv.RowCount - 1; i++)
                     {
-                        DataRow r2 = ds.Tables[3].NewRow();
+                        DataRow r2 = ds.Tables["billdtl"].NewRow();
                         r2["acctno"] = "1";
                         r2["nno"] = i + 1;
                         r2["acctno"] = dgv.Rows[i].Cells[0].Value;
@@ -244,7 +245,7 @@ namespace bcsys.Forms.EntryForms
                             r2["discount"] = 0;
                         }
 
-                        ds.Tables[3].Rows.Add(r2);
+                        ds.Tables["billdtl"].Rows.Add(r2);
                     }
                 }
 				else
@@ -256,7 +257,7 @@ namespace bcsys.Forms.EntryForms
 					//MessageBox.Show(dgvzn[0].Rows.Count.ToString());
                     for (int i = 0; i <= dgvzn[tpi].RowCount - 1; i++)
                     {
-                        DataRow r2 = ds.Tables[3].NewRow();
+                        DataRow r2 = ds.Tables["billdtl"].NewRow();
                         r2["acctno"] = "1";
                         r2["nno"] = i + 1;
                         r2["acctno"] = dgvzn[tpi].Rows[i].Cells[0].Value;
@@ -321,7 +322,7 @@ namespace bcsys.Forms.EntryForms
                             r2["discount"] = 0;
                         }
 
-                        ds.Tables[3].Rows.Add(r2);
+                        ds.Tables["billdtl"].Rows.Add(r2);
                     }
                 }
 				

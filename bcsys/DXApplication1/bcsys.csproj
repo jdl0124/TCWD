@@ -229,6 +229,12 @@
     <Compile Include="Forms\EntryForms\consumer.Designer.cs">
       <DependentUpon>consumer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EntryForms\readingupdown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EntryForms\readingupdown.Designer.cs">
+      <DependentUpon>readingupdown.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EntryForms\seniorcitizen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -540,6 +546,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EntryForms\consumer.resx">
       <DependentUpon>consumer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EntryForms\readingupdown.resx">
+      <DependentUpon>readingupdown.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EntryForms\seniorcitizen.resx">
       <DependentUpon>seniorcitizen.cs</DependentUpon>

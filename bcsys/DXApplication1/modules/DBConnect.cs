@@ -47,13 +47,13 @@ namespace bcsys.modules
           
 
             server = "192.168.1.149";
-            //server = "localhost";
+            server = "localhost";
             //database = "eguidance_db_2024";
             database = "bcdb";
-            //uid = "root";
-            //password = "";
-            uid = "tcwd2";
-            password = "tcwd2024!";
+            uid = "root";
+            password = "";
+            //uid = "tcwd2";
+            //password = "tcwd2024!";
             //string filepath = "";
             //  string mypassword = "eguidance20241008!";
             //filepath = Application.StartupPath + "/iploc.txt";

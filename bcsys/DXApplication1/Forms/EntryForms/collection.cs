@@ -47,6 +47,7 @@ using DevExpress.Web.Internal.XmlProcessor;
 //using DevExpress.DataAccess.Native.Data;
 using System.Web.UI.WebControls;
 using DevExpress.XtraEditors.DXErrorProvider;
+using DevExpress.DataProcessing.InMemoryDataProcessor;
 //using DataTable = DevExpress.DataAccess.Native.Data.DataTable;
 
 namespace bcsys.Forms.EntryForms
@@ -388,8 +389,8 @@ namespace bcsys.Forms.EntryForms
                                     cmd2.Parameters.AddWithValue("@bp", dgvPayment.Rows[i].Cells[16].Value);
                                     cmd2.Parameters.AddWithValue("@bamt", dgvPayment.Rows[i].Cells[8].Value);
                                     cmd2.Parameters.AddWithValue("@pamt", dgvPayment.Rows[i].Cells[12].Value);
-                                    cmd2.Parameters.AddWithValue("@tt", "1");
-                                    cmd2.Parameters.AddWithValue("@rem", dgvPayment.Rows[i].Cells[15].Value);
+                                    cmd2.Parameters.AddWithValue("@tt", dgvPayment.Rows[i].Cells[15].Value);
+                                    cmd2.Parameters.AddWithValue("@rem", dgvPayment.Rows[i].Cells[14].Value);
                                     cmd2.Parameters.AddWithValue("@ba", dgvPayment.Rows[i].Cells[4].Value);
                                     cmd2.Parameters.AddWithValue("@ft", dgvPayment.Rows[i].Cells[5].Value);
                                     cmd2.Parameters.AddWithValue("@wm", dgvPayment.Rows[i].Cells[6].Value);
@@ -416,17 +417,21 @@ namespace bcsys.Forms.EntryForms
 								}
                                 //save to reading
                                 namt = 0;
-								ssql = "update bcdb.reading_bc set payment=@pa where mascode=@mc and billperiod=@bp";
-								using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
-								{
-                                    namt = Convert.ToDecimal(dgvPayment.Rows[i].Cells[9].Value) + Convert.ToDecimal(dgvPayment.Rows[i].Cells[12].Value);
-									cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
-									cmd2.Parameters.AddWithValue("@pa", namt);
-									cmd2.Parameters.AddWithValue("@bp", dgvPayment.Rows[i].Cells[16].Value);
-									cmd2.Prepare();
-									cmd2.ExecuteNonQuery();
-									cmd2.Dispose();
-								}
+                                if (dgvPayment.Rows[i].Cells[15].Value.ToString() == "1")
+                                {
+                                    ssql = "update bcdb.reading_bc set payment=@pa where mascode=@mc and billperiod=@bp";
+                                    using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
+                                    {
+                                        namt = Convert.ToDecimal(dgvPayment.Rows[i].Cells[9].Value) + Convert.ToDecimal(dgvPayment.Rows[i].Cells[12].Value);
+                                        cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
+                                        cmd2.Parameters.AddWithValue("@pa", namt);
+                                        cmd2.Parameters.AddWithValue("@bp", dgvPayment.Rows[i].Cells[16].Value);
+                                        cmd2.Prepare();
+                                        cmd2.ExecuteNonQuery();
+                                        cmd2.Dispose();
+                                    }
+                                }
+								
                                 namt = 0;
                                 //save penalty date payment
                                 namt = Convert.ToDecimal(dgvPayment.Rows[i].Cells[7].Value);
@@ -628,18 +633,28 @@ namespace bcsys.Forms.EntryForms
             }
 		}
 
+
 		private void tsbSurcharge_Click(object sender, EventArgs e)
 		{
             //check if duedate
             DateTime ddate = new DateTime();
-            ddate = Convert.ToDateTime(dgvPayment.CurrentRow.Cells[18].Value);
+            ddate = Convert.ToDateTime(dgvPayment.CurrentRow.Cells[19].Value);
             if (ddate < DateTime.Now)
             {
                 namt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[7].Value);
-                if (namt < 0)
+                if (namt <= 0)
                 {
-                    namt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[3].Value) * .1m;
+                    namt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[4].Value) * .1m;
                     dgvPayment.CurrentRow.Cells[7].Value = namt;
+                    nbillamt = Convert.ToDecimal( dgvPayment.CurrentRow.Cells[4].Value);
+                    nftax = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[5].Value);
+                    nwmf = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[7].Value);
+                    ntotalbill = namt + nbillamt + nftax + nwmf;
+                    dgvPayment.CurrentRow.Cells[8].Value = ntotalbill ;
+                    dgvPayment.CurrentRow.Cells[9].Value = 0;
+                    dgvPayment.CurrentRow.Cells[10].Value = 0;
+                    dgvPayment.CurrentRow.Cells[12].Value = ntotalbill ;
+                    dgvPayment.CurrentRow.Cells[13].Value = 0;
                     //add to penalty table
                     DBConnect dbcon = new DBConnect();
                     dbcon.OpenConnection(retries);
@@ -650,16 +665,35 @@ namespace bcsys.Forms.EntryForms
                         cmd2.Parameters.AddWithValue("@hdt", DateTime.Now.ToString("yyyy-MM-dd"));
                         cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
                         cmd2.Parameters.AddWithValue("@acn", tbAcctno.Text);
-                        cmd2.Parameters.AddWithValue("@bp", dgvPayment.CurrentRow.Cells[15].Value);
+                        cmd2.Parameters.AddWithValue("@bp", dgvPayment.CurrentRow.Cells[16].Value);
                         cmd2.Parameters.AddWithValue("@amt", namt);
                         cmd2.Parameters.AddWithValue("@pay", 0);
                         cmd2.Parameters.AddWithValue("@usr", Program.usr);
                         cmd2.Prepare();
                         cmd2.ExecuteNonQuery();
                         cmd2.Dispose();
-                        namt = 0;
+                       
                     }
+                    //update surcahge
+                    ssql = "update bcdb.reading_bc set penalty=@amt where mascode=@mc and billperiod=@bp";
+
+                    using (MySqlCommand cmd2 = new MySqlCommand(ssql, dbcon.database_connection))
+                    {
+                        cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
+                        cmd2.Parameters.AddWithValue("@bp", dgvPayment.CurrentRow.Cells[16].Value);
+                        cmd2.Parameters.AddWithValue("@amt", namt);
+                        
+                        cmd2.Prepare();
+                        cmd2.ExecuteNonQuery();
+                        cmd2.Dispose();
+                       
+                    }
+                    namt = 0;
+
+
                     dbcon.CloseConnection();
+                    scomputetotal();
+
                 }
             }
             else
@@ -797,7 +831,8 @@ namespace bcsys.Forms.EntryForms
 				r1["duedate"] = dtpCollection.Value.ToString();
 				r1["acctname"] = tbName.Text;
 				r1["barangay"] = tbAddress.Text;
-				r1["t1"] = tbTeller.Text;
+                r1["acctno"] = tbAcctno.Text ;
+                r1["t1"] = tbTeller.Text;
 				rw = 1;
 				for (int i = 0; i <= dgvPayment.RowCount - 1; i++)
 				{
@@ -858,8 +893,8 @@ namespace bcsys.Forms.EntryForms
                         namt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[13].Value) - Convert.ToDecimal(dgvPayment.CurrentRow.Cells[12].Value);
                         dgvPayment.CurrentRow.Cells[13].Value = namt;
                         //namount = nudTotal.Value;
-                        //namount += Convert.ToDecimal(dgvPayment.CurrentRow.Cells[12].Value);
-                        //nudTotal.Value = namount;
+                        namount += Convert.ToDecimal(dgvPayment.CurrentRow.Cells[12].Value);
+                        nudTotal.Value = namount;
                         //nudamtdue.Value = namount - nudwtax.Value;
 
                     }
@@ -874,8 +909,8 @@ namespace bcsys.Forms.EntryForms
                         dgvPayment.CurrentRow.Cells[12].Value = 0;
                         dgvPayment.CurrentRow.Cells[13].Value = ntotalbill - npayment - ndiscount - nwtax; //  - namount;
                         //namount = nudTotal.Value;
-                        //namount -= Convert.ToDecimal(dgvPayment.CurrentRow.Cells[13].Value);
-                        //nudTotal.Value = Math.Abs(namount);
+                        namount -= Convert.ToDecimal(dgvPayment.CurrentRow.Cells[13].Value);
+                        nudTotal.Value = Math.Abs(namount);
                         //nudamtdue.Value = nudTotal.Value + nudwtax.Value;
 					}
                     scurrentrowtotal();
@@ -938,7 +973,7 @@ namespace bcsys.Forms.EntryForms
             namt = 0;
             for (int i = 0;i < dgvPayment.Rows.Count;i++)
             {
-                namt = Convert.ToDecimal(dgvPayment.Rows[i].Cells[12].Value);
+                namt += Convert.ToDecimal(dgvPayment.Rows[i].Cells[12].Value);
 
             }
             nudTotal.Value = namt;
@@ -949,14 +984,14 @@ namespace bcsys.Forms.EntryForms
         private void scurrentrowtotal()
         {
             nbillamt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[4].Value);
-            nftax = Convert.ToDecimal(dgvPayment.Rows[r].Cells[5].Value);
-            nwmf = Convert.ToDecimal(dgvPayment.Rows[r].Cells[6].Value);
-            npenalty = Convert.ToDecimal(dgvPayment.Rows[r].Cells[7].Value);
+            nftax = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[5].Value);
+            nwmf = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[6].Value);
+            npenalty = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[7].Value);
             namount = nbillamt + nftax + nwmf + npenalty;
-            npayment = Convert.ToDecimal(dgvPayment.Rows[r].Cells[9].Value);
-            ndiscount = Convert.ToDecimal(dgvPayment.Rows[r].Cells[10].Value);
-            nwtax = Convert.ToDecimal(dgvPayment.Rows[r].Cells[11].Value);
-            namt = Convert.ToDecimal(dgvPayment.Rows[r].Cells[12].Value);
+            npayment = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[9].Value);
+            ndiscount = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[10].Value);
+            nwtax = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[11].Value);
+            namt = Convert.ToDecimal(dgvPayment.CurrentRow.Cells[12].Value);
             nbalance = namount - npayment - ndiscount - nwtax - namt;
             dgvPayment.CurrentRow.Cells[13].Value = nbalance;
         }
@@ -1012,7 +1047,7 @@ namespace bcsys.Forms.EntryForms
                             }
                             dgvPayment.Rows.Add();
                             r = dgvPayment.Rows.Count - 1;
-                            nftax = 0;nwmf = 0;npayment = 0;ndiscount = 0;npayment=0;nbalance = 0;nbillamt = 0;namount = 0;
+                            nftax = 0;nwmf = 0;npayment = 0;ndiscount = 0;npayment=0;nbalance = 0;nbillamt = 0;namount = 0; npenalty=0;
                             nwtax = 0;
                             if (dr["billamt"] != DBNull.Value)
                             {
@@ -1068,14 +1103,42 @@ namespace bcsys.Forms.EntryForms
 							dgvPayment.Rows[r].Cells[12].Value = 0;
                             nbalance = namount - npayment - ndiscount;
                             dgvPayment.Rows[r].Cells[13].Value = nbalance;
+                            dgvPayment.Rows[r].Cells[15].Value = "1";
                             dgvPayment.Rows[r].Cells[16].Value = dr["billperiod"];
                             dgvPayment.Rows[r].Cells[17].Value = dr["present"];
 							dgvPayment.Rows[r].Cells[19].Value = dr["duedate"];
 						}
                     }
+                    //add demand
+                    if(rs.Rows.Count >= 2)
+                    {
+                        sdemand();
+                    }
                 }
             }
             dbcon.CloseConnection();
+        }
+        // deman
+        void sdemand()
+        {
+            dgvPayment.Rows.Add();
+            r = dgvPayment.Rows.Count - 1;
+            dgvPayment.Rows[r].Cells[1].Value = true;
+            dgvPayment.Rows[r].Cells[2].Value = DateTime.Now.ToString("MMM-yyyy");
+            dgvPayment.Rows[r].Cells[3].Value = 0;
+            dgvPayment.Rows[r].Cells[4].Value = 100;
+            dgvPayment.Rows[r].Cells[5].Value = 0;
+            dgvPayment.Rows[r].Cells[6].Value = 0;
+            dgvPayment.Rows[r].Cells[7].Value = 0;
+            dgvPayment.Rows[r].Cells[8].Value = 100;
+            dgvPayment.Rows[r].Cells[9].Value = 0;
+            dgvPayment.Rows[r].Cells[10].Value = 0;
+            dgvPayment.Rows[r].Cells[12].Value = 100;
+            dgvPayment.Rows[r].Cells[13].Value = 0;
+            dgvPayment.Rows[r].Cells[14].Value = "Demand Fee";
+            dgvPayment.Rows[r].Cells[15].Value = "62";
+            dgvPayment.Rows[r].Cells[16].Value = DateTime.Now.ToString("yyyyMM");
+            scomputetotal();
         }
 
         private void sdgvrowtotal()
