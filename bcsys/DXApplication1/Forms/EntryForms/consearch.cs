@@ -31,7 +31,7 @@ namespace bcsys.Forms.EntryForms
             }
             else
             {
-				qry = "SELECT a.name,a.accno,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where a.bgycode=b.code and a.cust_stat='0' order by name";
+				qry = "SELECT a.name,a.accno,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where a.bgycode=b.code order by name";
 			}
             
             DBConnect newdbcon = new DBConnect();

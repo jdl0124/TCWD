@@ -58,6 +58,8 @@ namespace bcsys.Forms.EntryForms
         int retries = 1;
         int r;string sguid;
         decimal namount, npenalty, ndiscount;
+        public int nain;
+
 
         public collection()
         {
@@ -109,7 +111,7 @@ namespace bcsys.Forms.EntryForms
             
 			ssql = "select a.tdate,a.orno,b.name,a.amtdue,b.mascode from bcdb.pay_h a,bcdb.master b " +
                 "where a.mascode=b.mascode and a.teller=@tel and a.tdate=@dt and a.iscanceled is null " +
-                "order by orno desc limit 100";
+                "order by orno desc";
 			DBConnect dbcon = new DBConnect();
 			dbcon.OpenConnection(retries);
 			DataTable rs = new DataTable();
@@ -204,6 +206,7 @@ namespace bcsys.Forms.EntryForms
                             tbName.Text = dr["Name"].ToString();
                             tbAddress.Text = dr["address"].ToString();
                             tbtin.Text = dr["tin"].ToString();
+                            nain = Convert.ToInt32 (dr["cust_stat"].ToString());
                             if (tbtin.Text.Length > 0)
                             {
                                 tbtin.Visible = true;
@@ -261,7 +264,7 @@ namespace bcsys.Forms.EntryForms
             {
                 tbOrNo.Focus(); return; 
             }
-            if (counttrue() > 3)
+            if (counttrue() > 7)
             {
                 //dgvPayment.CurrentRow.Cells[1].Value = false;
                 MessageBox.Show("You cannot select more than 3 items from the list.");
@@ -527,6 +530,7 @@ namespace bcsys.Forms.EntryForms
                 dgvPayment.Rows[r].Cells[8].Value = Program.rate;
                 dgvPayment.Rows[r].Cells[9].Value = 0;
                 dgvPayment.Rows[r].Cells[10].Value = 0;
+                dgvPayment.Rows[r].Cells[11].Value = 0;
                 dgvPayment.Rows[r].Cells[12].Value = Program.rate;
                 dgvPayment.Rows[r].Cells[13].Value = 0;
                 dgvPayment.Rows[r].Cells[14].Value = Program.desc0;
@@ -1015,12 +1019,97 @@ namespace bcsys.Forms.EntryForms
 
         //Date tmpdte = new Date();
         DateTime tmpdte;
+
+        int yn;
+        private void tsbCancel_Click(object sender, EventArgs e)
+        {
+            if (Program.usr == "juvy")
+            {
+                DialogResult ans = MessageBox.Show("Are you sure?", "Collection", MessageBoxButtons.YesNo);
+                if (ans == DialogResult.Yes)
+                {
+                    //update pay_,pay_d
+                    
+                    DBConnect dbcon = new DBConnect();
+                    dbcon.OpenConnection(retries);
+                    // newdbcon.mytable = "master.mastfile";
+                    ssql = "update bcdb.pay_d set paidamout=0 where orno=@or";
+                    using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
+                        {
+                            cmd.Parameters.AddWithValue("@or", dgvItem.CurrentRow.Cells[1]);
+                            //cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
+                            //cmd2.Parameters.AddWithValue("@bp", dgvPayment.CurrentRow.Cells[16].Value);
+                            //cmd2.Parameters.AddWithValue("@amt", namt);
+
+                            cmd.Prepare();
+                            cmd.ExecuteNonQuery();
+                            cmd.Dispose();
+
+                        }
+                    ssql = "update bcdb.pay_h set amtdue=0,iscancelled='1' and canceleddate=@dt where orno=@or";
+                    using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
+                    {
+                        cmd.Parameters.AddWithValue("@or", dgvItem.CurrentRow.Cells[1]);
+                        cmd.Parameters.AddWithValue("@dt", DateTime.Now.ToString("yyyy-MM-dd"));
+                        cmd.Prepare();
+                        cmd.ExecuteNonQuery();
+                        cmd.Dispose();
+
+                    }
+
+                    DataTable rs = new DataTable();
+                    ssql = "select * from bcdb.pay_d where orno=@or";
+                    using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
+                    {
+                        cmd.Parameters.AddWithValue("@or", dgvItem.CurrentRow.Cells[1].Value.ToString());
+                        using (rs = new DataTable())
+                        {
+
+                            rs = dbcon.get_records(ssql, cmd);
+                            if (rs.Rows.Count > 0)
+                            {
+                                foreach(DataRow rw in rs.Rows)
+                                {
+                                    ssql = "update bcdb.reading_bc set payment=null where mascode=@mc and billperiod=@bp";
+                                    using (MySqlCommand cmd1 = new MySqlCommand(ssql, dbcon.database_connection))
+                                    {
+                                        cmd1.Parameters.AddWithValue("@mc", rw["mascode"]);
+                                        cmd1.Parameters.AddWithValue("@bp", rw["billperiod"]);
+                                        cmd1.Prepare();
+                                        cmd1.ExecuteNonQuery();
+                                        cmd1.Dispose();
+
+                                    }
+
+                                }
+
+                            }
+                        }
+                        cmd.Dispose ();
+                    }
+                    rs.Dispose ();
+                    dbcon.CloseConnection();
+
+                }
+            }
+            
+
+        }
+
         decimal notdisc = 0;
         decimal nwtax;
         private void sdisplaydetails()
         {
             nudTotal.Value = 0; nudChange.Value = 0;nudTendered.Value = 0;
-            ssql = "select * from reading_bc where mascode=@mc and (payment<=0 or payment is null or payment<billamt) and billperiod is not null and billperiod>='202411' order by billperiod";
+            if (nain == 0)
+            {
+                ssql = "select * from reading_bc where mascode=@mc and (payment<=0 or payment is null or payment<billamt) and billperiod is not null and billperiod>='202409' order by billperiod";
+            }
+            else
+            {
+                ssql = "select * from reading_bc where mascode=@mc and (payment<=0 or payment is null or payment<billamt) and billperiod is not null order by billperiod";
+            }
+            
             DBConnect dbcon = new DBConnect();
             dbcon.OpenConnection(retries);
             // newdbcon.mytable = "master.mastfile";

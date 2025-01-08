@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
@@ -48,15 +47,13 @@
             this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell4 = new DevExpress.XtraReports.UI.XRTableCell();
             this.dataSet21 = new bcsys.Reports.DataSet2();
+            this.accID1 = new DevExpress.XtraReports.Parameters.Parameter();
             this.dataSet22 = new bcsys.Reports.DataSet2();
-            this.dataSet23 = new bcsys.Reports.DataSet2();
-            this.accno = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
@@ -96,7 +93,7 @@
             // xrTableCell1
             // 
             this.xrTableCell1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billhead].[billhead_billdtl].[part1]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[part1]")});
             this.xrTableCell1.Multiline = true;
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.Text = "xrTableCell1";
@@ -105,7 +102,7 @@
             // xrTableCell2
             // 
             this.xrTableCell2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billhead].[billhead_billdtl].[amt1]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[billdtl].[amt1]")});
             this.xrTableCell2.Multiline = true;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.StylePriority.UseTextAlignment = false;
@@ -207,22 +204,17 @@
             this.dataSet21.DataSetName = "DataSet2";
             this.dataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // accID1
+            // 
+            this.accID1.Description = "Parameter1";
+            this.accID1.Name = "accID1";
+            this.accID1.Type = typeof(int);
+            this.accID1.ValueInfo = "0";
+            // 
             // dataSet22
             // 
             this.dataSet22.DataSetName = "DataSet2";
             this.dataSet22.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataSet23
-            // 
-            this.dataSet23.DataSetName = "DataSet2";
-            this.dataSet23.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accno
-            // 
-            this.accno.Name = "accno";
-            this.accno.Type = typeof(int);
-            this.accno.ValueInfo = "0";
-            this.accno.ValueSourceSettings = staticListLookUpSettings1;
             // 
             // xrtblotters1
             // 
@@ -234,21 +226,20 @@
             this.GroupFooter1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.dataSet21,
-            this.dataSet22,
-            this.dataSet23});
+            this.dataSet22});
             this.DataMember = "billdtl";
-            this.DataSource = this.dataSet21;
+            this.DataSource = this.dataSet22;
+            this.FilterString = "[acctno] = ?accID1";
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(100F, 100F, 10.5F, 6.25F);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.accno});
+            this.accID1});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -273,8 +264,8 @@
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow3;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell5;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell6;
+        private DevExpress.XtraReports.Parameters.Parameter accID;
+        private DevExpress.XtraReports.Parameters.Parameter accID1;
         private DataSet2 dataSet22;
-        private DataSet2 dataSet23;
-        private DevExpress.XtraReports.Parameters.Parameter accno;
     }
 }

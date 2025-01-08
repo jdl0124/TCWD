@@ -38,11 +38,11 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrSubreport3 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.dataSet21 = new bcsys.Reports.DataSet2();
             this.groupbyID = new DevExpress.XtraReports.UI.GroupHeaderBand();
-            this.xrSubreport3 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -145,6 +145,12 @@
             this.Detail.HeightF = 171.5416F;
             this.Detail.Name = "Detail";
             // 
+            // xrSubreport3
+            // 
+            this.xrSubreport3.LocationFloat = new DevExpress.Utils.PointFloat(304.1667F, 10.41665F);
+            this.xrSubreport3.Name = "xrSubreport3";
+            this.xrSubreport3.SizeF = new System.Drawing.SizeF(2F, 0F);
+            // 
             // xrSubreport2
             // 
             this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -182,12 +188,6 @@
             this.groupbyID.Name = "groupbyID";
             this.groupbyID.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
             // 
-            // xrSubreport3
-            // 
-            this.xrSubreport3.LocationFloat = new DevExpress.Utils.PointFloat(304.1667F, 10.41665F);
-            this.xrSubreport3.Name = "xrSubreport3";
-            this.xrSubreport3.SizeF = new System.Drawing.SizeF(2F, 0F);
-            // 
             // MasterReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -200,8 +200,9 @@
             this.DataMember = "StudentInfo";
             this.DataSource = this.dataSet21;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.Margins = new DevExpress.Drawing.DXMargins(100F, 100F, 105.2916F, 73.20837F);
+            this.Margins = new DevExpress.Drawing.DXMargins(99F, 99F, 105.2916F, 73.20837F);
             this.PageHeight = 550;
+            this.PageWidth = 849;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.Scripts.OnBeforePrint = "MasterReport_BeforePrint";
             this.ScriptsSource = "\r\nprivate void testlabel_BeforePrint(object sender, System.ComponentModel.CancelE" +

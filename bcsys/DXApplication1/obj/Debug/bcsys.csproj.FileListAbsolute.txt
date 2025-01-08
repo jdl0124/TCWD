@@ -732,6 +732,7 @@ D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.EntryFor
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.EntryForms.connectionstatus.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.EntryForms.consearch.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.EntryForms.consumer.resources
+D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.EntryForms.readingupdown.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.EntryForms.seniorcitizen.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.EntryForms.specialbilling.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.EntryForms.ledger_old.resources
@@ -755,8 +756,10 @@ D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.frmlogin
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.frmloading.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.Users.frmregistration.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.Users.MainEncrypter.resources
+D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.xrledger.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Properties.Resources.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrdlycollectionreport.resources
+D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrmischarges.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrmonthlybillingclasssummary.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrdlybillingclass.resources
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrdlybillingreport.resources
@@ -779,5 +782,5 @@ D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.csproj.CoreCom
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.csproj.Up2Date
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.exe
 D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.pdb
-D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.xrledger.resources
-D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Forms.EntryForms.readingupdown.resources
+D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrsub1.resources
+D:\jdl solutions\magdis\TCWD\bcsys\DXApplication1\obj\Debug\bcsys.Reports.xrsubrep.resources

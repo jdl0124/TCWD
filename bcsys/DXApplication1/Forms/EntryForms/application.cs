@@ -579,7 +579,7 @@ namespace bcsys.Forms.EntryForms
                 {
                     cmd.Parameters.AddWithValue("apn", tbAppNo.Text);
                     result = newdbcon.get_records(qry, cmd);
-                    if (result.Rows.Count <= 0)
+                    if (result.Rows.Count > 0)
                     {
                         //get mascode - primary key of master table
                         ssql = "select * from master order by mascode desc limit 1";
@@ -632,7 +632,7 @@ namespace bcsys.Forms.EntryForms
                             cmd2.Parameters.AddWithValue("@dtap", dtpApplied.Value.ToString("yyyy-MM-dd"));
 
                             cmd2.Parameters.AddWithValue("@m_no", tbMeterNo.Text);
-                            cmd2.Parameters.AddWithValue("@ftax", 6.44);
+                            cmd2.Parameters.AddWithValue("@ftx", 6.44);
                             cmd2.Parameters.AddWithValue("@ird", tbInitReading.Text);
                             cmd2.Prepare();
                             cmd2.ExecuteNonQuery();

@@ -172,6 +172,8 @@ namespace bcsys.Forms
                                     Program.sig1 = row["sig1"].ToString();
                                     Program.sig2 = row["sig2"].ToString();
                                     Program.sig3 = row["sig3"].ToString();
+                                    Program.sig4 = row["sig4"].ToString();
+                                    Program.sig5 = row["sig5"].ToString();
                                 }
                             }
                            

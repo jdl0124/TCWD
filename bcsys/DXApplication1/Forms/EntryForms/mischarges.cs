@@ -45,7 +45,7 @@ namespace bcsys.Forms.EntryForms
         {
             Program.acct = dgv.CurrentRow.Cells[0].Value.ToString();
             Program.desc0 = dgv.CurrentRow.Cells[1].Value.ToString();
-            Program.rate = Convert.ToDecimal(dgv.CurrentRow.Cells[2].Value.ToString());
+            Program.rate = Convert.ToDecimal(nudRate.Value);
             Program.ttype = dgv.CurrentRow.Cells[3].Value.ToString();
             Program.nmisamount = nudRate.Value;
             this.Close();

@@ -290,6 +290,21 @@ namespace bcsys.Forms.EntryForms
                             {
                                 dtpConnected.Value = Convert.ToDateTime(rw["daterec"].ToString());
                             }
+                            if (rw["cust_stat"] != DBNull.Value)
+                            {
+                                if (rw["cust_stat"].ToString() == "0")
+                                {
+                                    cbstatus.Checked = true;
+                                }
+                                else
+                                {
+                                    cbstatus.Checked = false;
+                                }
+                            }
+                            else
+                            {
+                                cbstatus.Checked = false;
+                            }
                             //dtpRecon.Value = Convert.ToDateTime(rw["daterec"].ToString());
 
 
@@ -374,7 +389,7 @@ namespace bcsys.Forms.EntryForms
                     result = ndbcon.get_records(qry, cmd);
                     if (result.Rows.Count > 0)
                     {
-                        ssql = "update bcdb.master set ratetype=@rt,m_brand=@mb,town=@twn,classcode=@cc,msize=@ms,bgycode=@bgyc,accno=@acn,user1=@usr,name=@na,address=@add,m_no=@mn where mascode=@mc";
+                        ssql = "update bcdb.master set ratetype=@rt,m_brand=@mb,classcode=@cc,msize=@ms,acctno=@act,bgycode=@bgyc,accno=@acn,user1=@usr,name=@na,address=@add,m_no=@mn,cust_stat=@cs where mascode=@mc";
                         using (MySqlCommand cmd2 = new MySqlCommand(ssql, ndbcon.database_connection))
                         {
                             cmd2.Parameters.AddWithValue("@mc", tbMasCode.Text);
@@ -384,11 +399,19 @@ namespace bcsys.Forms.EntryForms
                             cmd2.Parameters.AddWithValue("@ms", cbMSize.SelectedValue);
                             cmd2.Parameters.AddWithValue("@bgyc", tbBgyCode.Text);
                             cmd2.Parameters.AddWithValue("@acn", cbZone.Text + cbBook.Text + "-" +
-                                cbClass.Text + cbMSize.Text + "-" + tbAcc.Text);
+                                tbCMCode.Text  + "-" + tbAcc.Text);
+                            cmd2.Parameters.AddWithValue("@act", cbZone.Text + cbBook.Text + "-" +
+                                tbCMCode.Text  + "-" + tbAcc.Text);
                             cmd2.Parameters.AddWithValue("@usr", Program.usr);
                             cmd2.Parameters.AddWithValue("@na", tbName.Text);
                             cmd2.Parameters.AddWithValue("@add", tbAddress.Text);
-                            cmd2.Parameters.AddWithValue("@m_no", tbMeterNo.Text);
+                            cmd2.Parameters.AddWithValue("@mn", tbMeterNo.Text);
+                            if (cbstatus.Checked)
+                            {
+                                cmd2.Parameters.AddWithValue("@cs", "0");
+                            }
+                            else { cmd2.Parameters.AddWithValue("@cs", "1"); }
+
                             cmd2.Prepare();
                             cmd2.ExecuteNonQuery();
                             cmd2.Dispose();

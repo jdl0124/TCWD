@@ -31,6 +31,8 @@ namespace bcsys
         public static string sig1;
         public static string sig2;
         public static string sig3;
+        public static string sig4;
+        public static string sig5;
         public static string accno;
         /// <summary>
         /// The main entry point for the application.

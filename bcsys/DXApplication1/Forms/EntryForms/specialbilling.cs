@@ -35,39 +35,22 @@ namespace bcsys.Forms.EntryForms
 			tbmascode.Text = Program.smascode;
 			tbAcctno.Text = Program.zna;
 			tbAcctno.Focus();
-			tbAcctno_KeyDown(1, new KeyEventArgs(Keys.Enter));
+			tbAcctno_KeyDown_1(1, new KeyEventArgs(Keys.Enter));
 		}
 
 		private void tbAcctno_KeyDown(object sender, KeyEventArgs e)
 		{
-			if (e.KeyCode == Keys.Enter)
-			{
-				if (tbAcctno.Text != "")
-				{
-					sdisplayname();
-					//sdisplaydetails();
-					//tsGL.Enabled = true;
-				}
-			}
-			else if (e.KeyCode == Keys.F2)
-			{
-				Form consearch = new consearch();
-				consearch.ShowDialog();
-				tbmascode.Text = Program.smascode;
-				tbAcctno.Text = Program.zna;
-				sdisplayname();
-				//sdisplaydetails();
-			}
+			
 		}
 		private void sdisplayname()
 		{
-			ssql = "select * from bcdb.master where left(znacc12,6)=@zn";
+			ssql = "select * from bcdb.master where mascode=@mc";
 			DBConnect dbcon = new DBConnect();
 			dbcon.OpenConnection(retries);
 			DataTable rs = new DataTable();
 			using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
 			{
-				cmd.Parameters.AddWithValue("@zn", tbAcctno.Text.Substring(0, 6));
+				cmd.Parameters.AddWithValue("@mc", tbmascode.Text);
 				using (rs = new DataTable())
 				{
 					rs = dbcon.get_records(ssql, cmd);
@@ -77,7 +60,7 @@ namespace bcsys.Forms.EntryForms
 						foreach (DataRow dr in rs.Rows)
 						{
 							tbmascode.Text = dr["mascode"].ToString();
-							tbAcctno.Text = dr["znacc12"].ToString();
+							tbAcctno.Text = dr["accno"].ToString();
 							tbName.Text = dr["Name"].ToString();
 							tbAddress.Text = dr["address"].ToString();
 							nclcode = Convert.ToInt32(dr["classcode"]);
@@ -96,7 +79,7 @@ namespace bcsys.Forms.EntryForms
 							nbillamt = 0;
 							for (int i = 0; i < dgva.Rows.Count; i++)
 							{
-								nbillamt += Convert.ToDecimal(dgva.Rows[i].Cells[1].Value);
+								//nbillamt += Convert.ToDecimal(dgva.Rows[i].Cells[1].Value);
 							}
 							tbarrears.Text = nbillamt.ToString("###,##0.00");
 
@@ -120,7 +103,7 @@ namespace bcsys.Forms.EntryForms
 			DBConnect dbcon = new DBConnect();
 			dbcon.OpenConnection(retries);
 			DataTable dtb = new DataTable();
-			ssql = "select billperiod,billamt,ftax,wmf,penalty,discount,payment from bcdb.reading_bc where mascode=@mc and (billamt>payment or payment is null) ";
+			ssql = "select billperiod,billamt,ftax,wmf,penalty,srdisc,payment from bcdb.reading_bc where mascode=@mc and (billamt>payment or payment is null) ";
 			using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
 			{
 				using (dtb = new DataTable())
@@ -226,7 +209,8 @@ namespace bcsys.Forms.EntryForms
 					dtb = newdbcon.get_records(qry, cmd);
 					if (dtb.Rows.Count == 0)
 					{
-						ssql = "insert into bcdb.reading_bc (mascode,zn,bk,meterno,billperiod,previous,present,cumused,billamt,ftax,wmf,discount,others,payment,ttype,refdate,duedate,startdate,enddate,usr,seqno) " +
+						nbillamt = 0;
+						ssql = "insert into bcdb.reading_bc (mascode,zn,bk,meterno,billperiod,previous,present,cumused,billamt,ftax,wmf,srdisc,others,payment,ttype,refdate,duedate,startdate,enddate,usr,seqno) " +
 							"values(@mc,@zn,@bk,@mn,@bp,@pv,@pr,@cu,@ba,@ft,@wm,@dc,@ot,@pay,@tt,@rdt,@ddt,@sdt,@edt,@usr,@sq)";
 						using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
 						{
@@ -238,7 +222,9 @@ namespace bcsys.Forms.EntryForms
 							cmd2.Parameters.AddWithValue("@pv", tbpr.Text);
 							cmd2.Parameters.AddWithValue("@pr", tbcr.Text);
 							cmd2.Parameters.AddWithValue("@cu", tbcmu.Text);
-							cmd2.Parameters.AddWithValue("@ba", tbbillamt.Text);
+							nbillamt = Convert.ToDecimal( tbbillamt.Text.Trim());
+
+							cmd2.Parameters.AddWithValue("@ba", tbbillamt);
 							cmd2.Parameters.AddWithValue("@ft", tbftax.Text);
 							cmd2.Parameters.AddWithValue("@wm", tbwmf.Text);
 							cmd2.Parameters.AddWithValue("@dc", tbdisc.Text);
@@ -259,7 +245,7 @@ namespace bcsys.Forms.EntryForms
 					else
 					{
 						//update
-						ssql = "update bcdb.reading_bc set present=@cr,cumused=@cu,billamt=@ba,ftax=@ft,wmf=@wm,discount=@dc,others@ot,refdate=@rdt,duedate=@ddt,startdate=@sdt,enddate=@edt,usr=@usr) " +
+						ssql = "update bcdb.reading_bc set previous=@pv,present=@pr,cumused=@cu,billamt=@ba,ftax=@ft,wmf=@wm,discount=@dc,others@ot,refdate=@rdt,duedate=@ddt,startdate=@sdt,enddate=@edt,usr=@usr) " +
 							"where mascode=@mc and billperiod=@bp";
 						using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
 						{
@@ -291,7 +277,29 @@ namespace bcsys.Forms.EntryForms
 			}
 		}
 
-		private void sinit()
+        private void tbAcctno_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (tbAcctno.Text != "")
+                {
+                    sdisplayname();
+                    //sdisplaydetails();
+                    //tsGL.Enabled = true;
+                }
+            }
+            else if (e.KeyCode == Keys.F2)
+            {
+                Form consearch = new consearch();
+                consearch.ShowDialog();
+                tbmascode.Text = Program.smascode;
+                tbAcctno.Text = Program.zna;
+                sdisplayname();
+                //sdisplaydetails();
+            }
+        }
+
+        private void sinit()
 		{
 			tbAcctno.Text = "";
 			tbName.Text = "";

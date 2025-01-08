@@ -1,15 +1,4 @@
-﻿using bcsys.Forms.ReportForms;
-using bcsys.modules;
-using bcsys.Reports;
-using DevExpress.DataProcessing.InMemoryDataProcessor.GraphGenerator;
-using DevExpress.Diagram.Core.Native;
-using DevExpress.Drawing.Internal.Fonts.Interop;
-using DevExpress.Office.Utils;
-using DevExpress.XtraCharts;
-using DevExpress.XtraEditors;
-using DevExpress.XtraReports.UI;
-using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +7,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraPrinting;
+using DevExpress.XtraReports.UI;
+using bcsys.modules;
+using bcsys.Reports;
+using DevExpress.XtraGrid.Views.Grid.ViewInfo;
+using DevExpress.CodeParser;
+using MySql.Data.MySqlClient;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraEditors;
+using bcsys.Properties;
+using DevExpress.XtraRichEdit.Import.Doc;
+using DevExpress.Utils.About;
+using Mirabeau.Sql;
+using DevExpress.DashboardCommon.Viewer;
+using DevExpress.ExpressApp;
+using DevExpress.XtraExport.Helpers;
+using DevExpress.Utils.Menu;
+using DevExpress.XtraCharts;
+using DevExpress.DataAccess.Native.Sql.ConnectionProviders;
+using DevExpress.Utils.Serializing;
+using DevExpress.XtraEditors.Filtering.Templates;
+using DevExpress.ClipboardSource.SpreadsheetML;
+using System.Globalization;
+using CrystalDecisions.CrystalReports.Engine;
+using DevExpress.DashboardCommon.DataProcessing;
+using DevExpress.Printing.Core.PdfExport.Metafile;
+using DevExpress.Persistent.Base.General;
+using DevExpress.DataAccess.Native.EntityFramework;
+using DevExpress.Utils.Extensions;
+using DevExpress.Xpo.DB.Helpers;
+using DevExpress.Web.Internal.XmlProcessor;
+//using DevExpress.DataAccess.Native.Data;
+using System.Web.UI.WebControls;
+using DevExpress.XtraEditors.DXErrorProvider;
+using DevExpress.DataProcessing.InMemoryDataProcessor;
+using bcsys.Forms.ReportForms;
 
 namespace bcsys.Forms.EntryForms
 {
@@ -134,9 +165,29 @@ namespace bcsys.Forms.EntryForms
                 r1["sig1"] = Program.sig1;
                 r1["sig2"] = Program.sig2;
                 r1["sig3"] = Program.sig3;
+                r1["sig4"] = Program.sig4;
+
+
+
+                r1["m1"] = "618-1:" + " Inspection Fee";
+                r1["m2"] = "618-1:" + " Reconnection Fee";
+                r1["m3"] = "618-1:" + " Demand Fee";
+                r1["m4"] = "618-1:" + " Senior Citizen";
+                r1["m5"] = "618-1:" + " Transfer Fee";
+                r1["m6"] = "618-1:" + " Change Name";
+                r1["m7"] = "618-1:" + " Application Fee";
+                r1["m8"] = "134:" + " Advances to Off. & Emp.";
+                r1["m9"] = "618-4:" + " Materials";
+                r1["m10"] = "618:" + " Others";
+
+                //get details of payment
+
+
+
+
 
                 ds.Tables["billhead"].Rows.Add(r1);
-                if (xtc1.SelectedTabPageIndex == 1)
+                if (xtc1.SelectedTabPageIndex == 0)
                 {
 
                     for (int i = 0; i <= dgv.RowCount - 1; i++)
@@ -145,7 +196,15 @@ namespace bcsys.Forms.EntryForms
                         r2["acctno"] = "1";
                         r2["nno"] = i + 1;
                         r2["refno"] = dgv.Rows[i].Cells[0].Value;
-                        r2["acctname"] = dgv.Rows[i].Cells[1].Value;
+                        if (dgv.Rows[i].Cells[1].Value.ToString().Length > 30)
+                        {
+                            r2["acctname"] = dgv.Rows[i].Cells[1].Value.ToString().Substring(0, 30);
+                        }
+                        else
+                        {
+                            r2["acctname"] = dgv.Rows[i].Cells[1].Value.ToString();
+                        }
+                        
                         r2["orno"] = dgv.Rows[i].Cells[2].Value;
                         //r2["amount"] = dgv.Rows[i].Cells[2].Value;
                         if (dgv.Rows[i].Cells[3].Value != null)
@@ -234,11 +293,12 @@ namespace bcsys.Forms.EntryForms
         {
             if (xtc1.SelectedTabPageIndex == 1)
             {
-                sprn_collection();
+                sprn_tblotter();
             }
             else if (xtc1.SelectedTabPageIndex == 0) 
-            { 
-                sprn_tblotter();
+            {
+                sprn_collection();
+                
             }
 
             
@@ -250,7 +310,7 @@ namespace bcsys.Forms.EntryForms
             {
                 ObjectPositions newpos = new ObjectPositions();
                 frmDashboard fdash = new frmDashboard();
-                agingreport mainfrm = new agingreport();
+                collectionreport mainfrm = new collectionreport();
                 frmloading frm = new frmloading();
 
                 string thirdParam = string.Empty;
@@ -263,7 +323,8 @@ namespace bcsys.Forms.EntryForms
                 ds.Tables["billdtl"].Rows.Clear();
                 ds.Tables["deposit"].Rows.Clear();
 
-                XtraReport rpt = new xrtblotter ();
+                //XtraReport rpt = new xrtblotters1 ();
+                XtraReport rpt = new xrtblotter();
                 var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
 
                 Application.DoEvents();
@@ -280,7 +341,7 @@ namespace bcsys.Forms.EntryForms
                 DataRow r1 = ds.Tables["billhead"].NewRow();
                 r1["acctname"] = "Tangub City Water District";
                 r1["address"] = "Aging Report";
-                r1["acctno"] = "1";
+                r1["acctno"] = 1;
                 r1["billdate"] = dtpDate.Value;
                 r1["sig1"] = Program.sig1;
                 r1["sig2"] = Program.sig2;
@@ -293,7 +354,7 @@ namespace bcsys.Forms.EntryForms
                         
                     }
                 DataRow r2 = ds.Tables["billdtl"].NewRow();
-                r2["acctno"] = "1";
+                r2["acctno"] = 1;
                 r2["nno"] = 1;
                 r2["part1"] = dgvb.Rows[0].Cells[0].Value;
                 if (dgvb.Rows.Count >=2)
@@ -345,7 +406,7 @@ namespace bcsys.Forms.EntryForms
                 for (int i = 0; i <= dgvDeposit.RowCount - 1; i++)
                 {
                     DataRow r3 = ds.Tables["deposit"].NewRow();
-                    r3["acctno"] = "1";
+                    r3["acctno"] = 1;
                     
                     r3["part"] = dgvDeposit .Rows[i].Cells[0].Value;
                     //r2["amt1"] = dgv.Rows[i].Cells[1].Value;
@@ -370,11 +431,11 @@ namespace bcsys.Forms.EntryForms
                     ds.Tables["deposit"].Rows.Add(r3);
                 }
                 
-                XRSubreport subReport = (XRSubreport)rpt.FindControl("xrblotter1", true);
-               // ((xrtblotters1)subReport.ReportSource).DataSource = ds;
+               // XRSubreport subReport = (XRSubreport)rpt.FindControl("xrblotter1", true);
+               //((xrtblotters1)subReport.ReportSource).DataSource = ds;
 
-                XRSubreport subReport2 = (XRSubreport)rpt.FindControl("xrblotter2", true);
-                //((xrtblotters2)subReport2.ReportSource).DataSource = ds;
+               // XRSubreport subReport2 = (XRSubreport)rpt.FindControl("xrblotter2", true);
+               // ((xrtblotters2)subReport2.ReportSource).DataSource = ds;
 
                 rpt.DataSource = ds;
                 rpt.CreateDocument();
@@ -562,6 +623,29 @@ namespace bcsys.Forms.EntryForms
             sgetdeposit();
         }
 
+        private void spaydetails()
+        {
+            DBConnect newdbcon = new DBConnect();
+            newdbcon.OpenConnection(retries);
+
+            rs = new DataTable();
+            ssql = "select ttype,sum(paidamount) as pa from bcdb.pay_d where left(pdate,10)=@dt GROUP BY ttype";
+            dgvDeposit.Rows.Clear();
+            using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
+            {
+                
+                
+                cmd2.Parameters.AddWithValue("dte", dtpDate.Value.ToString("yyyy-MM-dd"));
+                cmd2.Prepare();
+
+                rs = newdbcon.get_records(ssql, cmd2);
+                
+                if (rs.Rows.Count > 0)
+                {
+
+                }
+            }
+        }
         private void sgetdeposit()
         {
             DBConnect newdbcon = new DBConnect();
@@ -863,47 +947,47 @@ namespace bcsys.Forms.EntryForms
 							r = dgvm.Rows.Count - 1;
 							dgvm.Rows[r].Cells[1].Value = rs["acctno"];
 							dgvm.Rows[r].Cells[0].Value = rs["acctname"];
-							dgvm.Rows[r].Cells[2].Value = rs["orno"];
-							dgvm.Rows[r].Cells[3].Value = rs["paidamount"];
+							dgvm.Rows[r].Cells[1].Value = rs["orno"];
+							dgvm.Rows[r].Cells[2].Value = rs["paidamount"];
 							if (rs["ttype"].ToString() == "60")
 							{
-								dgvm.Rows[r].Cells[4].Value = rs["paidamount"];
+								dgvm.Rows[r].Cells[3].Value = rs["paidamount"];
 							}
 							else if (rs["ttype"].ToString() == "61")
 							{
-								dgvm.Rows[r].Cells[5].Value = rs["paidamount"];
+								dgvm.Rows[r].Cells[4].Value = rs["paidamount"];
 							}
 							else if (rs["ttype"].ToString() == "62")
 							{
-								dgvm.Rows[r].Cells[6].Value = rs["paidamount"];
+								dgvm.Rows[r].Cells[5].Value = rs["paidamount"];
 							}
 							else if (rs["ttype"].ToString() == "63")
 							{
-								dgvm.Rows[r].Cells[7].Value = rs["paidamount"];
+								dgvm.Rows[r].Cells[6].Value = rs["paidamount"];
 							}
 							else if (rs["ttype"].ToString() == "64")
 							{
-								dgvm.Rows[r].Cells[8].Value = rs["paidamount"];
+								dgvm.Rows[r].Cells[7].Value = rs["paidamount"];
 							}
 							else if (rs["ttype"].ToString() == "65")
 							{
-								dgvm.Rows[r].Cells[9].Value = rs["paidamount"];
+								dgvm.Rows[r].Cells[8].Value = rs["paidamount"];
 							}
 							else if (rs["ttype"].ToString() == "66")
 							{
-								dgvm.Rows[r].Cells[10].Value = rs["paidamount"];
+								dgvm.Rows[r].Cells[9].Value = rs["paidamount"];
 							}
 							else if (rs["ttype"].ToString() == "67")
 							{
-								dgvm.Rows[r].Cells[11].Value = rs["paidamount"];
+								dgvm.Rows[r].Cells[10].Value = rs["paidamount"];
 							}
 							else if (rs["ttype"].ToString() == "68")
 							{
-								dgvm.Rows[r].Cells[12].Value = rs["paidamount"];
+								dgvm.Rows[r].Cells[11].Value = rs["paidamount"];
 							}
 							else if (rs["ttype"].ToString() == "69")
 							{
-								dgvm.Rows[r].Cells[13].Value = rs["paidamount"];
+								dgvm.Rows[r].Cells[12].Value = rs["paidamount"];
 							}
 						}
 					}
@@ -912,6 +996,8 @@ namespace bcsys.Forms.EntryForms
 			}
 			dbcon.CloseConnection();
 		}
+        decimal npay, ncurent, ncuyr, npyr, nftax, nwmf,npenalty, nsrdisc, nwtax;
+
 		private void sdailycollectionreport()
 		{
 			ssql = "select b.*,a.acctname from pay_h a,pay_d b where a.teller=@tel and a.tdate=@dt and a.orno=b.orno order by a.orno";
@@ -962,7 +1048,34 @@ namespace bcsys.Forms.EntryForms
 						}
                         nudTotal.Value = namt;
                         namt = 0;
-					}
+                        npay = 0; npenalty = 0;
+                        ncurent = 0;ncuyr = 0; npyr = 0;nftax = 0;nwmf = 0;nsrdisc = 0;nwtax = 0;
+
+                        for (int i = 0; i < dgv.Rows.Count; i++)
+                        {
+                            npay  += Convert.ToDecimal( dgv.Rows[i].Cells[3].Value);
+                            ncurent  += Convert.ToDecimal(dgv.Rows[i].Cells[4].Value);
+                            ncuyr += Convert.ToDecimal(dgv.Rows[i].Cells[5].Value);
+                            npyr += Convert.ToDecimal(dgv.Rows[i].Cells[6].Value);
+                            nftax += Convert.ToDecimal(dgv.Rows[i].Cells[7].Value);
+                            nwmf += Convert.ToDecimal(dgv.Rows[i].Cells[8].Value);
+                            npenalty  += Convert.ToDecimal(dgv.Rows[i].Cells[9].Value);
+                            nsrdisc += Convert.ToDecimal(dgv.Rows[i].Cells[10].Value);
+                            //nwtax += Convert.ToDecimal(dgv.Rows[i].Cells[11].Value);
+                        }
+                        dgvt.Rows.Clear();
+                        dgvt.Rows.Add();
+                        dgvt.Rows[0].Cells[3].Value = npay;
+                        dgvt.Rows[0].Cells[4].Value = ncurent ;
+                        dgvt.Rows[0].Cells[5].Value = ncuyr;
+                        dgvt.Rows[0].Cells[6].Value = npyr;
+                        dgvt.Rows[0].Cells[7].Value = nftax ;
+                        dgvt.Rows[0].Cells[8].Value = nwmf ;
+                        dgvt.Rows[0].Cells[9].Value = npenalty;
+                        dgvt.Rows[0].Cells[10].Value = nsrdisc;
+                        //dgvt.Rows[0].Cells[11].Value = nwtax ;
+
+                    }
 				}
 				cmd1.Dispose();
 			}

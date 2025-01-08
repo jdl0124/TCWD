@@ -401,11 +401,20 @@
     <Compile Include="modules\Work.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\DataSet2.cs">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\xrdlycollectionreport.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\xrdlycollectionreport.Designer.cs">
       <DependentUpon>xrdlycollectionreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\xrmischarges.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrmischarges.Designer.cs">
+      <DependentUpon>xrmischarges.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\xrmonthlybillingclasssummary.cs">
       <SubType>Component</SubType>
@@ -477,6 +486,18 @@
     </Compile>
     <Compile Include="Reports\xrmonthlybillingsum.Designer.cs">
       <DependentUpon>xrmonthlybillingsum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\xrsub1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrsub1.Designer.cs">
+      <DependentUpon>xrsub1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\xrsubrep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrsubrep.Designer.cs">
+      <DependentUpon>xrsubrep.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\xrtblotter.cs">
       <SubType>Component</SubType>
@@ -636,6 +657,9 @@
     <EmbeddedResource Include="Reports\xrdlycollectionreport.resx">
       <DependentUpon>xrdlycollectionreport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\xrmischarges.resx">
+      <DependentUpon>xrmischarges.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\xrmonthlybillingclasssummary.resx">
       <DependentUpon>xrmonthlybillingclasssummary.cs</DependentUpon>
     </EmbeddedResource>
@@ -669,6 +693,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\xrmonthlybillingsum.resx">
       <DependentUpon>xrmonthlybillingsum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\xrsub1.resx">
+      <DependentUpon>xrsub1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\xrsubrep.resx">
+      <DependentUpon>xrsubrep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\xrtblotter.resx">
       <DependentUpon>xrtblotter.cs</DependentUpon>
