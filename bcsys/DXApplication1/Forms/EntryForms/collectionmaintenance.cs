@@ -104,24 +104,13 @@ namespace bcsys.Forms.EntryForms
 					DBConnect dbcon = new DBConnect();
 					dbcon.OpenConnection(retries);
 					// newdbcon.mytable = "master.mastfile";
-					ssql = "update bcdb.pay_d set paidamount=0 where orno=@or";
+					
+					ssql = "update bcdb.pay_h set amtdue=0,iscanceled='1',canceleddate=@dt,remarks=@rem where orno=@or";
 					using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
 					{
-						cmd.Parameters.AddWithValue("@or", dgv.CurrentRow.Cells[1]);
-						//cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
-						//cmd2.Parameters.AddWithValue("@bp", dgvPayment.CurrentRow.Cells[16].Value);
-						//cmd2.Parameters.AddWithValue("@amt", namt);
-
-						cmd.Prepare();
-						cmd.ExecuteNonQuery();
-						cmd.Dispose();
-
-					}
-					ssql = "update bcdb.pay_h set amtdue=0,iscanceled='1' and canceleddate=@dt where orno=@or";
-					using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
-					{
-						cmd.Parameters.AddWithValue("@or", dgv.CurrentRow.Cells[1]);
+						cmd.Parameters.AddWithValue("@or", dgv.CurrentRow.Cells[1].Value);
 						cmd.Parameters.AddWithValue("@dt", DateTime.Now.ToString("yyyy-MM-dd"));
+						cmd.Parameters.AddWithValue("@rem", "Canceled-" + dgv.CurrentRow.Cells[3].Value);
 						cmd.Prepare();
 						cmd.ExecuteNonQuery();
 						cmd.Dispose();
@@ -129,7 +118,7 @@ namespace bcsys.Forms.EntryForms
 					}
 
 					DataTable rs = new DataTable();
-					ssql = "select * from bcdb.pay_d where orno=@or";
+					ssql = "select * from bcdb.pay_d where orno=@or and ttype='1'";
 					using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
 					{
 						cmd.Parameters.AddWithValue("@or", dgv.CurrentRow.Cells[1].Value.ToString());
@@ -157,6 +146,20 @@ namespace bcsys.Forms.EntryForms
 							}
 						}
 						cmd.Dispose();
+
+					}
+					ssql = "update bcdb.pay_d set paidamount=0 where orno=@or";
+					using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
+					{
+						cmd.Parameters.AddWithValue("@or", dgv.CurrentRow.Cells[1].Value);
+						//cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
+						//cmd2.Parameters.AddWithValue("@bp", dgvPayment.CurrentRow.Cells[16].Value);
+						//cmd2.Parameters.AddWithValue("@amt", namt);
+
+						cmd.Prepare();
+						cmd.ExecuteNonQuery();
+						cmd.Dispose();
+
 					}
 					rs.Dispose();
 					dbcon.CloseConnection();

@@ -48,7 +48,6 @@ namespace bcsys.modules
 
             server = "192.168.1.149";
             server = "localhost";
-            
             database = "bcdb";
             uid = "root";
             password = "";
@@ -92,7 +91,7 @@ namespace bcsys.modules
             //    x++;
             //}
 
-            string connectionString=string.Empty;
+            string connectionString =string.Empty;
 
             //server = NewEncrypterDecrypter.Decrypt(server, encrytion_key);
             //uid = NewEncrypterDecrypter.Decrypt(uid, encrytion_key);

@@ -49,6 +49,9 @@ using System.Web.UI.WebControls;
 using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.DataProcessing.InMemoryDataProcessor;
 using bcsys.Forms.ReportForms;
+using DevExpress.Utils.DirectXPaint;
+using DevExpress.XtraEditors.TextEditController.Win32;
+using static DevExpress.CodeParser.CodeStyle.Formatting.Rules;
 
 namespace bcsys.Forms.EntryForms
 {
@@ -102,7 +105,7 @@ namespace bcsys.Forms.EntryForms
 		}
 
 		private void btnGo_Click(object sender, EventArgs e)
-		{;
+		{
 
             nudAdd.Value = 0;
             nudLess.Value = 0;
@@ -124,10 +127,17 @@ namespace bcsys.Forms.EntryForms
 			}
 		}
 
+        decimal[]msc = new decimal[10];
+       
         private void sprn_collection()
         {
             try
             {
+                for (int i = 0; i < msc.Length; i++)
+                {
+                    msc[i] = 0;
+                }
+
                 ObjectPositions newpos = new ObjectPositions();
                 frmDashboard fdash = new frmDashboard();
                 agingreport mainfrm = new agingreport();
@@ -166,10 +176,14 @@ namespace bcsys.Forms.EntryForms
                 r1["sig2"] = Program.sig2;
                 r1["sig3"] = Program.sig3;
                 r1["sig4"] = Program.sig4;
+				r1["penalty"] = "Penalty";
+				r1["wmf"] = "WMF";
+				r1["srdisc"] = "Senior Discount";
+				r1["penamt"] = dgvt.Rows[0].Cells[8].Value;
+				r1["wmfamt"] = dgvt.Rows[0].Cells[9].Value;
+				r1["srdisamt"] = dgvt.Rows[0].Cells[10].Value;
 
-
-
-                r1["m1"] = "618-1:" + " Inspection Fee";
+				r1["m1"] = "618-1:" + " Inspection Fee";
                 r1["m2"] = "618-1:" + " Reconnection Fee";
                 r1["m3"] = "618-1:" + " Demand Fee";
                 r1["m4"] = "618-1:" + " Senior Citizen";
@@ -180,14 +194,100 @@ namespace bcsys.Forms.EntryForms
                 r1["m9"] = "618-4:" + " Materials";
                 r1["m10"] = "618:" + " Others";
 
-                //get details of payment
+				//get details of payment
+				DBConnect newdbcon = new DBConnect();
+				newdbcon.OpenConnection(retries);
+
+				rs = new DataTable();
+				ssql = "select ttype,sum(paidamount) as pa from bcdb.pay_d where left(pdate,10)=@dt and ttype<>'1' and teller=@tel GROUP BY ttype";
+				
+				using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
+				{
+					cmd2.Parameters.AddWithValue("@dt", dtpDate.Value.ToString("yyyy-MM-dd"));
+					cmd2.Parameters.AddWithValue("@tel", cbteller.Text);
+					cmd2.Prepare();
+                    cmd2.ExecuteNonQuery();
 
 
+					rs = newdbcon.get_records(ssql, cmd2);
+
+					if (rs.Rows.Count > 0)
+					{
+                        foreach (DataRow dr in rs.Rows)
+                        {
+                            if (dr["ttype"].ToString() == "60")
+                            {
+                                r1["ma1"] = dr["pa"];
+                                msc[0] = Convert.ToDecimal(dr["pa"]);
+                            }
+                            else if (dr["ttype"].ToString() == "61")
+                            {
+								r1["ma2"] = dr["pa"];
+								msc[1] = Convert.ToDecimal(dr["pa"]);
+							}
+							else if (dr["ttype"].ToString() == "62")
+							{
+								r1["ma3"] = dr["pa"];
+								msc[2] = Convert.ToDecimal(dr["pa"]);
+							}
+							else if (dr["ttype"].ToString() == "63")
+							{
+								r1["ma4"] = dr["pa"];
+								msc[3] = Convert.ToDecimal(dr["pa"]);
+							}
+							else if (dr["ttype"].ToString() == "64")
+							{
+								r1["ma5"] = dr["pa"];
+								msc[4] = Convert.ToDecimal(dr["pa"]);
+							}
+							else if (dr["ttype"].ToString() == "65")
+							{
+								r1["ma6"] = dr["pa"];
+								msc[5] = Convert.ToDecimal(dr["pa"]);
+							}
+							else if (dr["ttype"].ToString() == "66")
+							{
+								r1["ma7"] = dr["pa"];
+								msc[6] = Convert.ToDecimal(dr["pa"]);
+							}
+							else if (dr["ttype"].ToString() == "67")
+							{
+								r1["ma8"] = dr["pa"];
+								msc[7] = Convert.ToDecimal(dr["pa"]);
+							}
+							else if (dr["ttype"].ToString() == "68")
+							{
+								r1["ma9"] = dr["pa"];
+								msc[8] = Convert.ToDecimal(dr["pa"]);
+							}
+							else if (dr["ttype"].ToString() == "69")
+							{
+								r1["ma10"] = dr["pa"];
+								msc[9] = Convert.ToDecimal(dr["pa"]);
+							}
+
+						}
+
+					}
+                    namt = 0;
+                    for (int i = 0; i < msc.Length; i++)
+                    {
+                        namt += msc[i];
+                    }
+                    r1["arbalance"] = Convert.ToDecimal(dgvt.Rows[0].Cells[4].Value) + Convert.ToDecimal(dgvt.Rows[0].Cells[5].Value)
+                    + Convert.ToDecimal(dgvt.Rows[0].Cells[6].Value);
+					r1["aramount"] = Convert.ToDecimal(dgvt.Rows[0].Cells[4].Value) + Convert.ToDecimal(dgvt.Rows[0].Cells[5].Value)
+					+ Convert.ToDecimal(dgvt.Rows[0].Cells[6].Value) + Convert.ToDecimal(dgvt.Rows[0].Cells[8].Value) + Convert.ToDecimal(dgvt.Rows[0].Cells[9].Value) + namt;
+
+					cmd2.Dispose();
+				}
+                rs.Dispose();
 
 
-
-                ds.Tables["billhead"].Rows.Add(r1);
-                if (xtc1.SelectedTabPageIndex == 0)
+                //newdbcon = new DBConnect();
+                newdbcon.CloseConnection();
+				ds.Tables["billhead"].Rows.Add(r1);
+				if (xtc1.SelectedTabPageIndex == 0)
                 {
 
                     for (int i = 0; i <= dgv.RowCount - 1; i++)
@@ -645,6 +745,8 @@ namespace bcsys.Forms.EntryForms
 
                 }
             }
+            newdbcon = new DBConnect();
+
         }
         private void sgetdeposit()
         {
@@ -1000,7 +1102,7 @@ namespace bcsys.Forms.EntryForms
 
 		private void sdailycollectionreport()
 		{
-			ssql = "select b.*,a.acctname from pay_h a,pay_d b where a.teller=@tel and a.tdate=@dt and a.orno=b.orno order by a.orno";
+			ssql = "select a.*,b.* from pay_h a,pay_d b where a.teller=@tel and a.tdate=@dt and a.orno=b.orno order by a.orno";
 			DBConnect dbcon = new DBConnect();
 			dbcon.OpenConnection(retries);
 			DataTable dt = new DataTable();
@@ -1017,36 +1119,94 @@ namespace bcsys.Forms.EntryForms
                         namt = 0;
 						foreach (DataRow rs in dt.Rows)
 						{
+                            if (rs["orno"].ToString() == "026645")
+                            {
+                                namt++;
+                            }
+
 							dgv.Rows.Add();
 							r = dgv.Rows.Count - 1;
 							dgv.Rows[r].Cells[0].Value = rs["acctno"];
 							dgv.Rows[r].Cells[1].Value = rs["acctname"];
+                            //MessageBox.Show(rs["iscanceled"].ToString());
+							if (rs["iscanceled"] != DBNull.Value)
+                            {
+                                if (Convert.ToInt32(rs["iscanceled"]) == 1)
+                                {
+									dgv.Rows[r].Cells[1].Value = "Cancelded-" + rs["acctname"];
+								}
+								
+							}
+
+							
 							dgv.Rows[r].Cells[2].Value = rs["orno"];
 							dgv.Rows[r].Cells[3].Value = rs["paidamount"];
                             namt += Convert.ToDecimal(rs["paidamount"]);
-							if (bp == rs["billperiod"].ToString())
-							{
-								dgv.Rows[r].Cells[4].Value = Convert.ToDecimal( rs["billamt"]) + Convert.ToDecimal(rs["ftax"]);
-							}
-							else if (Convert.ToInt32(rs["billperiod"].ToString().Substring(0, 4)) < Convert.ToInt32(bp.ToString().Substring(0, 4)))
-							{
-								dgv.Rows[r].Cells[5].Value = Convert.ToDecimal(rs["billamt"]) + Convert.ToDecimal(rs["ftax"]); ;
-							}
-							else if (Convert.ToInt32(rs["billperiod"]) < Convert.ToInt32(bp))
-							{
-								dgv.Rows[r].Cells[6].Value = Convert.ToDecimal(rs["billamt"]) + Convert.ToDecimal(rs["ftax"]); ;
-							}
-							dgv.Rows[r].Cells[8].Value = rs["penalty"];
-							dgv.Rows[r].Cells[7].Value = rs["ftax"];
-							dgv.Rows[r].Cells[9].Value = rs["wmf"];
-							dgv.Rows[r].Cells[10].Value = rs["srdisc"];
-							dgv.Rows[r].Cells[11].Value = rs["wtax"];
-							//dgv.Rows[r].Cells[11].Value = rs["advance"];
-							//dgv.Rows[r].Cells[12].Value = rs["others"];
-							//dgv.Rows[r].Cells[13].Value = rs["stubno"];
+                            //if (bp == rs["billperiod"].ToString())
+                            //{
+                            //	dgv.Rows[r].Cells[4].Value = Convert.ToDecimal( rs["paidamount"]);
+                            //}
+                            //else if (Convert.ToInt32(rs["billperiod"].ToString().Substring(0, 4)) < Convert.ToInt32(bp.ToString().Substring(0, 4)))
+                            //{
+                            //	dgv.Rows[r].Cells[5].Value = Convert.ToDecimal(rs["paidamount"]); ;
+                            //}
+                            //else if (Convert.ToInt32(rs["billperiod"]) < Convert.ToInt32(bp))
+                            //{
+                            //	dgv.Rows[r].Cells[6].Value = Convert.ToDecimal(rs["paidamount"]); ;
+                            //}
+                            //ssql = rs["billperiod"].ToString();
+                            if (rs["ttype"].ToString() == "1")
+                            {
+                                if (rs["iscanceled"] == DBNull.Value)
+                                {
+									if (bp == rs["billperiod"].ToString())
+									{
+										dgv.Rows[r].Cells[4].Value = Convert.ToDecimal(rs["billamt"]) + Convert.ToDecimal(rs["ftax"]);
+									}
+									else if (Convert.ToInt32(rs["billperiod"].ToString().Substring(0, 4)) < Convert.ToInt32(bp.ToString().Substring(0, 4)))
+									{
 
-						}
-                        nudTotal.Value = namt;
+
+										dgv.Rows[r].Cells[6].Value = Convert.ToDecimal(rs["billamt"]) + Convert.ToDecimal(rs["ftax"]); ;
+									}
+									else if (Convert.ToInt32(rs["billperiod"]) < Convert.ToInt32(bp))
+									{
+										dgv.Rows[r].Cells[5].Value = Convert.ToDecimal(rs["billamt"]) + Convert.ToDecimal(rs["ftax"]); ;
+									}
+								}
+                               
+                            }
+                            else
+                            {
+								dgv.Rows[r].Cells[4].Value = 0;
+							    dgv.Rows[r].Cells[6].Value = 0;
+							    dgv.Rows[r].Cells[5].Value = 0;
+							}
+                            dgv.Rows[r].Cells[8].Value = rs["penalty"];
+                            dgv.Rows[r].Cells[7].Value = rs["ftax"];
+                            dgv.Rows[r].Cells[9].Value = rs["wmf"];
+                            dgv.Rows[r].Cells[10].Value = rs["srdisc"];
+                            dgv.Rows[r].Cells[11].Value = rs["wtax"];
+
+                            //dgv.Rows[r].Cells[8].Value = 0;
+                            //dgv.Rows[r].Cells[7].Value = 0;
+                            //dgv.Rows[r].Cells[9].Value = 0;
+                            //dgv.Rows[r].Cells[10].Value = 0;
+                            //dgv.Rows[r].Cells[11].Value = 0;
+                            //if (rs["iscanceled"] == DBNull.Value)
+                            //                     {
+
+                            //                     }
+                            //                     else
+                            //                     {
+
+                            //}
+                            //dgv.Rows[r].Cells[11].Value = rs["advance"];
+                            //dgv.Rows[r].Cells[12].Value = rs["others"];
+                            //dgv.Rows[r].Cells[13].Value = rs["stubno"];
+
+                        }
+						nudTotal.Value = namt;
                         namt = 0;
                         npay = 0; npenalty = 0;
                         ncurent = 0;ncuyr = 0; npyr = 0;nftax = 0;nwmf = 0;nsrdisc = 0;nwtax = 0;
@@ -1057,10 +1217,23 @@ namespace bcsys.Forms.EntryForms
                             ncurent  += Convert.ToDecimal(dgv.Rows[i].Cells[4].Value);
                             ncuyr += Convert.ToDecimal(dgv.Rows[i].Cells[5].Value);
                             npyr += Convert.ToDecimal(dgv.Rows[i].Cells[6].Value);
-                            nftax += Convert.ToDecimal(dgv.Rows[i].Cells[7].Value);
-                            nwmf += Convert.ToDecimal(dgv.Rows[i].Cells[8].Value);
-                            npenalty  += Convert.ToDecimal(dgv.Rows[i].Cells[9].Value);
-                            nsrdisc += Convert.ToDecimal(dgv.Rows[i].Cells[10].Value);
+                            if (dgv.Rows[i].Cells[7].Value != DBNull.Value)
+                            {
+								nftax += Convert.ToDecimal(dgv.Rows[i].Cells[7].Value);
+							}
+                            if (dgv.Rows[i].Cells[8].Value != DBNull.Value)
+                            {
+								nwmf += Convert.ToDecimal(dgv.Rows[i].Cells[8].Value);
+							}
+							if (dgv.Rows[i].Cells[9].Value != DBNull.Value)
+							{
+								npenalty += Convert.ToDecimal(dgv.Rows[i].Cells[9].Value);
+							}
+							if (dgv.Rows[i].Cells[10].Value != DBNull.Value)
+							{
+								nsrdisc += Convert.ToDecimal(dgv.Rows[i].Cells[10].Value);
+							}
+							
                             //nwtax += Convert.ToDecimal(dgv.Rows[i].Cells[11].Value);
                         }
                         dgvt.Rows.Clear();

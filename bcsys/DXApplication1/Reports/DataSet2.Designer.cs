@@ -2229,13 +2229,13 @@ namespace bcsys.Reports {
                         decimal ma9, 
                         decimal ma10, 
                         string watersales, 
-                        string wsamt, 
+                        decimal wsamt, 
                         string penalty, 
-                        string penamt, 
+                        decimal penamt, 
                         string wmf, 
-                        string wmfamt, 
+                        decimal wmfamt, 
                         string srdisc, 
-                        string srdisamt) {
+                        decimal srdisamt) {
                 billheadRow rowbillheadRow = ((billheadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         acctno,
@@ -2563,19 +2563,19 @@ namespace bcsys.Reports {
                 base.Columns.Add(this.columnma10);
                 this.columnwatersales = new global::System.Data.DataColumn("watersales", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnwatersales);
-                this.columnwsamt = new global::System.Data.DataColumn("wsamt", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnwsamt = new global::System.Data.DataColumn("wsamt", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnwsamt);
                 this.columnpenalty = new global::System.Data.DataColumn("penalty", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpenalty);
-                this.columnpenamt = new global::System.Data.DataColumn("penamt", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnpenamt = new global::System.Data.DataColumn("penamt", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpenamt);
                 this.columnwmf = new global::System.Data.DataColumn("wmf", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnwmf);
-                this.columnwmfamt = new global::System.Data.DataColumn("wmfamt", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnwmfamt = new global::System.Data.DataColumn("wmfamt", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnwmfamt);
                 this.columnsrdisc = new global::System.Data.DataColumn("srdisc", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsrdisc);
-                this.columnsrdisamt = new global::System.Data.DataColumn("srdisamt", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnsrdisamt = new global::System.Data.DataColumn("srdisamt", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsrdisamt);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnacctno}, false));
@@ -5806,10 +5806,10 @@ namespace bcsys.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string wsamt {
+            public decimal wsamt {
                 get {
                     try {
-                        return ((string)(this[this.tablebillhead.wsamtColumn]));
+                        return ((decimal)(this[this.tablebillhead.wsamtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'wsamt\' in table \'billhead\' is DBNull.", e);
@@ -5838,10 +5838,10 @@ namespace bcsys.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string penamt {
+            public decimal penamt {
                 get {
                     try {
-                        return ((string)(this[this.tablebillhead.penamtColumn]));
+                        return ((decimal)(this[this.tablebillhead.penamtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'penamt\' in table \'billhead\' is DBNull.", e);
@@ -5870,10 +5870,10 @@ namespace bcsys.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string wmfamt {
+            public decimal wmfamt {
                 get {
                     try {
-                        return ((string)(this[this.tablebillhead.wmfamtColumn]));
+                        return ((decimal)(this[this.tablebillhead.wmfamtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'wmfamt\' in table \'billhead\' is DBNull.", e);
@@ -5902,10 +5902,10 @@ namespace bcsys.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string srdisamt {
+            public decimal srdisamt {
                 get {
                     try {
-                        return ((string)(this[this.tablebillhead.srdisamtColumn]));
+                        return ((decimal)(this[this.tablebillhead.srdisamtColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'srdisamt\' in table \'billhead\' is DBNull.", e);
