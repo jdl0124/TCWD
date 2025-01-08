@@ -412,5 +412,10 @@ namespace bcsys.Forms
         {
             newChildForm(new xrledger(), "New Consumer Ledger");
         }
-    }
+
+		private void accordionControlElement35_Click(object sender, EventArgs e)
+		{
+			newChildForm(new collectionmaintenance(), "Collection Maintenance");
+		}
+	}
 }

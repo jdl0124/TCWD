@@ -1023,75 +1023,7 @@ namespace bcsys.Forms.EntryForms
         int yn;
         private void tsbCancel_Click(object sender, EventArgs e)
         {
-            if (Program.usr == "juvy")
-            {
-                DialogResult ans = MessageBox.Show("Are you sure?", "Collection", MessageBoxButtons.YesNo);
-                if (ans == DialogResult.Yes)
-                {
-                    //update pay_,pay_d
-                    
-                    DBConnect dbcon = new DBConnect();
-                    dbcon.OpenConnection(retries);
-                    // newdbcon.mytable = "master.mastfile";
-                    ssql = "update bcdb.pay_d set paidamout=0 where orno=@or";
-                    using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
-                        {
-                            cmd.Parameters.AddWithValue("@or", dgvItem.CurrentRow.Cells[1]);
-                            //cmd2.Parameters.AddWithValue("@mc", tbmascode.Text);
-                            //cmd2.Parameters.AddWithValue("@bp", dgvPayment.CurrentRow.Cells[16].Value);
-                            //cmd2.Parameters.AddWithValue("@amt", namt);
-
-                            cmd.Prepare();
-                            cmd.ExecuteNonQuery();
-                            cmd.Dispose();
-
-                        }
-                    ssql = "update bcdb.pay_h set amtdue=0,iscancelled='1' and canceleddate=@dt where orno=@or";
-                    using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
-                    {
-                        cmd.Parameters.AddWithValue("@or", dgvItem.CurrentRow.Cells[1]);
-                        cmd.Parameters.AddWithValue("@dt", DateTime.Now.ToString("yyyy-MM-dd"));
-                        cmd.Prepare();
-                        cmd.ExecuteNonQuery();
-                        cmd.Dispose();
-
-                    }
-
-                    DataTable rs = new DataTable();
-                    ssql = "select * from bcdb.pay_d where orno=@or";
-                    using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
-                    {
-                        cmd.Parameters.AddWithValue("@or", dgvItem.CurrentRow.Cells[1].Value.ToString());
-                        using (rs = new DataTable())
-                        {
-
-                            rs = dbcon.get_records(ssql, cmd);
-                            if (rs.Rows.Count > 0)
-                            {
-                                foreach(DataRow rw in rs.Rows)
-                                {
-                                    ssql = "update bcdb.reading_bc set payment=null where mascode=@mc and billperiod=@bp";
-                                    using (MySqlCommand cmd1 = new MySqlCommand(ssql, dbcon.database_connection))
-                                    {
-                                        cmd1.Parameters.AddWithValue("@mc", rw["mascode"]);
-                                        cmd1.Parameters.AddWithValue("@bp", rw["billperiod"]);
-                                        cmd1.Prepare();
-                                        cmd1.ExecuteNonQuery();
-                                        cmd1.Dispose();
-
-                                    }
-
-                                }
-
-                            }
-                        }
-                        cmd.Dispose ();
-                    }
-                    rs.Dispose ();
-                    dbcon.CloseConnection();
-
-                }
-            }
+            
             
 
         }

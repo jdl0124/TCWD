@@ -175,6 +175,12 @@
     <Compile Include="Forms\EntryForms\application.Designer.cs">
       <DependentUpon>application.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EntryForms\collectionmaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EntryForms\collectionmaintenance.Designer.cs">
+      <DependentUpon>collectionmaintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EntryForms\dailybillingreport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -540,6 +546,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EntryForms\application.resx">
       <DependentUpon>application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EntryForms\collectionmaintenance.resx">
+      <DependentUpon>collectionmaintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EntryForms\dailybillingreport.resx">
       <DependentUpon>dailybillingreport.cs</DependentUpon>
