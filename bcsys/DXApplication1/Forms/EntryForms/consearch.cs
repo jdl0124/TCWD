@@ -27,11 +27,11 @@ namespace bcsys.Forms.EntryForms
 
             if (this.Text == "Reconnection")
             {
-                qry = "SELECT a.name,a.accno,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where a.bgycode=b.code and a.cust_stat='1' order by name";
+                qry = "SELECT a.name,a.accno,b.name as bgyname,a.zn,a.bk,a.mascode,a.cust_stat FROM bcdb.master a, barangay b where a.bgycode=b.code and a.cust_stat='1' order by name";
             }
             else
             {
-				qry = "SELECT a.name,a.accno,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where a.bgycode=b.code order by name";
+				qry = "SELECT a.name,a.accno,b.name as bgyname,a.zn,a.bk,a.mascode,a.cust_stat FROM bcdb.master a, barangay b where a.bgycode=b.code order by name";
 			}
             
             DBConnect newdbcon = new DBConnect();
@@ -65,10 +65,14 @@ namespace bcsys.Forms.EntryForms
             dgvConsumer.Columns[2].Width = 150;
             dgvConsumer.Columns[3].HeaderText = "Zone";
             dgvConsumer.Columns[3].Width = 50;
+            dgvConsumer.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvConsumer.Columns[4].HeaderText = "Book";
-            dgvConsumer.Columns[4].Width = 50;
+			dgvConsumer.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+			dgvConsumer.Columns[4].Width = 50;
             dgvConsumer.Columns[5].Visible = false;
-        }
+			dgvConsumer.Columns[6].Visible = false;
+
+		}
         private void tsbClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -96,7 +100,7 @@ namespace bcsys.Forms.EntryForms
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-            string qry = "SELECT a.name,a.acctno,b.name as bgyname,a.zn,a.bk,a.mascode FROM bcdb.master a, barangay b where (a.name like '%" + tbSearch.Text + "%' or a.acctno like '%" + tbSearch.Text + "%') and a.bgycode=b.code order by name";
+            string qry = "SELECT a.name,a.accno,b.name as bgyname,a.zn,a.bk,a.mascode,a.cust_stat FROM bcdb.master a, barangay b where (a.name like '%" + tbSearch.Text + "%' or a.acctno like '%" + tbSearch.Text + "%') and a.bgycode=b.code order by name";
             DBConnect newdbcon = new DBConnect();
             newdbcon.OpenConnection(retries);
             // newdbcon.mytable = "master.mastfile";
@@ -116,5 +120,22 @@ namespace bcsys.Forms.EntryForms
             }
             newdbcon.CloseConnection();
         }
-    }
+
+		private void dgvConsumer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+		{
+			foreach (DataGridViewRow row in dgvConsumer.Rows)
+			{
+                if (row.Cells[6].Value.ToString() == "1")
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightPink;
+                    row.DefaultCellStyle.ForeColor = Color.DarkRed;
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.White;
+                    row.DefaultCellStyle.ForeColor = Color.Black;
+                }
+            }
+		}
+	}
 }

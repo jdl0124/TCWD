@@ -55,13 +55,13 @@ namespace bcsys.Forms.EntryForms
 		}
 		private void sdisplayname()
 		{
-			ssql = "select * from bcdb.master where left(znacc12,6)=@zn";
+			ssql = "select * from bcdb.master where mascode=@mc";
 			DBConnect dbcon = new DBConnect();
 			dbcon.OpenConnection(retries);
 			DataTable rs = new DataTable();
 			using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
 			{
-				cmd.Parameters.AddWithValue("@zn", tbAcctno.Text.Substring(0, 6));
+				cmd.Parameters.AddWithValue("@mc", tbmascode.Text);
 				using (rs = new DataTable())
 				{
 					rs = dbcon.get_records(ssql, cmd);
@@ -70,7 +70,7 @@ namespace bcsys.Forms.EntryForms
 						foreach (DataRow dr in rs.Rows)
 						{
 							tbmascode.Text = dr["mascode"].ToString();
-							tbAcctno.Text = dr["znacc12"].ToString();
+							tbAcctno.Text = dr["accno"].ToString();
 							tbName.Text = dr["Name"].ToString();
 							tbAddress.Text = dr["address"].ToString();
 							Program.zone = dr["zn"].ToString();
@@ -108,15 +108,10 @@ namespace bcsys.Forms.EntryForms
 		private void dtps_ValueChanged(object sender, EventArgs e)
 		{
 			dtpe.Value = dtps.Value.AddYears(1);
-			dtpe.Value = dtpe.Value.AddDays(-1);
+			//dtpe.Value = dtpe.Value.AddDays (-1);
 		}
 
-		private void tsMenu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-		{
-			this .Close();
-
-		}
-
+		
 		private void btnPost_Click(object sender, EventArgs e)
 		{
 			string qry = "select * from bcdb.master where mascode=@mc";
@@ -133,7 +128,7 @@ namespace bcsys.Forms.EntryForms
 					if (dtb.Rows.Count > 0)
 					{
 						//update
-						ssql = "update bcdb.master set tin=@tin,scid=@id,scstart=@sdt,scend=@edt,withscdisc=@sc) " +
+						ssql = "update bcdb.master set tin=@tin,scid=@id,scstart=@sdt,scend=@edt,withscdisc=@sc " +
 							"where mascode=@mc";
 						using (MySqlCommand cmd2 = new MySqlCommand(ssql, newdbcon.database_connection))
 						{
@@ -142,7 +137,7 @@ namespace bcsys.Forms.EntryForms
 							cmd2.Parameters.AddWithValue("@id", tbidno.Text);
 							cmd2.Parameters.AddWithValue("@sdt", dtps.Value.ToString("yyyy-MM-dd"));
 							cmd2.Parameters.AddWithValue("@edt", dtpe.Value.ToString("yyyy-MM-dd"));
-							if (cbsc.Checked)
+															if (cbsc.Checked)
 							{
 								cmd2.Parameters.AddWithValue("@sc", 1);
 							}
@@ -158,10 +153,29 @@ namespace bcsys.Forms.EntryForms
 					dtb.Dispose();
 				}
 				MessageBox.Show("Senior Citizen status has been saved!");
-				//sinit();
+				sinit();
 
 				newdbcon.CloseConnection();
 			}
+		}
+		void sinit()
+		{
+			tbmascode.Text = string.Empty;
+			tbtin.Text = string.Empty;
+			tbidno.Text = string.Empty;
+			tbAcctno.Text = string.Empty;
+			dtps.Text = string.Empty;
+			dtpe.Text = string.Empty;
+			cbsc.Checked = false;
+			tbName.Text = string.Empty;
+			tbAddress.Text = string.Empty;
+		}
+
+
+		private void btnClose_Click(object sender, EventArgs e)
+		{
+			this.Close();
+
 		}
 	}
 }

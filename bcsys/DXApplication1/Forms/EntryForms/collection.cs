@@ -187,13 +187,13 @@ namespace bcsys.Forms.EntryForms
         }
         private void sdisplayname()
         {
-            ssql = "select * from bcdb.master where accno=@zn";
+            ssql = "select * from bcdb.master where mascode=@mc";
             DBConnect dbcon = new DBConnect();
             dbcon.OpenConnection(retries);
             DataTable rs = new DataTable();
             using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
             {
-                cmd.Parameters.AddWithValue("@zn", tbAcctno.Text);
+                cmd.Parameters.AddWithValue("@mc", tbmascode.Text);
                 using (rs = new DataTable())
                 {
                     rs = dbcon.get_records(ssql, cmd);
@@ -1061,10 +1061,10 @@ namespace bcsys.Forms.EntryForms
                         {
                             if (rs.Rows.Count < 2)
                             {
-                                if (dr["billperiod"].ToString() == "202411")
-                                {
-                                    return;
-                                }
+                                //if (dr["billperiod"].ToString() == "202411")
+                                //{
+                                //    return;
+                                //}
                             }
                             dgvPayment.Rows.Add();
                             r = dgvPayment.Rows.Count - 1;
@@ -1133,7 +1133,7 @@ namespace bcsys.Forms.EntryForms
                     //add demand
                     if(rs.Rows.Count >= 2)
                     {
-                        sdemand();
+                        //sdemand();
                     }
                 }
             }

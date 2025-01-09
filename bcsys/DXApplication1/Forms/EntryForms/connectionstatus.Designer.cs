@@ -28,15 +28,20 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(connectionstatus));
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.tsMenu = new System.Windows.Forms.ToolStrip();
+			this.btnRecon = new System.Windows.Forms.ToolStripButton();
+			this.btnPost = new System.Windows.Forms.ToolStripButton();
+			this.btnmark = new System.Windows.Forms.ToolStripButton();
+			this.btnClose = new System.Windows.Forms.ToolStripButton();
 			this.gbConDtl = new System.Windows.Forms.GroupBox();
 			this.tbmascode = new System.Windows.Forms.TextBox();
 			this.Label16 = new System.Windows.Forms.Label();
 			this.tbContype = new System.Windows.Forms.TextBox();
 			this.Label6 = new System.Windows.Forms.Label();
 			this.tbAddress = new System.Windows.Forms.TextBox();
+			this.btnConSearch = new System.Windows.Forms.Button();
 			this.Label1 = new System.Windows.Forms.Label();
 			this.tbAcctno = new System.Windows.Forms.TextBox();
 			this.Label4 = new System.Windows.Forms.Label();
@@ -99,11 +104,6 @@
 			this.label17 = new System.Windows.Forms.Label();
 			this.label19 = new System.Windows.Forms.Label();
 			this.textBox6 = new System.Windows.Forms.TextBox();
-			this.btnRecon = new System.Windows.Forms.ToolStripButton();
-			this.btnPost = new System.Windows.Forms.ToolStripButton();
-			this.btnmark = new System.Windows.Forms.ToolStripButton();
-			this.btnClose = new System.Windows.Forms.ToolStripButton();
-			this.btnConSearch = new System.Windows.Forms.Button();
 			this.tsMenu.SuspendLayout();
 			this.gbConDtl.SuspendLayout();
 			this.gbdisconnect.SuspendLayout();
@@ -116,20 +116,55 @@
 			// 
 			// tsMenu
 			// 
-			this.tsMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.tsMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.tsMenu.Dock = System.Windows.Forms.DockStyle.None;
 			this.tsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnRecon,
             this.btnPost,
             this.btnmark,
             this.btnClose});
-			this.tsMenu.Location = new System.Drawing.Point(221, -1);
+			this.tsMenu.Location = new System.Drawing.Point(242, -1);
 			this.tsMenu.Name = "tsMenu";
-			this.tsMenu.Size = new System.Drawing.Size(291, 25);
+			this.tsMenu.Size = new System.Drawing.Size(322, 25);
 			this.tsMenu.TabIndex = 280;
 			this.tsMenu.TabStop = true;
 			this.tsMenu.Text = "Special Billing Menu";
 			this.tsMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsMenu_ItemClicked);
+			// 
+			// btnRecon
+			// 
+			this.btnRecon.Image = ((System.Drawing.Image)(resources.GetObject("btnRecon.Image")));
+			this.btnRecon.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnRecon.Name = "btnRecon";
+			this.btnRecon.Size = new System.Drawing.Size(83, 22);
+			this.btnRecon.Text = "Reconnect";
+			this.btnRecon.Click += new System.EventHandler(this.btnRecon_Click);
+			// 
+			// btnPost
+			// 
+			this.btnPost.Image = ((System.Drawing.Image)(resources.GetObject("btnPost.Image")));
+			this.btnPost.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnPost.Name = "btnPost";
+			this.btnPost.Size = new System.Drawing.Size(86, 22);
+			this.btnPost.Text = "&Disconnect";
+			this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
+			// 
+			// btnmark
+			// 
+			this.btnmark.Image = ((System.Drawing.Image)(resources.GetObject("btnmark.Image")));
+			this.btnmark.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnmark.Name = "btnmark";
+			this.btnmark.Size = new System.Drawing.Size(54, 22);
+			this.btnmark.Text = "Mark";
+			// 
+			// btnClose
+			// 
+			this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+			this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.btnClose.Name = "btnClose";
+			this.btnClose.Size = new System.Drawing.Size(56, 22);
+			this.btnClose.Text = "&Close";
 			// 
 			// gbConDtl
 			// 
@@ -199,6 +234,18 @@
 			this.tbAddress.ReadOnly = true;
 			this.tbAddress.Size = new System.Drawing.Size(340, 21);
 			this.tbAddress.TabIndex = 234;
+			// 
+			// btnConSearch
+			// 
+			this.btnConSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnConSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnConSearch.Image")));
+			this.btnConSearch.Location = new System.Drawing.Point(196, 13);
+			this.btnConSearch.Name = "btnConSearch";
+			this.btnConSearch.Size = new System.Drawing.Size(30, 22);
+			this.btnConSearch.TabIndex = 1;
+			this.btnConSearch.Text = "F2";
+			this.btnConSearch.UseVisualStyleBackColor = true;
+			this.btnConSearch.Click += new System.EventHandler(this.btnConSearch_Click);
 			// 
 			// Label1
 			// 
@@ -561,14 +608,14 @@
 			// dgvh
 			// 
 			this.dgvh.AllowUserToAddRows = false;
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F);
-			dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.meterno,
@@ -895,52 +942,6 @@
 			this.textBox6.TabIndex = 255;
 			this.textBox6.Text = "0";
 			this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			// 
-			// btnRecon
-			// 
-			this.btnRecon.Image = ((System.Drawing.Image)(resources.GetObject("btnRecon.Image")));
-			this.btnRecon.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnRecon.Name = "btnRecon";
-			this.btnRecon.Size = new System.Drawing.Size(83, 22);
-			this.btnRecon.Text = "Reconnect";
-			this.btnRecon.Click += new System.EventHandler(this.btnRecon_Click);
-			// 
-			// btnPost
-			// 
-			this.btnPost.Image = ((System.Drawing.Image)(resources.GetObject("btnPost.Image")));
-			this.btnPost.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnPost.Name = "btnPost";
-			this.btnPost.Size = new System.Drawing.Size(86, 22);
-			this.btnPost.Text = "&Disconnect";
-			this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
-			// 
-			// btnmark
-			// 
-			this.btnmark.Image = ((System.Drawing.Image)(resources.GetObject("btnmark.Image")));
-			this.btnmark.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnmark.Name = "btnmark";
-			this.btnmark.Size = new System.Drawing.Size(54, 22);
-			this.btnmark.Text = "Mark";
-			// 
-			// btnClose
-			// 
-			this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-			this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(56, 22);
-			this.btnClose.Text = "&Close";
-			// 
-			// btnConSearch
-			// 
-			this.btnConSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnConSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnConSearch.Image")));
-			this.btnConSearch.Location = new System.Drawing.Point(196, 13);
-			this.btnConSearch.Name = "btnConSearch";
-			this.btnConSearch.Size = new System.Drawing.Size(30, 22);
-			this.btnConSearch.TabIndex = 1;
-			this.btnConSearch.Text = "F2";
-			this.btnConSearch.UseVisualStyleBackColor = true;
-			this.btnConSearch.Click += new System.EventHandler(this.btnConSearch_Click);
 			// 
 			// connectionstatus
 			// 

@@ -315,7 +315,7 @@
 			this.tsMenu.TabIndex = 278;
 			this.tsMenu.TabStop = true;
 			this.tsMenu.Text = "Special Billing Menu";
-			this.tsMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsMenu_ItemClicked);
+			//this.tsMenu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsMenu_ItemClicked);
 			// 
 			// btnPost
 			// 
@@ -331,8 +331,9 @@
 			this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
 			this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(56, 22);
+			this.btnClose.Size = new System.Drawing.Size(56, 20);
 			this.btnClose.Text = "&Close";
+			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
 			// lblstat
 			// 

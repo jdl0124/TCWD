@@ -358,13 +358,13 @@ namespace bcsys.Forms.EntryForms
         }
         private void sdisplayname()
 		{
-			ssql = "select a.*,b.previous,b.present,b.cumused from bcdb.master a,bcdb.reading_bc b where a.mascode=b.mascode and left(znacc12,6)=@zn order by billperiod desc limit 1";
+			ssql = "select a.*,b.previous,b.present,b.cumused from bcdb.master a,bcdb.reading_bc b where a.mascode=b.mascode and mascode=@mc order by billperiod desc limit 1";
 			DBConnect dbcon = new DBConnect();
 			dbcon.OpenConnection(retries);
 			DataTable rs = new DataTable();
 			using (MySqlCommand cmd = new MySqlCommand(ssql, dbcon.database_connection))
 			{
-				cmd.Parameters.AddWithValue("@zn", tbAcctno.Text.Substring(0, 6));
+				cmd.Parameters.AddWithValue("@mc", tbmascode.Text);
 				using (rs = new DataTable())
 				{
 					rs = dbcon.get_records(ssql, cmd);

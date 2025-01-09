@@ -236,7 +236,7 @@ namespace bcsys.Forms.EntryForms
 
         private void dgvConsumer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string qry = "select * FROM bcdb.master where znacc12=@zn order by name";
+            string qry = "select * FROM bcdb.master where mascode=@mc order by name";
             DBConnect newdbcon = new DBConnect();
             newdbcon.OpenConnection(retries);
 
@@ -246,7 +246,7 @@ namespace bcsys.Forms.EntryForms
             {
                 using (result5 = new DataTable())
                 {
-                    cmd.Parameters.AddWithValue("zn", dgvConsumer.CurrentRow.Cells[1].Value);
+                    cmd.Parameters.AddWithValue("mc", dgvConsumer.CurrentRow.Cells[2].Value);
                     result5 = newdbcon.get_records(qry, cmd);
                     if (result5.Rows.Count > 0)
                     {

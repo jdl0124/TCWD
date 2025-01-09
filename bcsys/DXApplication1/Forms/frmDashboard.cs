@@ -405,8 +405,8 @@ namespace bcsys.Forms
 
         private void accordionControlElement29_Click(object sender, EventArgs e)
         {
-
-        }
+			newChildForm(new tblotter(), "Teller's Blotter");
+		}
 
         private void accordionControlElement12_Click(object sender, EventArgs e)
         {
@@ -416,6 +416,11 @@ namespace bcsys.Forms
 		private void accordionControlElement35_Click(object sender, EventArgs e)
 		{
 			newChildForm(new collectionmaintenance(), "Collection Maintenance");
+		}
+
+		private void accordionControlElement18_Click(object sender, EventArgs e)
+		{
+			newChildForm(new seniorcitizen (), "Set Senior Citizen");
 		}
 	}
 }

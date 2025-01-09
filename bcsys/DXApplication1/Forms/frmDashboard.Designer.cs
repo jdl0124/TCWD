@@ -143,6 +143,7 @@
 			this.accordionControlSeparator26 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.accordionControlElement34 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlSeparator27 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+			this.accordionControlElement35 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlSeparator5 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
 			this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.accordionControlElement39 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -164,7 +165,6 @@
 			this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
 			this.pgpanel = new DevExpress.XtraWaitForm.ProgressPanel();
-			this.accordionControlElement35 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
 			((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox3)).BeginInit();
@@ -726,6 +726,7 @@
             this.accordionControlElement22,
             this.accordionControlSeparator1,
             this.accordionControlSeparator2});
+			this.customersAccordionControlElement.Expanded = true;
 			this.customersAccordionControlElement.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("customersAccordionControlElement.ImageOptions.Image")));
 			this.customersAccordionControlElement.Name = "customersAccordionControlElement";
 			this.customersAccordionControlElement.Text = "Consumer";
@@ -781,6 +782,7 @@
 			this.accordionControlElement18.Name = "accordionControlElement18";
 			this.accordionControlElement18.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
 			this.accordionControlElement18.Text = "Set Senior Citizen";
+			this.accordionControlElement18.Click += new System.EventHandler(this.accordionControlElement18_Click);
 			// 
 			// accordionControlSeparator10
 			// 
@@ -1114,6 +1116,14 @@
 			// 
 			this.accordionControlSeparator27.Name = "accordionControlSeparator27";
 			// 
+			// accordionControlElement35
+			// 
+			this.accordionControlElement35.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement35.ImageOptions.Image")));
+			this.accordionControlElement35.Name = "accordionControlElement35";
+			this.accordionControlElement35.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+			this.accordionControlElement35.Text = "Collection Maintenance";
+			this.accordionControlElement35.Click += new System.EventHandler(this.accordionControlElement35_Click);
+			// 
 			// accordionControlSeparator5
 			// 
 			this.accordionControlSeparator5.Name = "accordionControlSeparator5";
@@ -1246,14 +1256,6 @@
 			this.pgpanel.Text = "ñ";
 			this.pgpanel.Visible = false;
 			this.pgpanel.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Line;
-			// 
-			// accordionControlElement35
-			// 
-			this.accordionControlElement35.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement35.ImageOptions.Image")));
-			this.accordionControlElement35.Name = "accordionControlElement35";
-			this.accordionControlElement35.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-			this.accordionControlElement35.Text = "Collection Maintenance";
-			this.accordionControlElement35.Click += new System.EventHandler(this.accordionControlElement35_Click);
 			// 
 			// frmDashboard
 			// 

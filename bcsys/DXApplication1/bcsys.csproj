@@ -416,6 +416,24 @@
     <Compile Include="Reports\DataSet2.cs">
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\xrcashcollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrcashcollection.Designer.cs">
+      <DependentUpon>xrcashcollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\xrcheckcollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrcheckcollection.Designer.cs">
+      <DependentUpon>xrcheckcollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\xrdeno.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrdeno.Designer.cs">
+      <DependentUpon>xrdeno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\xrdlycollectionreport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -499,6 +517,12 @@
     <Compile Include="Reports\xrmonthlybillingsum.Designer.cs">
       <DependentUpon>xrmonthlybillingsum.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\xronlinecollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xronlinecollection.Designer.cs">
+      <DependentUpon>xronlinecollection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\xrsub1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -528,6 +552,12 @@
     </Compile>
     <Compile Include="Reports\xrtblotters2.Designer.cs">
       <DependentUpon>xrtblotters2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\xrtellerblotter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\xrtellerblotter.Designer.cs">
+      <DependentUpon>xrtellerblotter.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\xrtest.cs">
       <SubType>Component</SubType>
@@ -672,6 +702,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\xrcashcollection.resx">
+      <DependentUpon>xrcashcollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\xrcheckcollection.resx">
+      <DependentUpon>xrcheckcollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\xrdeno.resx">
+      <DependentUpon>xrdeno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\xrdlycollectionreport.resx">
       <DependentUpon>xrdlycollectionreport.cs</DependentUpon>
     </EmbeddedResource>
@@ -712,6 +751,9 @@
     <EmbeddedResource Include="Reports\xrmonthlybillingsum.resx">
       <DependentUpon>xrmonthlybillingsum.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\xronlinecollection.resx">
+      <DependentUpon>xronlinecollection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\xrsub1.resx">
       <DependentUpon>xrsub1.cs</DependentUpon>
     </EmbeddedResource>
@@ -726,6 +768,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\xrtblotters2.resx">
       <DependentUpon>xrtblotters2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\xrtellerblotter.resx">
+      <DependentUpon>xrtellerblotter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\xrtest.resx">
       <DependentUpon>xrtest.cs</DependentUpon>
