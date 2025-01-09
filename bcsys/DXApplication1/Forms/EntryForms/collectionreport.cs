@@ -154,8 +154,6 @@ namespace bcsys.Forms.EntryForms
                 XtraReport rpt = new xrdlycollectionreport();
                 var labelReceiver = (XRLabel)rpt.FindControl("testlabel", false);
 
-
-
                 Application.DoEvents();
 
                 newpos.CenterObj(fdash, frm);
@@ -277,7 +275,7 @@ namespace bcsys.Forms.EntryForms
                     r1["arbalance"] = Convert.ToDecimal(dgvt.Rows[0].Cells[4].Value) + Convert.ToDecimal(dgvt.Rows[0].Cells[5].Value)
                     + Convert.ToDecimal(dgvt.Rows[0].Cells[6].Value);
 					r1["aramount"] = Convert.ToDecimal(dgvt.Rows[0].Cells[4].Value) + Convert.ToDecimal(dgvt.Rows[0].Cells[5].Value)
-					+ Convert.ToDecimal(dgvt.Rows[0].Cells[6].Value) + Convert.ToDecimal(dgvt.Rows[0].Cells[8].Value) + Convert.ToDecimal(dgvt.Rows[0].Cells[9].Value) + namt;
+					+ Convert.ToDecimal(dgvt.Rows[0].Cells[6].Value) + Convert.ToDecimal(dgvt.Rows[0].Cells[8].Value) + Convert.ToDecimal(dgvt.Rows[0].Cells[9].Value) + namt - Convert.ToDecimal(dgvt.Rows[0].Cells[10].Value);
 
 					cmd2.Dispose();
 				}
@@ -1100,8 +1098,10 @@ namespace bcsys.Forms.EntryForms
 		}
         decimal npay, ncurent, ncuyr, npyr, nftax, nwmf,npenalty, nsrdisc, nwtax;
 
+        int nbp;
 		private void sdailycollectionreport()
 		{
+            nbp = 202501;
 			ssql = "select a.*,b.* from pay_h a,pay_d b where a.teller=@tel and a.tdate=@dt and a.orno=b.orno order by a.orno";
 			DBConnect dbcon = new DBConnect();
 			dbcon.OpenConnection(retries);
@@ -1119,9 +1119,9 @@ namespace bcsys.Forms.EntryForms
                         namt = 0;
 						foreach (DataRow rs in dt.Rows)
 						{
-                            if (rs["orno"].ToString() == "026645")
+                            if (rs["orno"].ToString() == "026646")
                             {
-                                namt++;
+                                //namt++;
                             }
 
 							dgv.Rows.Add();
@@ -1140,8 +1140,18 @@ namespace bcsys.Forms.EntryForms
 
 							
 							dgv.Rows[r].Cells[2].Value = rs["orno"];
-							dgv.Rows[r].Cells[3].Value = rs["paidamount"];
-                            namt += Convert.ToDecimal(rs["paidamount"]);
+							
+                            if (rs["paidamount"] != DBNull.Value)
+                            {
+                                dgv.Rows[r].Cells[3].Value = rs["paidamount"];
+                                namt += Convert.ToDecimal(rs["paidamount"]);
+                            }
+                            else
+                            {
+                                dgv.Rows[r].Cells[3].Value = 0;
+                            }
+
+                            
                             //if (bp == rs["billperiod"].ToString())
                             //{
                             //	dgv.Rows[r].Cells[4].Value = Convert.ToDecimal( rs["paidamount"]);
@@ -1159,7 +1169,7 @@ namespace bcsys.Forms.EntryForms
                             {
                                 if (rs["iscanceled"] == DBNull.Value)
                                 {
-									if (bp == rs["billperiod"].ToString())
+									if (nbp == Convert.ToInt32( rs["billperiod"].ToString()))
 									{
 										dgv.Rows[r].Cells[4].Value = Convert.ToDecimal(rs["billamt"]) + Convert.ToDecimal(rs["ftax"]);
 									}
@@ -1187,6 +1197,7 @@ namespace bcsys.Forms.EntryForms
                             dgv.Rows[r].Cells[9].Value = rs["wmf"];
                             dgv.Rows[r].Cells[10].Value = rs["srdisc"];
                             dgv.Rows[r].Cells[11].Value = rs["wtax"];
+                            dgv.Rows[r].Cells[12].Value = rs["billperiod"];
 
                             //dgv.Rows[r].Cells[8].Value = 0;
                             //dgv.Rows[r].Cells[7].Value = 0;
@@ -1238,6 +1249,8 @@ namespace bcsys.Forms.EntryForms
                         }
                         dgvt.Rows.Clear();
                         dgvt.Rows.Add();
+                        dgvt.Rows[0].Cells[0].Value = dt.Rows.Count;
+                        dgvt.Rows[0].Cells[1].Value = dgv.Rows.Count;
                         dgvt.Rows[0].Cells[3].Value = npay;
                         dgvt.Rows[0].Cells[4].Value = ncurent ;
                         dgvt.Rows[0].Cells[5].Value = ncuyr;

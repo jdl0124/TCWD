@@ -349,6 +349,12 @@
     <Compile Include="Forms\ReportForms\monthlybillingsummary.Designer.cs">
       <DependentUpon>monthlybillingsummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ReportForms\tblotter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\tblotter.Designer.cs">
+      <DependentUpon>tblotter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\reportviewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -633,6 +639,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReportForms\monthlybillingsummary.resx">
       <DependentUpon>monthlybillingsummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportForms\tblotter.resx">
+      <DependentUpon>tblotter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\reportviewer.resx">
       <DependentUpon>reportviewer.cs</DependentUpon>
